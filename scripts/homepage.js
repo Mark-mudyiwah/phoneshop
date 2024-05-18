@@ -36,8 +36,7 @@ products.forEach((product)=>{
      R ${(product.price).toFixed(2)}
     </div>
     <div class="added-text-div">
-    added
-    <img class="added-tick-icon " src="images/img/icons8-tick-50.png">
+ 
     </div>
     <div class="add-to-cart-container">
     <button class="add-to-cart-button">

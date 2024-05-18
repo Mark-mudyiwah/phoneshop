@@ -123,23 +123,40 @@ body a{
 
  .search-div{
     margin-left: 15px;
-    height: 40px;
     width:100%;
     background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid rgb(221, 26, 26);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:3px ;
+    
    
     
  }
  .searchbar{
-    padding-top:0px;
+     padding-top: 10px;
+     padding-bottom: 10px;
     font-size: 15px;
-    width:200px;
+    width:100%;
     border-style: none;
+    border-top-left-radius:3px ;
+    
     
     resize: none;
     outline: none;
     
+ }
+ .search-icon-container{
+   background-color: rgb(224, 224, 224);
+   height: 35.6px;
+   padding-top: 4px;
+   padding-left: 4px;
+   margin-top: 1px;
+   margin-bottom: 1px;
+   margin-left: -1px;
+   border-top-right-radius:3px ;
+   border-bottom-right-radius:3px ;
+    
+   
  }
  .search-icon{
     margin-top: 1px;
@@ -188,9 +205,10 @@ body a{
  .product-price-container{
    font-size: 25px;
    font-weight: bold;
-   padding-top: 10px;
-   margin-left: 50px;
-   color: rgb(236, 7, 7);
+   width: 150px;
+   color: rgb(177, 16, 16);
+   margin-top: 10px;
+   margin-left: 10px;
    
  }
 
