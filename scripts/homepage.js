@@ -1,4 +1,4 @@
-const products =[
+/*const products =[
   {
     image:'images/products/Laptops&monitors/Apple MacBook.webp',
     name:' Apple MacBook',
@@ -44,6 +44,7 @@ const products =[
   },
 
 ]
+*/
 let productsHTML=''
 products.forEach((product)=>{
  productsHTML+= `
