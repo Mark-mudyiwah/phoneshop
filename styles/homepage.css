@@ -213,23 +213,32 @@ body a{
  }
  .storage-rom-container,
  .storage-ram-container,
- .product-color-container{
+ .product-system-container{
  display: flex;
  margin: 7px 3px;
+ align-items: center;
+ justify-content: safe;
+ gap: 15px;
+ 
 
  }
 
  .rom-text-container,
  .ram-text-container,
- .color-text-container,
+ .system-text-container,
  .product-price-text{
    font-weight: 600;
    font-style: arial;
  }
+ .system-text-container{
+  width:  80px;
+  line-height: 15px;
+ }
  .ram-amount,
  .rom-amount,
- .product-color{
+ .product-operating-system{
    color: rgb(0, 0, 255);
+    
  }
  .amount-container,
  .rom-type{

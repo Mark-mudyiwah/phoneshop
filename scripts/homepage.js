@@ -4,10 +4,10 @@ const products =[
     name:' Apple MacBook',
     price: 22000,
     specs:{
-      
+
       rom: 256,
       ram: 24,
-      color:'Black',
+       Osystem:' MacOS',
       romType:'(SSD)'
     }
 
@@ -20,7 +20,7 @@ const products =[
     specs:{
       rom:512,
       ram: 16,
-      color:'Black',
+      Osystem:' Windows11',
       romType:'(SSD)'
 
     }
@@ -34,7 +34,7 @@ const products =[
     specs:{
       rom: 256,
       ram:  12,
-      color:'White',
+      Osystem:'Windows 10',
       romType:''
 
     }
@@ -78,13 +78,13 @@ products.forEach((product)=>{
      ${product.specs.ram}GB
      </div>
     </div>
-    <div class = "product-color-container">
+    <div class = "product-system-container">
     
-     <div class="color-text-container">
-     Color :
+     <div class="system-text-container">
+     Operating System:
      </div>
-     <div class="product-color">
-      ${product.specs.color}
+     <div class="product-operating-system">
+      ${product.specs.Osystem}
      </div>
     </div>
     </div>
