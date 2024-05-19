@@ -231,7 +231,8 @@ body a{
  .product-color{
    color: rgb(0, 0, 255);
  }
- .amount-container{
+ .amount-container,
+ .rom-type{
    color:brown;
    font-weight: 800;
  }

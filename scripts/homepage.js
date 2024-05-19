@@ -2,20 +2,44 @@ const products =[
   {
     image:'images/products/Laptops&monitors/Apple MacBook.webp',
     name:' Apple MacBook',
-    price: 22000
+    price: 22000,
+    specs:{
+      
+      rom: 256,
+      ram: 24,
+      color:'Black',
+      romType:'(SSD)'
+    }
+
 
   },
   {
     image: 'images/products/Laptops&monitors/Dell Laptop.webp',
     name: 'Dell Laptop',
-    price: 11000
+    price: 11000,
+    specs:{
+      rom:512,
+      ram: 16,
+      color:'Black',
+      romType:'(SSD)'
+
+    }
 
   },
 
   {
     image: 'images/products/Laptops&monitors/Asus Laptop.webp',
     name:  'Asus VivoBook',
-    price: 8999.9
+    price: 8999.9,
+    specs:{
+      rom: 256,
+      ram:  12,
+      color:'White',
+      romType:''
+
+    }
+
+
 
   },
 
@@ -40,7 +64,10 @@ products.forEach((product)=>{
     ROM :
     </div>
     <div class="rom-amount">
-      ${256}GB
+      ${product.specs.rom}GB
+    </div>
+    <div class ="rom-type">
+     ${product.specs.romType}
     </div>
     </div>
     <div class = "storage-ram-container">
@@ -48,7 +75,7 @@ products.forEach((product)=>{
      RAM :
     </div>
      <div class="ram-amount">
-     25GB
+     ${product.specs.ram}GB
      </div>
     </div>
     <div class = "product-color-container">
@@ -57,7 +84,7 @@ products.forEach((product)=>{
      Color :
      </div>
      <div class="product-color">
-      ${'Blue'}
+      ${product.specs.color}
      </div>
     </div>
     </div>
