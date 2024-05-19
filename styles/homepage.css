@@ -165,8 +165,8 @@ body a{
     margin-top: 100px;
  }
  .item{
-   height: 180px;
-    width:  100%;
+   height:120px ;
+   
   
  }
 
@@ -186,30 +186,63 @@ body a{
    display: inline-block;
    border: 1px solid rgb(0, 0, 0);
    border-radius: 15px;
+   width: 200px;
    
    
  }
  .product-image-container{
-   margin: 10px 6px;
+   display: flex;
+   justify-content: center;
+   padding-top: 8px ;
+    
+   margin-right: 8px;
    border-bottom: 1px solid rgb(19, 18, 18);
    border-radius:9px ;
-   width: 250px;
+   width:100%;
+   flex: 1;
  }
  .product-name-container{
-   font-size: 25px;
+   display: flex;
+   justify-content: center;
+   font-size: 20px;
    font-weight: bold;
    margin-top: 10px;
-   margin-left: 6px;
+   height: 30px;
+    
    
  }
+ .storage-rom-container,
+ .storage-ram-container,
+ .product-color-container{
+ display: flex;
+ margin: 7px 3px;
+
+ }
+
+ .rom-text-container,
+ .ram-text-container,
+ .color-text-container,
+ .product-price-text{
+   font-weight: 600;
+   font-style: arial;
+ }
+ .ram-amount,
+ .rom-amount,
+ .product-color{
+   color: rgb(0, 0, 255);
+ }
+ .amount-container{
+   color:brown;
+   font-weight: 800;
+ }
+
  .product-price-container{
-   font-size: 25px;
-   font-weight: bold;
-   width: 150px;
-   color: rgb(177, 16, 16);
+   display: flex;
+   justify-content: center;
    margin-top: 10px;
-   margin-left: 10px;
-   
+   padding-top: 4px;
+   padding-bottom: 4px;
+    
  }
 
  .added-text-div{
@@ -220,7 +253,10 @@ body a{
    color:green;
  }
  .add-to-cart-container{
-   margin:25px 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+
    
  }
 .added-tick-icon{
@@ -229,7 +265,7 @@ body a{
 }
  
  .add-to-cart-button{
-   width: 100%;
+   width: 130px;
    height: 40px;
    border: none;
    background-color: rgb(0, 0, 255);
