@@ -47,6 +47,7 @@
 */
 let productsHTML=''
 products.forEach((product)=>{
+ 
  productsHTML+= `
 <div class = "product-container">
 
@@ -82,12 +83,27 @@ products.forEach((product)=>{
     <div class = "product-system-container">
     
      <div class="system-text-container">
-     Operating System:
+     O.S:
      </div>
      <div class="product-operating-system">
       ${product.specs.Osystem}
      </div>
-    </div>
+     </div>
+     <div class ="product-system-container">
+     <div class="system-text-container">
+     Version:
+     </div>
+     <div class="product-operating-system">
+      ${product.specs.version}
+      </div>
+      </div>
+      <div class = "see-more-info">
+     
+       <button class = "see-more-button" onclick ="
+       
+       ">
+       See more...</button>
+      </div>
     </div>
     <div class =  "product-price-container">
     <div class="product-price-text">
@@ -97,8 +113,7 @@ products.forEach((product)=>{
     R${(product.price).toFixed(2)}
     </div>
     </div>
-    <div class="added-text-div">
- 
+    <div class="added-text-div" >
     </div>
     <div class="add-to-cart-container">
     <button class="add-to-cart-button">
@@ -107,10 +122,10 @@ products.forEach((product)=>{
     </div>
 
 </div>
-
-`
  
+`
 })
 
 document.querySelector('.js-product-container').innerHTML = productsHTML
  
+
