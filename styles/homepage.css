@@ -22,7 +22,7 @@ body a{
  height: 60px;
  
 
- background-color: rgb(238, 120, 10);
+ background-color:  rgb(238, 120, 10);
 }
 
 .logo{
@@ -53,14 +53,14 @@ body a{
 .header{
 
  display:flex;
- justify-content: space-between;
+ justify-content:space-between ;
  align-items: center;
  height: 60px;
  position: fixed;
  right: 0px;
  left:0px;
  top: 0px;
- background-color: rgb(255, 125, 3);
+ background-color:  rgb(238, 120, 10);
  color: rgb(182, 23, 23);
 
  
@@ -88,9 +88,11 @@ body a{
     color: white;
 }
 
- .left-side{
+ .left-side,
+ .right-side{
     display: flex;
-    
+    background-color:  rgb(238, 120, 10);
+    height: 100%;
    
 
  }
@@ -119,6 +121,7 @@ body a{
     flex: 1;
     max-width: 600px;
     min-width: 260px;
+    
  }
 
   
@@ -148,7 +151,7 @@ body a{
     
  }
  .search-icon-container{
-   background-color: rgb(224, 224, 224);
+   background-color: rgb(230, 160, 11);
    height: 35.6px;
    padding-top: 4px;
    padding-left: 4px;
@@ -157,6 +160,7 @@ body a{
    margin-left: -1px;
    border-top-right-radius:3px ;
    border-bottom-right-radius:3px ;
+   margin-right: 15px;
     
    
  }
