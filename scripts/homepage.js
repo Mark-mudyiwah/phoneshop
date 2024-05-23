@@ -1,51 +1,6 @@
-/*const products =[
-  {
-    image:'images/products/Laptops&monitors/Apple MacBook.webp',
-    name:' Apple MacBook',
-    price: 22000,
-    specs:{
 
-      rom: 256,
-      ram: 24,
-       Osystem:' MacOS',
-      romType:'(SSD)'
-    }
-
-
-  },
-  {
-    image: 'images/products/Laptops&monitors/Dell Laptop.webp',
-    name: 'Dell Laptop',
-    price: 11000,
-    specs:{
-      rom:512,
-      ram: 16,
-      Osystem:' Windows11',
-      romType:'(SSD)'
-
-    }
-
-  },
-
-  {
-    image: 'images/products/Laptops&monitors/Asus Laptop.webp',
-    name:  'Asus VivoBook',
-    price: 8999.9,
-    specs:{
-      rom: 256,
-      ram:  12,
-      Osystem:'Windows 10',
-      romType:''
-
-    }
-
-
-
-  },
-
-]
-*/
 let productsHTML=''
+
 products.forEach((product)=>{
  
  productsHTML+= `
@@ -97,12 +52,9 @@ products.forEach((product)=>{
       ${product.specs.version}
       </div>
       </div>
-      <div class = "see-more-info">
-     
-       <button class = "see-more-button" onclick ="
-       
-       ">
-       See more...</button>
+      <div class = "see-more-info js-more-info"data-product-info ="${product.specs.more}">
+
+       See more... 
       </div>
     </div>
     <div class =  "product-price-container">
@@ -127,5 +79,51 @@ products.forEach((product)=>{
 })
 
 document.querySelector('.js-product-container').innerHTML = productsHTML
- 
 
+ const divElement = document.querySelectorAll('.js-more-info')
+ let intervalId;
+ let isRunning= true
+
+divElement.forEach((div)=>{
+  
+  div.addEventListener('click',()=>{
+    if(div.innerText === 'See more...'){
+       div.classList.add('displayed-info')
+     div.innerHTML = `
+     ${div.dataset.productInfo}
+     <button class = "see-less-button">
+     See less...
+     </button>
+     `
+     if(isRunning === true){
+      intervalId=setTimeout(()=>{
+       
+      div.classList.remove('displayed-info')
+        
+      div .innerHTML='See more...'
+      isRunning = true
+
+
+     },6000)}else{
+      clearInterval(intervalId)
+
+     
+     }
+     
+    }else{
+      
+       clearInterval(intervalId)
+      isRunning = true
+    div.classList.remove('displayed-info')
+        
+      div .innerHTML='See more...'
+
+
+    }
+
+      })
+     })
+
+      
+        
+    

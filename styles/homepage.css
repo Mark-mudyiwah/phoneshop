@@ -1,8 +1,10 @@
 body{
     
     padding-bottom: 2000px;
-    margin-top: 145px;
+    margin-top: 70px;
     background-color: white;
+    display:flex;
+    flex:1;
      
 }
 
@@ -20,7 +22,7 @@ body a{
  height: 60px;
  
 
- background-color:rgb(0, 0, 0);
+ background-color: rgb(238, 120, 10);
 }
 
 .logo{
@@ -57,8 +59,8 @@ body a{
  position: fixed;
  right: 0px;
  left:0px;
- top: 60px;
- background-color: black;
+ top: 0px;
+ background-color: rgb(255, 125, 3);
  color: rgb(182, 23, 23);
 
  
@@ -172,12 +174,15 @@ body a{
 
  .products-grid-container{
    display:grid;
+   flex-direction: row;
+   justify-content: space-between;
    grid-template-columns:repeat(5,1fr)   ;
    column-gap: 0;
-   row-gap: 3px;
+   row-gap: 12px;
    background-color: white;
    justify-content: space-between;
- 
+   flex: 1;
+  
     
  
    
@@ -188,6 +193,7 @@ body a{
    display: inline-block;
    border-style: solid;
    border-width: 1px;
+   border-radius: 8px;
    
    width: 250px;
    
@@ -250,17 +256,26 @@ body a{
    color:brown;
    font-weight: 800;
  }
- .see-more-button,
+ .js-more-info,
  .see-less-button{
-  color: blue;
+  color: rgb(0, 17, 255);
   cursor: pointer;
   border:none;
   background-color:white;
+  display: inline-block;
  }
 
  .displayed-info{
-  color: black;
+  padding-left: 10px;
+  color: rgb(28, 32, 29);
+  border:none;
+  background-color:white;
+  height: 180px;
+  font-size: 14px;
+ 
  }
+
+ 
  
 
  .product-price-container{
@@ -297,7 +312,7 @@ body a{
    border: none;
    background-color: rgb(0, 0, 255);
    color: white;
-   border-radius: 6px;
+   border-radius: 20px;
    font-size: 17px;
    cursor: pointer;
  }
