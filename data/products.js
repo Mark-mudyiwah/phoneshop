@@ -126,7 +126,7 @@ const products = [
 
 ,
   { 
-    Id:'g4s2-e8hj-le3m-4n',
+    Id:'g2s2-e8hj-le3m-4n',
     image:'images/products/Laptops&monitors/Dell-monitor.png',
     name:' Dell SE2722H Monitor',
     price: 6500,
@@ -188,7 +188,7 @@ const products = [
   
  
    { 
-     Id:'2c3d-4e5f-6g7h-8j',
+     Id:'2z3d-4e5f-6g7y-8j',
      image:'images/products/Laptops&monitors/Dell-desktop-all-in-one.jpeg',
      name:'Dell Inspiron 27 Desktop',
      price: 22000,
@@ -578,7 +578,7 @@ const products = [
  
    },
    { 
-     Id:'2c3d-4e5l-6g7t-8y',
+     Id:'2c3d-4e5l-6x7c-8y',
      image:'images/products/cellphones/samsung-galaxy-s10-edge.jpg',
      name:'Samsung Galaxy S10',
      price: 8499.9,
@@ -626,7 +626,7 @@ const products = [
  
    },
    { 
-    // Id:'2e3d-4x5f-6d7h-3i',
+    Id:'2e3d-4x5f-6d7k-3i',
      image:'images/products/cellphones/samsung-galaxy-s21-ultra5g.jpg',
      name:'Samsung Galaxy S21 Ultra',
      price: 14999.9,

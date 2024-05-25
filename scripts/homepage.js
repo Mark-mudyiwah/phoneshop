@@ -68,7 +68,7 @@ products.forEach((product)=>{
     <div class="added-text-div" >
     </div>
     <div class="add-to-cart-container">
-    <button class="add-to-cart-button">
+    <button class="add-to-cart-button" data-product-Id= "${product.Id}">
     Add to cart
     </button>
     </div>
@@ -80,9 +80,52 @@ products.forEach((product)=>{
 
 document.querySelector('.js-product-container').innerHTML = productsHTML
 
+ const addToCart = document.querySelectorAll('.add-to-cart-button')
+
+ 
+   
+
+ addToCart.forEach((button)=>{
+  button.addEventListener('click',()=>{
+ const productId = button.dataset.productId
+
+ let matchingItem;
+
+cart.forEach((item)=>{ 
+ if(productId === item.productId){
+  matchingItem = item
+ }
+})
+
+if(matchingItem){
+  matchingItem.quantity++
+}else{
+  cart.push(
+    {
+      productId:productId,
+      quantity:1
+    }
+  )
+}
+   console.log(cart)
+  })
+})
+
+  
+  
+
+ 
+
+
+ 
+
+
+
  const divElement = document.querySelectorAll('.js-more-info')
  let intervalId;
- let isRunning= true
+ 
+
+ 
 
 divElement.forEach((div)=>{
   
@@ -95,29 +138,20 @@ divElement.forEach((div)=>{
      See less...
      </button>
      `
-     if(isRunning === true){
       intervalId=setTimeout(()=>{
        
       div.classList.remove('displayed-info')
         
       div .innerHTML='See more...'
-      isRunning = true
-
-
-     },6000)}else{
-      clearInterval(intervalId)
-
-     
-     }
-     
-    }else{
       
+     },6000)
+  
+    }else{
        clearInterval(intervalId)
-      isRunning = true
-    div.classList.remove('displayed-info')
+    
+       div.classList.remove('displayed-info')
         
-      div .innerHTML='See more...'
-
+       div .innerHTML='See more...'
 
     }
 
