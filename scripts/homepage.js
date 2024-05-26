@@ -82,7 +82,7 @@ document.querySelector('.js-product-container').innerHTML = productsHTML
 
  const addToCart = document.querySelectorAll('.add-to-cart-button')
 
- 
+
    
 
  addToCart.forEach((button)=>{
@@ -92,6 +92,7 @@ document.querySelector('.js-product-container').innerHTML = productsHTML
  let matchingItem;
 
 cart.forEach((item)=>{ 
+     
  if(productId === item.productId){
   matchingItem = item
  }
@@ -107,7 +108,17 @@ if(matchingItem){
     }
   )
 }
-   console.log(cart)
+let cartQuantity = 0
+
+cart.forEach((item)=>{
+    cartQuantity += item.quantity
+  
+})
+
+document.querySelector('.js-cart-quantity')
+.innerHTML = cartQuantity
+  // console.log(cart)
+  // console.log(cartQuantity)
   })
 })
 

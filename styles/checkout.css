@@ -1,0 +1,111 @@
+body{
+    font-family: roboto;
+}
+.header-container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+}
+.item-text{
+   color:rgb(17, 17, 17) ;
+   font-weight: 900;
+}
+.left-h-side{
+display: flex;
+align-items: center;
+}
+
+.check-out-text{
+    font-size: 25px;
+    font-weight: 900;
+    background-color: rgb(231, 10, 10);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 6px;
+    cursor:default;
+
+}
+.icon-lock{
+    height: 30px;
+}
+
+.products-text-container
+,.products-container{
+   display: grid;
+   grid-template-columns: 1fr 400px;
+   border-top: 2px solid black;
+   align-items: center;
+   border-right:1px solid black; 
+   border-left:1px solid black;
+}
+.products-container{
+   border:1px solid black;
+   
+}
+
+.right-side{
+   display: flex;
+   
+  border-left:1px solid black;
+  border-right:2px solid black ;
+}
+.left-side{
+   display: flex;
+   align-items: end;
+   min-width: 300px;
+   
+   
+}
+.image-div{
+   width: 100px;
+   padding-top: 10px;
+}
+
+.name-info-div,
+.id-info-div{
+   display: flex;
+}
+
+.name-text,
+.id-text{
+   font-weight: 800;
+}
+.actual-name,
+.actual-id{
+   color: darkred;
+   font-weight: 600;
+}
+.item-image{
+   width: 100%;
+}
+.price{
+   
+  display: flex;
+  justify-content: center;
+   border-right: 1px solid ;
+   width: 120px;
+   color: red;
+   font-weight: 900;
+  
+}
+.quantity{
+   display: flex;
+   justify-content: center;
+   border-right: 1px solid ;
+   width: 100px;
+   color: rgb(0, 60, 255);
+   font-weight: 900;
+}
+.subTotal{
+   display: flex;
+   justify-content: center;
+    flex: 1;
+    color: darkred;
+    font-weight: 900;
+}
+ 
+
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/checkout.css">
+    </head>
+    <body>
+
+
+
+
+
+<div class = "header-container">
+
+
+    <div class ="check-out-text">
+        Checkout
+    </div>
+  
+
+<div>
+    <img  class="icon-lock" src="images/header images/Lock-image.png" alt="lock">
+</div>
+
+</div>
+
+<button class="test-button">Test</button>
+<br>
+<br>
+
+<div class="products-text-container">
+
+<div class="left-side">
+    <div class="item-text">Item</div>
+    
+</div>
+<div class="right-side">
+    <div class="price">Price</div>
+    <div class="quantity">Quantity</div>
+    <div class="subTotal">SubTotal</div>
+
+</div>
+
+</div>
+
+<div class="products-container">
+
+ 
+    
+    </div>
+    
+ <script>
+
+
+    let html=`   <div class="left-side">
+        <div class="image-div">
+            <img class="item-image" src="images/products/Laptops&Monitors/HP Notebook.webp">
+        </div>
+
+        <div class="all-info-div">
+          <div class=" name-info-div">
+          <div class="name-text">Name:</div>
+          <div class="actual-name">Dell-Laptop</div>
+        </div>
+        <div class="id-info-div">
+           <div class="id-text">ID:</div>
+           <div class="actual-id">eee-fdd-df</div>
+         
+
+        </div>
+
+        </div>
+        
+    </div>
+    <div class="right-side">
+        <div class="price">
+            17 000
+        </div>
+        <div class="quantity">
+            2
+        </div>
+        <div class="subTotal">
+           34 000
+        </div>
+    
+    </div>`
+
+
+
+
+  document.querySelector('.test-button')
+  .addEventListener('click',()=>{
+    document.querySelector('.products-container').innerHTML= html
+  })
+
+ </script>
+ 
+
+
+    </body>
+</html>
