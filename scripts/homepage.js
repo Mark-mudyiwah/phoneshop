@@ -67,6 +67,23 @@ products.forEach((product)=>{
     </div>
     <div class="added-text-div" >
     </div>
+     
+    <div class="product-quantity-container">
+        <select class="js-select-quantity-${product.Id}">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        </div>
+
+
     <div class="add-to-cart-container">
     <button class="add-to-cart-button" data-product-Id= "${product.Id}">
     Add to cart
@@ -82,13 +99,28 @@ document.querySelector('.js-product-container').innerHTML = productsHTML
 
  const addToCart = document.querySelectorAll('.add-to-cart-button')
 
+ 
 
-   
+ 
 
  addToCart.forEach((button)=>{
   button.addEventListener('click',()=>{
  const productId = button.dataset.productId
+ const selectElement = document.querySelectorAll(`.js-select-quantity-${productId}`)
 
+ let quantity;
+
+selectElement.forEach((select)=>{
+  quantity = Number((select.value))
+  
+ 
+})
+
+ 
+  
+  
+
+ 
  let matchingItem;
 
 cart.forEach((item)=>{ 
@@ -99,12 +131,12 @@ cart.forEach((item)=>{
 })
 
 if(matchingItem){
-  matchingItem.quantity++
+  matchingItem.quantity+= quantity
 }else{
   cart.push(
     {
       productId:productId,
-      quantity:1
+      quantity: quantity
     }
   )
 }
@@ -167,6 +199,29 @@ divElement.forEach((div)=>{
     }
 
       })
+     })
+
+     const mainMenuElement =document.querySelector('.main-menu-info')
+     const sidebarElement = document.querySelector('.main-menu')
+
+     sidebarElement.addEventListener('click',()=>{
+      if(mainMenuElement.innerText===''){
+      
+      mainMenuElement.innerHTML = `<div class="categories">
+      Categories
+    </div>
+    <div  class="categories-laptops">
+      Laptops >
+    </div>
+    <div  class="categories-mobiles">
+       Mobiles >
+      </div>
+    <div  class="categories-other">
+       Other >
+      </div>`}else{
+        mainMenuElement.innerHTML ='';
+      }
+
      })
 
       
