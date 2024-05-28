@@ -302,6 +302,7 @@ body a{
    .products-grid-container{
      grid-template-columns: 1fr;
    }
+   
  }
 
 
@@ -313,7 +314,7 @@ body a{
    
    
    border-spacing:0;
-   max-width: 250px;
+   max-width: 100%;
    
    
  }
