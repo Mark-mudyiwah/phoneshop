@@ -280,7 +280,7 @@ body a{
  
  @media (max-width: 1000px) {
    .products-grid-container{
-     grid-template-columns: repeat(5, 1fr);
+     grid-template-columns: repeat(4, 1fr);
    }
  }
  
