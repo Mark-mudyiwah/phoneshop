@@ -184,9 +184,11 @@ body a{
   
  }
  .cart-quantity{
+  display: flex;
+  justify-content:center ;
   color: rgb(13, 4, 46);
   font-weight: 800;
-  margin-left: 15px;
+  padding-left: 4px;
   margin-bottom: -12px;
   padding-top:6px;
  }
