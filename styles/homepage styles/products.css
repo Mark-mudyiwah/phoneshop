@@ -9,9 +9,7 @@ body{
      
 }
 
-body a{
-   
-}
+ 
  
  .products-grid-container{
    display:grid;
@@ -75,40 +73,7 @@ body a{
      grid-template-columns: 1fr;
    }
 
-   /*
-   .middle{
-   height: 25px;
-     
-   }
-   .orders-returns-div{
-    padding-top: 15px;
-    margin-left:10px;
-    height: 25px;
-   
-   }
-
- .cart-div{
   
-  justify-content: flex-end;
-  
- }
- .orders-returns-text,
- .home-text,
- .cart-text{
-  font-size: 12px;
- }
- .orders-icon,
- .cart-icon{
-   height: 30px;
-   width: 100%;
-    cursor: pointer;
- }
- .list-icon{
-  height: 25px;
- }
-
-   */
-   
  }
 
  .products-grid{
@@ -255,7 +220,24 @@ body a{
 .product-quantity-container{
 display: inline-block;
  
-height: 25px;
+  height: 25px;
+
+}
+.added-text-container{
+  display: inline-block;
+  margin-left: 46px;
+  color:green;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.adding-product{
+  display: inline-block;
+  margin-left: 46px;
+  color:green;
+  font-weight: bold;
+  opacity: 1;
+  
 
 }
 

@@ -65,8 +65,6 @@ products.forEach((product)=>{
     R${(product.price).toFixed(2)}
     </div>
     </div>
-    <div class="added-text-div" >
-    </div>
      
     <div class="product-quantity-container">
         <select class="js-select-quantity-${product.Id}">
@@ -82,6 +80,8 @@ products.forEach((product)=>{
             <option value="10">10</option>
         </select>
         </div>
+        <div class="added-text-container js-added-text-${product.Id}">
+        Added&#10004</div>
 
 
     <div class="add-to-cart-container">
@@ -99,24 +99,35 @@ document.querySelector('.js-product-container').innerHTML = productsHTML
 
  const addToCart = document.querySelectorAll('.add-to-cart-button')
 
- 
-
- 
 
  addToCart.forEach((button)=>{
   button.addEventListener('click',()=>{
  const productId = button.dataset.productId
  const selectElement = document.querySelectorAll(`.js-select-quantity-${productId}`)
 
+ const addedTextElement = document.querySelectorAll(`.js-added-text-${productId}`)
+
  let quantity;
 
 selectElement.forEach((select)=>{
   quantity = Number((select.value))
   
- 
+  addedTextElement.forEach((text)=>{
+    text.classList.add('adding-product')
+   setTimeout(()=>{
+      text.classList.remove('adding-product')
+    },1000)
+  })
+
 })
 
  
+ 
+  
+  
+
+ 
+
   
   
 
@@ -151,16 +162,15 @@ document.querySelector('.js-cart-quantity')
 .innerHTML = cartQuantity
   // console.log(cart)
   // console.log(cartQuantity)
+
+  
   })
 })
 
   
   
 
- 
 
-
- 
 
 
 
@@ -201,29 +211,8 @@ divElement.forEach((div)=>{
       })
      })
 
-     const mainMenuElement =document.querySelector('.main-menu-info')
-     const sidebarElement = document.querySelector('.main-menu')
-
-     sidebarElement.addEventListener('click',()=>{
-      if(mainMenuElement.innerText===''){
-      
-      mainMenuElement.innerHTML = `<div class="categories">
-      Categories
-    </div>
-    <div  class="categories-laptops">
-      Laptops >
-    </div>
-    <div  class="categories-mobiles">
-       Mobiles >
-      </div>
-    <div  class="categories-other">
-       Other >
-      </div>`}else{
-        mainMenuElement.innerHTML ='';
-      }
-
-     })
-
+     
+     
       
         
     
