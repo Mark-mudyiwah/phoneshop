@@ -1,0 +1,102 @@
+
+ 
+
+
+.header{
+    height: 60px;
+    background-color:darkred;
+     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0;
+   
+
+}
+
+.header div{
+    display: flex;
+    justify-content: space-between;
+    flex:1;
+     
+}
+.header div a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  
+}
+
+ 
+.header div div div{
+    cursor: pointer;
+   
+}
+
+
+.left-side{
+max-width: 120px;
+
+}
+.middle{
+    flex: 1;
+    max-width: 800px;
+    margin-right: 10px;
+    margin-left: 10px;
+   
+}
+
+.searchbar{
+   outline: none;
+   border:none;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.searchbar::placeholder{
+font-family: roboto;
+color: rgb(73, 69, 69);
+}
+
+.search-button{
+    background-color: rgb(12, 140, 199);
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.right-side{
+   
+   flex:1;
+ max-width: 120px;
+   
+}
+.cart-quantity{
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+  
+    font-weight: bold;
+    color:rgb(3, 255, 24);
+  
+    position:absolute;
+    top: 0;
+   
+    right: 8px;
+}
+.icon-container{
+     width: 30px;
+    height: 30px;
+}
+.header-icon{
+    width:100%;
+}
