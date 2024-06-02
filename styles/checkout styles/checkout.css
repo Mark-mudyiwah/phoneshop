@@ -8,12 +8,13 @@ body{
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    background-color:orange;
+    background-color:darkred;
     position: fixed;
     right: 0;
     left: 0;
     top: 0;
-    height: 60px;
+    height: 50px;
+    color: white;
 
 }
 .item-text{
@@ -39,12 +40,55 @@ align-items: center;
     height: 30px;
 }
 
+.products-summary-grid{
+   
+   display:grid ;
+   grid-template-columns: repeat(2,1fr);
+    
+}
+
+
 .all-item-info-div{
    border: 1px solid gray;
    background-color: white;
    max-width: 700px;
-   margin:8px;
-   margin-left: 0px;
+   margin-right:10px;
+
+   margin-bottom: 8px;
+}
+.product-container{
+
+   display: flex;
+   height: max-content;
+   align-items: center;
+   justify-content:safe;
+   max-width:100%;
+   padding: 4px;
+    
+   
+}
+.all-summary-info{
+   border: 1px solid black;
+   height: max-content;
+   margin-right: 10px;
+   padding: 4px;
+}
+.summary-side{
+   height: max-content;
+  
+  
+   max-width: 1fr;
+   margin: 0;
+   
+   
+}
+
+.summary-side div{
+   background-color: whitesmoke;
+   display: flex;
+   align-items: center;
+   padding: 2px;
+   justify-content: space-between;
 }
 
 .item-delivery-date{
@@ -56,115 +100,30 @@ color: rgb(255, 72, 0);
 font-weight: 800;
 }
 
-.products-summary-grid{
-   
-   display:grid ;
-   grid-template-columns: repeat(2,1fr);
-    
-}
+@media(max-width:500px){
 
-.product-container{
-
-   display: flex;
-   height: 180px;
-   align-items: center;
-   justify-content:safe;
-   max-width:100%;
-    
-   
-}
-
-@media (max-width: 800px){
-
-   .all-item-info-div{
-     max-width:1fr;
-   }
-  .products-summary-grid{
-    grid-template-columns: repeat(1,1fr);
-    align-items: center;
-  }
-   .product-container{
-       flex-direction: ;
-       height:max-content;
-      width:100%;
-    
-       margin:0;
-   }
-   .product-info{
-     margin: 8px;
-   }
-   .item-image-container{
-     width: 150px;
-   }
-  
-   .summary-side{
-     width: 1fr;
-     background-color:darkgray;
-     margin:0;
-   
-   }
-   
-
-
-   
-}
-@media (max-width: 400px){
-  
-.all-item-info-div{
-  max-width: 100%;
-}
-   .product-container{
-      display: flex;
-       height: max-content;
-       max-width:345px ;
-       margin:0;
-      align-items: end;
-     font-size: 12px;
-    
-   }
-     .item-image-container{
-     width: 130px;
-   }
-   .shipping-cost{
-    font-size:10px;
-   }
-   
    .products-summary-grid{
-     grid-template-columns: repeat(1,1fr);
-     align-items: center;
-     max-width:max-content;
+      grid-template-columns: repeat(1,1fr);
    }
-   .summary-side{
-     width:345px;
-     margin-right: 3px;
-   }
-   .item-delivery-date,
-   .choose-delivery-date-text{
-     font-size: 12px;
-   }
-   
-
-   
+.all-item-info-div{
+   max-width: 100%;
 }
-   
-
-.product-info{
-
-   display:  ;
-   
-   align-items:center;
-   justify-content:;
-   max-width:max-content;
-   
-  
- 
+.summary-side{
+max-width: 100%;
 
 }
 
 .item-image-container{
+   max-width: 120px;
+}
+
+}
+
+
+.item-image-container{
    display: flex;
    justify-content: center;
-   max-width: 180px;
+   width: 180px;
     
   
 }
@@ -219,7 +178,9 @@ font-weight: 800;
    color: rgb(8, 8, 211);
    padding-bottom: 6px;
 }
-
+.shipping-date-flex input{
+   cursor: pointer;
+}
 .shipping-date-flex{
    display: flex;
    align-items: center;
@@ -235,6 +196,7 @@ font-weight: 800;
 }
 .shipping-cost{
    color: brown;
+   font-size: 13.6px;
 }
 
 .quantity-update-buttons{
@@ -261,31 +223,36 @@ cursor: pointer;
 
 }
 
-
-.summary-side{
-   height: max-content;
-  
-   border: 1px solid black;
-   max-width: 700px;
-   margin: 0;
-   
-  
-   
-   
-}
-
-
 .order-summary-heading{
  font-size: 20px;
  font-weight: 700;
 
 }
-.item-summary-info,
-.shipping-summary-info,
-.total-before-tax-info,
-.estimated-tax-info{
-   display: flex;
-   justify-content: space-between;
-   margin-top:4px ;
-   align-items: center;
+
+.amount-before-tax{
+   font-weight: bold;
+}
+
+.actual-total-amount,
+.amount-before-tax{
+   border-top: 1px solid black ;
+}
+.order-total-text,
+.actual-total-amount{
+   color:darkred;
+   font-weight: bold;
+}
+.place-order-div{
+display: flex;
+justify-content: center;
+background-color: whitesmoke;
+}
+.place-order-button{
+   cursor: pointer;
+   width: 100px;
+   padding: 6px 6px;
+   color: white;
+   background-color: blue;
+   border: none;
+   border-radius: 3px;
 }
