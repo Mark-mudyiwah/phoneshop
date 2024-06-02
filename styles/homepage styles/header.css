@@ -4,7 +4,7 @@
 
 .header{
     height: 60px;
-    background-color:darkred;
+    background-color:darkblue;
      color: white;
     display: flex;
     justify-content: space-between;
@@ -84,14 +84,14 @@ color: rgb(73, 69, 69);
     display: flex;
     font-size: 10px;
     justify-content: center;
-  
+     width: 12px;
     font-weight: bold;
-    color:rgb(3, 255, 24);
+    color:rgb(24, 226, 24);
   
     position:absolute;
-    top: 0;
+    top: 2px;
    
-    right: 8px;
+    right: 9px;
 }
 .icon-container{
      width: 30px;
