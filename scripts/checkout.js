@@ -5,12 +5,14 @@ let cartItemsHTML='';
 
 cart.forEach((cartItem)=>{
 const productId = cartItem.productId
+console.log(productId)
 let matchingProduct;
 
 products.forEach((product)=>{
     if(product.Id === productId){
   matchingProduct = product
     }
+    
 })
  
 cartItemsHTML+=`<div class="all-item-info-div 
