@@ -13,7 +13,8 @@ products.forEach((product)=>{
     }
 })
  
-cartItemsHTML+=`<div class="all-item-info-div">
+cartItemsHTML+=`<div class="all-item-info-div 
+js-all-items-info-${matchingProduct.Id}">
 
 <div class="item-delivery-date">
 <div class="delivered-text">
@@ -137,7 +138,11 @@ document.querySelectorAll('.js-delete-button')
 button.addEventListener('click',()=>{
  const productId = button.dataset.productId
  removeFromCart(productId)
+
+
+ const container = document.querySelector(`.js-all-items-info-${productId}`)
   
+ container.remove();
 })
 
 })
