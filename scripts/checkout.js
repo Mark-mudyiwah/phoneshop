@@ -1,4 +1,4 @@
-import { cart } from "../data/cart.js";
+import { cart,removeFromCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 
 let cartItemsHTML='';
@@ -55,9 +55,10 @@ cartItemsHTML+=`<div class="all-item-info-div">
     ${cartItem.quantity}
 </div>
   </div>
-  <button class="update-button">
+  <button class="update-button js-delete-button">
     Update</button>
-  <button class="delete-button">
+  <button class="delete-button js-delete-button"
+  data-product-id="${matchingProduct.Id}">
     Delete</button>
   
 </div>
@@ -130,4 +131,15 @@ cartItemsHTML+=`<div class="all-item-info-div">
 })
 
 document.querySelector('.js-products-side').innerHTML=cartItemsHTML
+
+document.querySelectorAll('.js-delete-button')
+.forEach((button)=>{
+button.addEventListener('click',()=>{
+ const productId = button.dataset.productId
+ removeFromCart(productId)
+  
+})
+
+})
+
  
