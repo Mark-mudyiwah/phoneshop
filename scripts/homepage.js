@@ -108,15 +108,25 @@ document.querySelector('.js-product-container').innerHTML = productsHTML
  const addedTextElement = document.querySelectorAll(`.js-added-text-${productId}`)
 
  let quantity;
+ let isDisplaying= false
+ let timeOutId;
 
 selectElement.forEach((select)=>{
   quantity = Number((select.value))
   
   addedTextElement.forEach((text)=>{
-    text.classList.add('adding-product')
-   setTimeout(()=>{
-      text.classList.remove('adding-product')
-    },1000)
+    if(!isDisplaying){
+      text.classList.add('adding-product')
+   
+      timeOutId = setTimeout(()=>{
+        text.classList.remove('adding-product')
+       
+      },1000)
+    }else{
+      clearTimeout(timeOutId)
+      text.classList.add('adding-product')
+    }
+   
   })
 
 })

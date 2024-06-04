@@ -224,16 +224,16 @@ display: inline-block;
 
 }
 .added-text-container{
-  display: inline-block;
-  margin-left: 46px;
+  display:flex;
+  justify-content: center;
   color:green;
   font-weight: bold;
   opacity: 0;
 }
 
 .adding-product{
-  display: inline-block;
-  margin-left: 46px;
+  display:flex;
+  justify-content: center;
   color:green;
   font-weight: bold;
   opacity: 1;
