@@ -43,7 +43,7 @@ cartItemsHTML+=`<div class="all-item-info-div">
 
  
 <div class="item-price">
-    ${matchingProduct.price}
+    R${(matchingProduct.price).toFixed(2)}
 </div>
 
 <div class="quantity-info">
@@ -74,7 +74,8 @@ cartItemsHTML+=`<div class="all-item-info-div">
 <div>
      <div  class="shipping-date-flex">
     <div class="radio-input-div">
-        <input type="radio" name ="name">
+        <input type="radio" name ="name-${matchingProduct.Id}" 
+       >
     </div>
     <div>
         <div class ="date">
@@ -89,7 +90,9 @@ cartItemsHTML+=`<div class="all-item-info-div">
 
 <div  class="shipping-date-flex">
     <div>
-        <input type="radio" name ="name">
+        <input type="radio" name =
+        "name-${matchingProduct.Id}"
+       >
     </div>
     <div>
         <div class ="date">
@@ -104,7 +107,8 @@ cartItemsHTML+=`<div class="all-item-info-div">
  
 <div  class="shipping-date-flex">
     <div>
-        <input type="radio" name ="name">
+        <input type="radio" name = "name-${matchingProduct.Id}"
+       >
     </div>
     <div>
         <div class ="date">
