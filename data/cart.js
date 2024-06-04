@@ -1,4 +1,11 @@
-export const cart = []
+export const cart = [{
+    productId:'2c3a-6e9f-1g2h-5i',
+    quantity:2,
+},{
+    productId:'3c4d-5e6f-6g7h-9i',
+    quantity:1,
+
+}]
 
 
 
