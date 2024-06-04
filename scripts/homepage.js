@@ -1,4 +1,4 @@
-import { cart } from "../data/cart.js"
+import { cart,addToCart } from "../data/cart.js"
 import { products } from "../data/products.js"  
 
 
@@ -101,129 +101,100 @@ products.forEach((product)=>{
 
 document.querySelector('.js-product-container').innerHTML = productsHTML
 
- const addToCart = document.querySelectorAll('.add-to-cart-button')
+showItemSpecs()
+
+function updateCartQuantity(){
+
+  let cartQuantity = 0
+
+  cart.forEach((cartItem)=>{
+      cartQuantity += cartItem.quantity
+    
+  })
+  
+  document.querySelector('.js-cart-quantity')
+  .innerHTML = cartQuantity
+    // console.log(cart)
+    // console.log(cartQuantity)
+  
+}
 
 
- addToCart.forEach((button)=>{
+ document.querySelectorAll('.add-to-cart-button')
+ .forEach((button)=>{
   button.addEventListener('click',()=>{
  const productId = button.dataset.productId
  const selectElement = document.querySelectorAll(`.js-select-quantity-${productId}`)
 
- const addedTextElement = document.querySelectorAll(`.js-added-text-${productId}`)
-
  let quantity;
- let isDisplaying= false
- let timeOutId;
-
+  
 selectElement.forEach((select)=>{
   quantity = Number((select.value))
+  displayAddedText(productId)
+
+})
+  addToCart(productId,quantity)
+  updateCartQuantity()
+
+  })
+})
+
   
+
+function displayAddedText(productId){
+
+  const addedTextElement = document.querySelectorAll(`.js-added-text-${productId}`)
+
   addedTextElement.forEach((text)=>{
-    if(!isDisplaying){
+    
       text.classList.add('adding-product')
    
-      timeOutId = setTimeout(()=>{
+    setTimeout(()=>{
         text.classList.remove('adding-product')
        
       },1000)
-    }else{
-      clearTimeout(timeOutId)
-      text.classList.add('adding-product')
-    }
-   
-  })
-
-})
-
- 
- 
-  
-  
-
- 
-
-  
-  
-
- 
- let matchingItem;
-
-cart.forEach((item)=>{ 
-     
- if(productId === item.productId){
-  matchingItem = item
- }
-})
-
-if(matchingItem){
-  matchingItem.quantity+= quantity
-}else{
-  cart.push(
-    {
-      productId:productId,
-      quantity: quantity
-    }
-  )
-}
-let cartQuantity = 0
-
-cart.forEach((item)=>{
-    cartQuantity += item.quantity
-  
-})
-
-document.querySelector('.js-cart-quantity')
-.innerHTML = cartQuantity
-  // console.log(cart)
-  // console.log(cartQuantity)
-
-  
-  })
-})
-
-  
-  
-
-
-
-
-
- const divElement = document.querySelectorAll('.js-more-info')
- let intervalId;
- 
-
- 
-
-divElement.forEach((div)=>{
-  
-  div.addEventListener('click',()=>{
-    if(div.innerText === 'See more...'){
-       div.classList.add('displayed-info')
-     div.innerHTML = `
-     ${div.dataset.productInfo}
-     <button class = "see-less-button">
-     See less...
-     </button>
-     `
-      intervalId=setTimeout(()=>{
-       
-      div.classList.remove('displayed-info')
-        
-      div .innerHTML='See more...'
-      
-     },6000)
-  
-    }else{
-       clearInterval(intervalId)
     
-       div.classList.remove('displayed-info')
+    })
+   
+  }
+
+  
+ function showItemSpecs(){
+  let intervalId;
+
+  document.querySelectorAll('.js-more-info')
+  .forEach((div)=>{
+    
+    div.addEventListener('click',()=>{
+      if(div.innerText === 'See more...'){
+         div.classList.add('displayed-info')
+       div.innerHTML = `
+       ${div.dataset.productInfo}
+       <button class = "see-less-button">
+       See less...
+       </button>
+       `
+        intervalId=setTimeout(()=>{
+         
+        div.classList.remove('displayed-info')
+          
+        div .innerHTML='See more...'
         
-       div .innerHTML='See more...'
-
-    }
-
-      })
-     })
+       },6000)
+    
+      }else{
+         clearInterval(intervalId)
+      
+         div.classList.remove('displayed-info')
+          
+         div .innerHTML='See more...'
+  
+      }
+  
+        })
+       })
+ }
+ 
 
      
      
