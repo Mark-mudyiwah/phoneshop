@@ -102,6 +102,7 @@ products.forEach((product)=>{
 document.querySelector('.js-product-container').innerHTML = productsHTML
 
 showItemSpecs()
+updateCartQuantity()
 
 function updateCartQuantity(){
 
@@ -196,8 +197,142 @@ function displayAddedText(productId){
  }
  
 
+  //MENU DROPDOWN
+
+
+
+  const menuDropDown = document.querySelector('.js-anchor-menu')
+ 
+    menuDropDown.addEventListener('click',()=>{
+
+      document.querySelector('.message-us-drop-down')
+        .innerHTML=''
+      document.querySelector('.categories-drop-down')
+      .innerHTML='';
+    const dropDownMenu =document.querySelector('.drop-down-menu')
+    if(dropDownMenu.innerText=== ''){
+
+      menuDropDown.innerHTML =
+      `
+    <div class="icon-container"> 
+    <img class="header-icon" src="images/header images/close-icon.png">
+    </div>
+    <div>Close</div>
      
+      `
+      dropDownMenu.innerHTML= `
+      <div class="Sign In">Sign In</div>
+      <div class="categories"> Categories</div>
+     <div class="about-us">About Us </div>
+     <div></div>
+  
+      
+      `
+    }else{
+      dropDownMenu.innerHTML='';
+      document.querySelector('.about-us-drop-down')
+      .innerHTML=''
+      menuDropDown.innerHTML =
+      `
+    <div class="icon-container"> 
+    <img class="header-icon" src="images/header images/menu-icon.png">
+    </div>
+    <div>More</div>
+    `
      
+     return
+    }
+
+
+      
+      const categoriesElement = document.querySelector('.categories')  
+        
+      categoriesElement.addEventListener('click',()=>{
+
+        document.querySelector('.about-us-drop-down')
+        .innerHTML=''
+        document.querySelector('.message-us-drop-down')
+        .innerHTML=''
+
+        const categoryDropDown =document.querySelector('.categories-drop-down')
+        if(categoryDropDown.innerText === ''){
+
+          categoryDropDown.innerHTML=
+          `
+          <div class="laptops">Laptops</div>
+          <div class="mobiles"> Mobiles</div>
+          <div class="other">Other</div>
+          <div></div>
+          
+          `
+
+        }else{
+         
+          categoryDropDown.innerHTML=''
+          return
+        }
+
       
         
+         
+       
+
+
+      })
+
+      const  aboutUsElement = document.querySelector('.about-us')
+
+      aboutUsElement.addEventListener('click',()=>{
+        document.querySelector('.categories-drop-down')
+        .innerHTML =''
+        const aboutUsDropDown =document.querySelector('.about-us-drop-down')
+       if(aboutUsDropDown.innerText === ''){
+        aboutUsDropDown.innerHTML =
+        `
+        
+      <div class="contact-us">Message Us</div>
+      <div class="address"> Address</div>
+      <div class="services">Services</div>
+      <div></div>
+        `
+       }else{
+        document.querySelector('.message-us-drop-down').innerHTML=''
+        aboutUsDropDown.innerHTML =''
+       return
+       }
+        
+        
+        const messageUsElement = document.querySelector('.contact-us')
+
+        messageUsElement.addEventListener('click',()=>{
+          const messageUsDropDown =document.querySelector('.message-us-drop-down')
+          if(messageUsDropDown.innerText===''){
+            messageUsDropDown.innerHTML=
+            ` 
+            <a href="https://wa.me/message/CTCLVZLPBW5JK1">
+            <div class="watsapp">
+            <img class="whatsapp-icon" src="images/other images/whatsapp-icon.png">
+            Whatsapp</div>
+            <a/>
+            <div class="facebook"> 
+            <img class="facebook-icon" src="images/other images/facebook-icon.png">
+            Facebook</div>
+
+            <div class="email">
+            <img class="gmail-icon" src="images/other images/gmail-icon.png">
+            Email</div>
     
+            `
+    
+          }else{
+            messageUsDropDown.innerHTML= ''
+          }
+        
+        
+        })
+      })
+
+
+    })
+     
+   

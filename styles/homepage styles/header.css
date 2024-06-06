@@ -100,3 +100,95 @@ color: rgb(73, 69, 69);
 .header-icon{
     width:100%;
 }
+
+/*menu styles*/
+
+.drop-down-menu{
+    background-color: aliceblue;
+    display: inline-block;
+    
+    width: max-content;
+    height: max-content;
+    position: fixed;
+    left: 0;
+}
+
+.drop-down-menu div {
+   
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width:  100px;
+
+}
+
+.drop-down-menu div:hover{
+background-color: rgb(3, 170, 192);
+text-decoration: underline;
+ 
+
+} 
+
+.categories-drop-down,
+.message-us-drop-down
+{
+     
+    position:fixed ;
+    background-color:aliceblue;
+    color:black;
+     
+    width: 90px;
+    left: 80px;
+    top:98px;
+
+    
+}
+.categories-drop-down div,
+.about-us-drop-down div,
+.message-us-drop-down div{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    
+}
+.categories-drop-down div:hover,
+.about-us-drop-down div:hover,
+.message-us-drop-down div:hover{
+    background-color: rgb(6, 143, 185);
+    text-decoration: underline;
+    border-radius: 3px;
+     
+    
+    } 
+    
+.about-us-drop-down{
+    position:fixed ;
+    background-color: aliceblue;
+    width: 90px;
+    left: 80px;
+    top:122px;
+
+
+}   
+.message-us-drop-down{
+left: 163px;
+top:135px;
+width: 110px;
+ 
+ 
+}
+.message-us-drop-down div{
+    display: flex;
+    align-items: center;
+}
+.message-us-drop-down a{
+    text-decoration: none;
+    color: black;
+}
+
+.facebook-icon,
+.whatsapp-icon,
+.gmail-icon{
+    width: 20px;
+    
+}
