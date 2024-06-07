@@ -101,8 +101,12 @@ products.forEach((product)=>{
 
 document.querySelector('.js-product-container').innerHTML = productsHTML
 
+
+dropDownAnimation()
 showItemSpecs()
 updateCartQuantity()
+
+
 
 function updateCartQuantity(){
 
@@ -198,8 +202,8 @@ function displayAddedText(productId){
  
 
   //MENU DROPDOWN
-
-
+  
+function dropDownAnimation(){
 
   const menuDropDown = document.querySelector('.js-anchor-menu')
  
@@ -207,10 +211,22 @@ function displayAddedText(productId){
 
       document.querySelector('.message-us-drop-down')
         .innerHTML=''
+        document.querySelector('.message-us-drop-down').classList.remove('message-us-drop-down-animate')
+
+
       document.querySelector('.categories-drop-down')
       .innerHTML='';
-    const dropDownMenu =document.querySelector('.drop-down-menu')
+
+      document.querySelector('.categories-drop-down').classList.remove('categories-drop-down-animate')
+
+      document.querySelector('.about-us-drop-down').classList.remove('about-us-drop-down-animate')
+
+
+
+    const dropDownMenu = document.querySelector('.drop-down-menu')
     if(dropDownMenu.innerText=== ''){
+
+    dropDownMenu.classList.add('menu-drop-down-animate')
 
       menuDropDown.innerHTML =
       `
@@ -224,12 +240,20 @@ function displayAddedText(productId){
       <div class="Sign In">Sign In</div>
       <div class="categories"> Categories</div>
      <div class="about-us">About Us </div>
-     <div></div>
+     
   
       
       `
     }else{
-      dropDownMenu.innerHTML='';
+      
+      dropDownMenu.classList.add('menu-drop-down-animate-close')
+      setTimeout(()=>{
+        dropDownMenu.innerHTML='';
+        dropDownMenu.classList.remove('menu-drop-down-animate')
+        dropDownMenu.classList.remove('menu-drop-down-animate-close')
+      },500)
+      
+
       document.querySelector('.about-us-drop-down')
       .innerHTML=''
       menuDropDown.innerHTML =
@@ -239,6 +263,7 @@ function displayAddedText(productId){
     </div>
     <div>More</div>
     `
+    dropDownMenu.classList.remove('menu-drop-down-animate')
      
      return
     }
@@ -251,12 +276,13 @@ function displayAddedText(productId){
 
         document.querySelector('.about-us-drop-down')
         .innerHTML=''
+        document.querySelector('.about-us-drop-down').classList.remove('about-us-drop-down-animate')
         document.querySelector('.message-us-drop-down')
         .innerHTML=''
 
         const categoryDropDown =document.querySelector('.categories-drop-down')
         if(categoryDropDown.innerText === ''){
-
+         categoryDropDown.classList.add('categories-drop-down-animate')
           categoryDropDown.innerHTML=
           `
           <div class="laptops">Laptops</div>
@@ -267,16 +293,13 @@ function displayAddedText(productId){
           `
 
         }else{
-         
+          categoryDropDown.classList.remove('categories-drop-down-animate')
           categoryDropDown.innerHTML=''
           return
         }
 
       
         
-         
-       
-
 
       })
 
@@ -285,19 +308,33 @@ function displayAddedText(productId){
       aboutUsElement.addEventListener('click',()=>{
         document.querySelector('.categories-drop-down')
         .innerHTML =''
+        document.querySelector('.categories-drop-down').classList.remove('categories-drop-down-animate')
+
+        document.querySelector('.message-us-drop-down').classList.remove('message-us-drop-down-animate')
+
         const aboutUsDropDown =document.querySelector('.about-us-drop-down')
-       if(aboutUsDropDown.innerText === ''){
+       aboutUsDropDown.classList.add('about-us-drop-down-animate')
+       
+        if(aboutUsDropDown.innerText === ''){
+        
+          aboutUsDropDown.classList.add('about-us-drop-down-animate')
         aboutUsDropDown.innerHTML =
         `
         
       <div class="contact-us">Message Us</div>
       <div class="address"> Address</div>
       <div class="services">Services</div>
-      <div></div>
         `
        }else{
+        aboutUsDropDown.classList.add('about-us-drop-down-animate-close')
+        
         document.querySelector('.message-us-drop-down').innerHTML=''
-        aboutUsDropDown.innerHTML =''
+        setTimeout(()=>{
+          aboutUsDropDown.innerHTML =''
+          aboutUsDropDown.classList.remove('about-us-drop-down-animate')
+          aboutUsDropDown.classList.remove('about-us-drop-down-animate-close')
+        },500)
+         
        return
        }
         
@@ -307,6 +344,9 @@ function displayAddedText(productId){
         messageUsElement.addEventListener('click',()=>{
           const messageUsDropDown =document.querySelector('.message-us-drop-down')
           if(messageUsDropDown.innerText===''){
+
+            messageUsDropDown.classList.add('message-us-drop-down-animate')
+
             messageUsDropDown.innerHTML=
             ` 
             <a href="https://wa.me/message/CTCLVZLPBW5JK1">
@@ -325,6 +365,7 @@ function displayAddedText(productId){
             `
     
           }else{
+            messageUsDropDown.classList.remove('message-us-drop-down-animate')
             messageUsDropDown.innerHTML= ''
           }
         
@@ -335,4 +376,4 @@ function displayAddedText(productId){
 
     })
      
-   
+  }

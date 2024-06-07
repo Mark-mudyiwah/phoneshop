@@ -1,0 +1,129 @@
+
+
+@keyframes  slideInLeft {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform:translateX(0) ;
+    }
+}
+
+@keyframes  slideInDown {
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform:translateY(0) ;
+    }
+}
+
+@keyframes  slideInUp {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform:translateY(-25px) ;
+    }
+}
+
+@keyframes  slideOutLeft {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform:translateX(-100px) ;
+        }
+}
+
+
+
+
+
+    .about-us-drop-down-animate{
+
+
+
+        animation-name:slideInLeft;
+        animation-duration: 1s;
+       animation-delay: 5ms;
+
+       position:fixed ;
+       background-color: aliceblue;
+       width: 90px;
+       left: 80px;
+       top:122px;
+   
+
+    }
+
+    .message-us-drop-down-animate{
+
+
+
+        animation-name:slideInLeft;
+        animation-duration: 1s;
+       animation-delay: 5ms;
+
+       position:fixed ;
+       background-color: aliceblue;
+       left: 163px;
+       top:135px;
+       width: 110px;
+        
+
+    }
+
+
+    .menu-drop-down-animate{
+
+        animation-name:slideInDown;
+        animation-duration: 555ms;
+       animation-delay:0s;
+       background-color: aliceblue;
+       display: inline-block;
+       
+       width: max-content;
+       height: max-content;
+       position: fixed;
+       left: 0;
+
+    }
+
+    .menu-drop-down-animate-close{
+        animation-name:slideInUp;
+        animation-duration: 555ms;
+        transition-property:ease ;
+        transition-duration: 555ms;
+
+    }
+
+
+    .categories-drop-down-animate{
+
+        animation-name:slideInLeft;
+        animation-duration: 1s;
+       animation-delay: 5ms;
+       position:fixed ;
+    background-color:aliceblue;
+    color:black;
+     
+    width: 90px;
+    left: 80px;
+    top:98px;
+
+
+    }
+
+    .about-us-drop-down-animate-close{
+
+        animation-name:slideOutLeft;
+        animation-duration: 555ms;
+         
+
+    }
+
+
+
+
+
