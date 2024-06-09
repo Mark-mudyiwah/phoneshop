@@ -354,14 +354,17 @@ function dropDownAnimation(){
             <img class="whatsapp-icon" src="images/other images/whatsapp-icon.png">
             Whatsapp</div>
             <a/>
+            <a href = "https://m.me/mark.mudyiwa.2004yew">
             <div class="facebook"> 
             <img class="facebook-icon" src="images/other images/facebook-icon.png">
             Facebook</div>
+            </a>
 
+            <a href = "mailto:markmudyiwah0@gmail.com">
             <div class="email">
             <img class="gmail-icon" src="images/other images/gmail-icon.png">
             Email</div>
-    
+            </a>
             `
     
           }else{

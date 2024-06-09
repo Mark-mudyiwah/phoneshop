@@ -17,6 +17,12 @@ body{
     color: white;
 
 }
+
+.header-container div a{
+   text-decoration: none;
+   color: white;
+   cursor: pointer;
+}
 .item-text{
    color:rgb(17, 17, 17) ;
    font-weight: 900;
@@ -33,7 +39,7 @@ align-items: center;
   
     padding: 4px 15px;
     border-radius: 6px;
-    cursor:default;
+    cursor:pointer;
 
 }
 .icon-lock{
@@ -137,8 +143,12 @@ max-width: 100%;
 .item-info{
    max-width: max-content;
    flex: 1;
+   
 }
-
+.item-info div{
+   font-size:14px;
+   margin: 2px 1px;
+}
  
 .quantity-info{
    display: flex;
@@ -211,7 +221,7 @@ max-width: 100%;
    background-color: green;
    color: white;
    border: 1px solid rgb(59, 57, 57);
-   padding: 3px 6px;
+   padding: 2px 4px;
    cursor: pointer;
    margin-right: 5px;
 }
@@ -219,7 +229,7 @@ max-width: 100%;
 background-color: darkred;
 color :white;
 border:  1px solid rgb(59, 57, 57);
-padding: 3px 6px;
+padding: 2px 4px;
 border-radius: 2px;
 cursor: pointer;
 
@@ -255,7 +265,7 @@ background-color: whitesmoke;
    width: 100px;
    padding: 6px 6px;
    color: white;
-   background-color: blue;
+   background-color:rgb(3, 88, 3);
    border: none;
    border-radius: 3px;
    flex-shrink: none;
