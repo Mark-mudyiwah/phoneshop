@@ -217,15 +217,81 @@ max-width: 100%;
   margin: 4px;
 }
 
+.quantity-update-input{
+   display: none;
+   width:45px;
+   border: 1px solid black ;
+   outline: none;
+   padding: 2px 4px;
+   font-weight: 700;
+   font-family: roboto;
+
+   color:  rgb(9, 2, 109);
+}
+.quantity-update-input:focus{
+text-transform: none;
+border: 1px solid rgb(175, 7, 7);
+
+}
+
+.save-input-quantity-button{
+   display: none;
+   border: 1px solid rgb(59, 57, 57);
+   padding: 2px 4px;
+   width: 50px;
+   font-weight: 700;
+   cursor: pointer;
+   background-color: rgb(24, 138, 14);
+   color: white;
+   font-family: roboto;
+
+}
+
+
+.is-editing-quantity .quantity-update-input{
+
+   display: initial;
+}
+
+.is-editing-quantity .save-input-quantity-button{
+   display: initial;
+}
+.is-editing-quantity .update-button{
+   display: none;
+}
+.is-editing-quantity .delete-button{
+   display: none;
+}
+
+.is-editing-quantity .item-quantity{
+   display: none;
+}
+
+.is-editing-quantity .quantity-update-caution{
+display: initial;
+}
+
+.quatity-update-buttons{
+ 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-shrink: 0;
+   width: 150px;
+   font-family: roboto;
+}
+
 .update-button{
+
    background-color: green;
    color: white;
-   border: 1px solid rgb(59, 57, 57);
+   border: 1px solid rgb(245, 204, 204);
    padding: 2px 4px;
    cursor: pointer;
    margin-right: 5px;
 }
 .delete-button{
+  
 background-color: darkred;
 color :white;
 border:  1px solid rgb(59, 57, 57);
@@ -235,6 +301,16 @@ cursor: pointer;
 
 
 }
+
+.quantity-update-caution{
+color:rgb(201, 6, 6);
+font-weight: 500;
+font-size:12px;
+margin: 2px 2px;
+display: none;
+}
+
+ 
 
 .order-summary-heading{
  font-size: 20px;

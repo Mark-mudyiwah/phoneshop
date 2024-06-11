@@ -56,3 +56,16 @@ export function addToCart(productId,quantity){
     cart = newCart
     saveToStorage();
   }
+
+ export function updateQuantity(productId,updatedQuantity){
+  let matchingItem; 
+
+  cart.forEach((cartItem)=>{
+  if(cartItem.productId ===productId
+  ){
+    matchingItem = cartItem
+  }
+})
+matchingItem.quantity=updatedQuantity
+saveToStorage();
+  }

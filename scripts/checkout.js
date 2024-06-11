@@ -1,4 +1,4 @@
-import { cart,removeFromCart } from "../data/cart.js";
+import { cart,removeFromCart,updateQuantity } from "../data/cart.js";
 import { products } from "../data/products.js";
 
 let cartItemsHTML='';
@@ -54,16 +54,26 @@ js-all-items-info-${matchingProduct.Id}">
 <div class="quantity-text">
     <div>Quantity:</div>
 </div>
-<div class="item-quantity">
+<div class="item-quantity js-item-quantity-${matchingProduct.Id}">
     ${cartItem.quantity}
 </div>
   </div>
-  <button class="update-button js-delete-button">
+  <div class = "quatity-update-buttons">
+  <button class="update-button js-update-button"
+  data-product-id="${matchingProduct.Id}">
     Update</button>
+    <input type="number" class="quantity-update-input js-quantity-update-input-${matchingProduct.Id}">
+    <button class="save-input-quantity-button js-save-quantity"data-product-id="${matchingProduct.Id}"
+    >
+    Save</button>
+
   <button class="delete-button js-delete-button"
   data-product-id="${matchingProduct.Id}">
     Delete</button>
-  
+  </div>
+  <p class=" quantity-update-caution quantity-update-caution-${matchingProduct.Id}">
+   0 < quantity <=100
+  </p>
 </div>
     </div>
 
@@ -135,7 +145,12 @@ js-all-items-info-${matchingProduct.Id}">
 
 document.querySelector('.js-products-side').innerHTML=cartItemsHTML
 
-document.querySelectorAll('.js-delete-button')
+
+deletingItem()
+updatingItemQuantity()
+
+function deletingItem(){
+ document.querySelectorAll('.js-delete-button')
 .forEach((button)=>{
 button.addEventListener('click',()=>{
  const productId = button.dataset.productId
@@ -143,10 +158,69 @@ button.addEventListener('click',()=>{
 
 
  const container = document.querySelector(`.js-all-items-info-${productId}`)
-  
+     
  container.remove();
 })
 
 })
+}
+
+
+function updatingItemQuantity(){
+document.querySelectorAll('.js-update-button')
+.forEach((button)=>{
+    button.addEventListener('click',()=>{
+const productId = button.dataset.productId
+const itemContainer =document.querySelector(`.js-all-items-info-${productId}`)
+
+itemContainer.classList.add('is-editing-quantity')
+
+
+    })
+})
+
 
  
+document.querySelectorAll('.js-save-quantity')
+.forEach((button)=>{
+    button.addEventListener('click',()=>{
+        const productId = button.dataset.productId
+        const itemContainer =document.querySelector(`.js-all-items-info-${productId}`)
+
+
+       
+
+        const inputElement=document.querySelector(`.js-quantity-update-input-${productId}`)
+
+        const updatedQuantity= Number(inputElement.value)
+
+        if(updatedQuantity >= 1 && updatedQuantity <=100){
+ 
+
+
+            const quantityLabel = document.querySelector(`.js-item-quantity-${productId}`)
+
+            quantityLabel.innerHTML=updatedQuantity
+    
+            updateQuantity(productId,updatedQuantity)
+
+            itemContainer.classList.remove('is-editing-quantity')
+            
+        }else{
+
+             document.querySelector(`.quantity-update-caution-${productId}`).innerHTML ='please provide correct quantity'
+            setTimeout(()=>{
+
+                document.querySelector(`.quantity-update-caution-${productId}`).innerHTML =' 0 < quantity <=100'
+            },3000)
+         
+        }
+
+
+
+      
+
+    })
+
+})
+}
