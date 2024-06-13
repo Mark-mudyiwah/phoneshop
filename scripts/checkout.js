@@ -180,45 +180,54 @@ itemContainer.classList.add('is-editing-quantity')
 })
 
 
+
  
 document.querySelectorAll('.js-save-quantity')
 .forEach((button)=>{
+   
     button.addEventListener('click',()=>{
         const productId = button.dataset.productId
         const itemContainer =document.querySelector(`.js-all-items-info-${productId}`)
+        const inputElement=document.querySelector(`.js-quantity-update-input-${productId}`)
+       
+        saveNewQuantity()
 
+        function saveNewQuantity(){
+            const updatedQuantity= Number(inputElement.value)
 
+            if(updatedQuantity >= 1 && updatedQuantity <=100){
+     
+    
+    
+                const quantityLabel = document.querySelector(`.js-item-quantity-${productId}`)
+    
+                quantityLabel.innerHTML=updatedQuantity
+        
+                updateQuantity(productId,updatedQuantity)
+    
+                inputElement.value = ''
+                itemContainer.classList.remove('is-editing-quantity')
+                
+            }else{
+    
+                 document.querySelector(`.quantity-update-caution-${productId}`).innerHTML ='please provide correct quantity'
+                setTimeout(()=>{
+    
+                    document.querySelector(`.quantity-update-caution-${productId}`).innerHTML =' 0 < quantity <=100'
+                },3000)
+             
+            }
+    
+
+        }
        
 
-        const inputElement=document.querySelector(`.js-quantity-update-input-${productId}`)
-
-        const updatedQuantity= Number(inputElement.value)
-
-        if(updatedQuantity >= 1 && updatedQuantity <=100){
- 
-
-
-            const quantityLabel = document.querySelector(`.js-item-quantity-${productId}`)
-
-            quantityLabel.innerHTML=updatedQuantity
-    
-            updateQuantity(productId,updatedQuantity)
-
-            itemContainer.classList.remove('is-editing-quantity')
-            
-        }else{
-
-             document.querySelector(`.quantity-update-caution-${productId}`).innerHTML ='please provide correct quantity'
-            setTimeout(()=>{
-
-                document.querySelector(`.quantity-update-caution-${productId}`).innerHTML =' 0 < quantity <=100'
-            },3000)
-         
+       
+    inputElement.addEventListener('keydown',()=>{
+        if(event.key==='Enter'){
+            saveNewQuantity()
         }
-
-
-
-      
+    })
 
     })
 
