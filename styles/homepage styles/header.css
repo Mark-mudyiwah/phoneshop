@@ -38,7 +38,10 @@
     cursor: pointer;
    
 }
-
+.header div a:hover{
+    color: rgb(193, 15, 199);
+    transition: 500ms ease-in-out  ;
+}
 
 .left-side{
 max-width: 120px;
