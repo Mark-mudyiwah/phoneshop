@@ -1,6 +1,6 @@
 import { renderOrderSummary } from "./checkout/orderSummary.js"
 import { updateQuantity } from "../data/cart.js"
-
+import { renderPaymentSummary } from "./checkout/paymentSummary.js"
 
 
 
@@ -8,10 +8,11 @@ import { updateQuantity } from "../data/cart.js"
 
 
  renderOrderSummary()
+  renderPaymentSummary()
 
 updatingItemQuantity()
  
-function updatingItemQuantity(){
+export function updatingItemQuantity(){
 document.querySelectorAll('.js-update-button')
 .forEach((button)=>{
     button.addEventListener('click',()=>{

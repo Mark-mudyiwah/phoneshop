@@ -1,7 +1,8 @@
 import { cart,removeFromCart,updateDeliveryOption } from "../../data/cart.js";
-import { products }from '../../data/products.js'
+import { products,getProduct }from '../../data/products.js'
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
-import { deliveryOptions } from "../../data/deliveyOptions.js";
+import { deliveryOptions,getDeliveryOption } from "../../data/deliveryOptions.js";
+import { updatingItemQuantity } from "../checkout.js";
 
 
 
@@ -11,25 +12,14 @@ let cartItemsHTML='';
 
 cart.forEach((cartItem)=>{
 const productId = cartItem.productId
-console.log(productId)
-let matchingProduct;
 
-products.forEach((product)=>{
-    if(product.Id === productId){
-  matchingProduct = product
-    }
-    
-})
+const matchingProduct = getProduct(productId);
 
 const deliveryOptionId = cartItem.deliveryOptionId
-let deliveryOption;
-deliveryOptions.forEach((option)=>{
 
-    if( option.id ===deliveryOptionId){
-        deliveryOption = option;
-    }
-});
-//this code takes the delivery option we selected and calculate it so that we can use it down in our code
+const deliveryOption= getDeliveryOption(deliveryOptionId)
+ 
+//this code takes the delivery option/date we selected and calculate it so that we can use it down in our code
 const today = dayjs();
 const deliveryDate =  today.add(deliveryOption.deliveryDays,'days')
 
@@ -170,10 +160,10 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
 
 document.querySelector('.js-products-side').innerHTML=cartItemsHTML
 
+deletingItem()
 
 
-
-function deletingItem(){
+ function deletingItem(){
  document.querySelectorAll('.js-delete-button')
 .forEach((button)=>{
 button.addEventListener('click',()=>{
@@ -198,6 +188,8 @@ button.addEventListener('click',()=>{
 
  updateDeliveryOption(productId,deliveryOptionId)
 renderOrderSummary();
+updatingItemQuantity()
+u
     })
  })
 
