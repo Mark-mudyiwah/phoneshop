@@ -1,4 +1,4 @@
-import { cart,removeFromCart,updateQuantity } from "../data/cart.js";
+import { cart,removeFromCart,updateQuantity,updateDeliveryOption } from "../data/cart.js";
 import { products } from "../data/products.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 let cartItemsHTML='';
@@ -131,16 +131,22 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
       html +=`
         <div>
      <div  class="shipping-date-flex">
-    <div class="radio-input-div">
+    <div class="radio-input-div js-delivery-option"
+      data-product-id="${matchingProduct.Id}"
+      data-delivery-option-id="${deliveryOption.id}">
         <input type="radio" 
         ${isChecked ?'checked':''}
         name ="name-${matchingProduct.Id}">
     </div>
     <div>
-        <div class ="date">
+        <div class ="date js-delivery-option"
+         data-product-id="${matchingProduct.Id}"
+         data-delivery-option-id="${deliveryOption.id}">
          ${dateString}
         </div>
-        <div class="shipping-cost">
+        <div class="shipping-cost js-delivery-option"
+        data-product-id="${matchingProduct.Id}"
+         data-delivery-option-id="${deliveryOption.id}">
         <div>${priceString}</div>
          <div>
          &#160 Shipping
@@ -249,4 +255,13 @@ document.querySelectorAll('.js-save-quantity')
 })
 }
 
-console.log(dayjs())
+ document.querySelectorAll('.js-delivery-option')
+ .forEach((element)=>{
+    element.addEventListener('click',()=>{
+//shorthand property
+  const{productId,deliveryOptionId}= element.dataset;
+
+ updateDeliveryOption(productId,deliveryOptionId)
+
+    })
+ })
