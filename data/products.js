@@ -411,7 +411,7 @@ export const products = [
        rom: 64,
        ram: 4,
        Osystem:'Android',
-       version:'12',
+       version:'11',
        romType:' ',
        more:`The Samsung Galaxy A03 features a 6.5-inch HD+ Infinity-V display,a quad-camera setup with a 48MP main camera,2MP macro camera and 2MP depth sensor,and a powerful octa-core processor...It comes with 3GB/4GB of RAM and 32GB/64GB of internal storage,expandable up to 1TB via microSD card.The phone runs on Android 11 and is powered by a large 5000mAh battery with 15W fast charging support.Additionaly,it features a sleek design,Dolby Atmos audio,and a range of security features likefingerprint recognition and face unlock,making it a great budget-friendly option for those looking for a reliable and feature-packed smartphone`
      }
@@ -419,15 +419,15 @@ export const products = [
    },
    { 
      Id:'6a3d-4z5f-6t7h-8n',
-     image:'images/products/cellphones/Samsung-A15-LTE.jpg',
-     name:'Samsung Galaxy A15 LTE',
+     image:'images/products/cellphones/Samsung-A15-Lte.jpg',
+     name:'Samsung A15 LTE',
      price: 4450,
      specs:{
        
-       rom: 32,
-       ram: 3,
+       rom: 128,
+       ram: 6,
        Osystem:'Android',
-       version:'11',
+       version:'12',
        romType:' ',
        more:`The Samsung Galaxy A15 LTE has a 6.5-inch HD+ Infinity-V display,a quad-camera setup with a 50 MP main camera ,2 MP macro camera,2MP depth sensor , and a 5MP ultra-wide-angle lens,and a powerful octa-core processor.It comes with 4GB/6GB of RAM and 64GB/128GB of internal storage,expandable up to 1TBvia microSD card.The phone  runs on Android 12 and is powered by a large 5000mAh battery with 15W fast charging support.Additionally,it has a range of security features like fingerprint recognition,face unlock and samsung knox security making it a great mobile`
      }
@@ -440,8 +440,8 @@ export const products = [
      price: 5499.9,
      specs:{
        
-       rom: 128,
-       ram: 4,
+       rom: 32,
+       ram: 3,
        Osystem:'Android',
        version:'11',
        romType:' ',
@@ -459,7 +459,7 @@ export const products = [
        rom: 64,
        ram: 4,
        Osystem:'Android',
-       version:'12',
+       version:'11',
        romType:' ',
        more:`The Samsung Galaxy A32 features a 6.5-inch FHD+ Infinity-V display, a quad-camera setup with a 64MP main camera, 8MP ultra-wide-angle lens, 5MP macro camera, and 5MP depth sensor, and a powerful octa-core processor. It comes with 4GB/6GB/8GB of RAM and 64GB/128GB of internal storage, expandable up to 1TB via microSD card. The phone runs on Android 11 and is powered by a large 5000mAh battery with 15W fast charging support. Additionally, it features a sleek design, Dolby Atmos audio, and advanced security features like fingerprint recognition, face unlock, and Samsung Knox security, making it a great option for those looking for a feature-packed and reliable smartphone with a large display and long-lasting battery life.`
      }
@@ -483,13 +483,13 @@ export const products = [
    },
    { 
      Id:'2a3d-4a5f-6a7h-8k',
-     image:'images/products/cellphones/samsung-galaxy-M34.jpg',
+     image:'images/products/cellphones/Samsung-galaxy-M34.jpg',
      name:'Samsung Galaxy M34',
      price: 5000.,
      specs:{
        
        rom: 64,
-       ram: 3,
+       ram: 4,
        Osystem:' Android',
        version:'11',
        romType:' ',
@@ -579,7 +579,7 @@ export const products = [
    },
    { 
      Id:'2c3d-4e5l-6x7c-8y',
-     image:'images/products/cellphones/samsung-galaxy-s10-edge.jpg',
+     image:'images/products/cellphones/Samsung-galaxy-s10-edge.jpg',
      name:'Samsung Galaxy S10',
      price: 8499.9,
      specs:{
