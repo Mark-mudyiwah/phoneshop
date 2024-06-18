@@ -103,7 +103,7 @@ padding: 4px;
  align-items: center;
  
 max-width: max-content;
-color: rgb(47, 0, 255);
+color: rgb(35, 70, 110);
 font-weight: 800;
 }
 
@@ -190,11 +190,11 @@ max-width: 100%;
 .choose-delivery-date-text{
    font-weight: 700;
    font-size: 16px;
-   color: rgb(8, 8, 211);
+   color: rgb(8, 39, 211);
    padding-bottom: 6px;
 }
 .shipping-date-flex input{
-   cursor: pointer;
+   cursor:pointer;
 }
 .shipping-date-flex{
    display: flex;
@@ -202,15 +202,17 @@ max-width: 100%;
    margin: 5px;
 }
 .shipping-cost{
-   color: rgb(63, 28, 28);
+   color: rgb(12, 29, 187);
    display: flex;
    padding-left: 3px;
 }
 .date{
    font-weight: 500;
+    color: rgb(15, 15, 82);
+    cursor: pointer;
 }
 .shipping-cost{
-   color: brown;
+   color: rgba(173, 11, 11, 0.938);
    font-size: 13.6px;
 }
 

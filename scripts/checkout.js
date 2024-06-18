@@ -1,7 +1,9 @@
 import { cart,removeFromCart,updateQuantity } from "../data/cart.js";
 import { products } from "../data/products.js";
-
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 let cartItemsHTML='';
+
+import { deliveryOptions } from "../data/deliveyOptions.js";
 
 cart.forEach((cartItem)=>{
 const productId = cartItem.productId
@@ -14,16 +16,31 @@ products.forEach((product)=>{
     }
     
 })
+
+const deliveryOptionId = cartItem.deliveryOptionId
+let deliveryOption;
+deliveryOptions.forEach((option)=>{
+
+    if( option.id ===deliveryOptionId){
+        deliveryOption = option;
+    }
+});
+//this code takes the delivery option we selected and calculate it so that we can use it down in our code
+const today = dayjs();
+const deliveryDate =  today.add(deliveryOption.deliveryDays,'days')
+
+const dateString = deliveryDate.format('dddd, MMMM D')  
+
  
 cartItemsHTML+=`<div class="all-item-info-div 
 js-all-items-info-${matchingProduct.Id}">
 
 <div class="item-delivery-date">
 <div class="delivered-text">
-    Delivered : 
+    Delivery Date : 
 </div>
 <div class="actual-delivery-date">
-    Sunday,June 11 
+ ${dateString}
 </div>
 </div>
 <div class="product-container">
@@ -84,57 +101,7 @@ js-all-items-info-${matchingProduct.Id}">
 <div class="choose-delivery-date-text">
     Choose delivery Date
 </div>
-
-<div>
-     <div  class="shipping-date-flex">
-    <div class="radio-input-div">
-        <input type="radio" name ="name-${matchingProduct.Id}" 
-       >
-    </div>
-    <div>
-        <div class ="date">
-            Monday, May 31
-        </div>
-        <div class="shipping-cost">
-        <div>R200</div> <div>-Shipping</div>
-        </div>
-    </div>
-    
-</div>
-
-<div  class="shipping-date-flex">
-    <div>
-        <input type="radio" name =
-        "name-${matchingProduct.Id}"
-       >
-    </div>
-    <div>
-        <div class ="date">
-            Sunday,June 11
-        </div>
-        <div class="shipping-cost">
-            <div>R80 </div> <div>-Shipping</div>
-        </div>
-    </div>
-    
-</div>
- 
-<div  class="shipping-date-flex">
-    <div>
-        <input type="radio" name = "name-${matchingProduct.Id}"
-       >
-    </div>
-    <div>
-        <div class ="date">
-            Wednesday, June 23
-        </div>
-        <div class="shipping-cost">
-            <div>Free</div> <div>-Shipping</div>
-        </div>
-    </div>
-    
-</div>
-</div>
+${deliveryOptionsHTML(matchingProduct,cartItem)}
 
 </div>
 </div>
@@ -142,6 +109,54 @@ js-all-items-info-${matchingProduct.Id}">
 `
    
 })
+//passing matching product and cartItem as parameters cz they are not defined in the deliveryOptionsHTML function
+function deliveryOptionsHTML(matchingProduct,cartItem){
+ let html = ''
+
+ /*Looping through the delivery options and creating html for each delivery option and substituting date of delivery and price */
+
+    deliveryOptions.forEach((deliveryOption)=>{
+        const today = dayjs();
+        const deliveryDate =  today.add(deliveryOption.deliveryDays,'days')
+
+      const dateString = deliveryDate.format('dddd, MMMM D')  
+      //use a ternary operator to check if price is 0 we display free
+      const priceString = deliveryOption.price === 0 ?'FREE'
+      :
+      `R${deliveryOption.price} -`
+
+/*using a ternary operator to make the variable true if both deliveryOptions are equal*/
+      const isChecked = cartItem.deliveryOptionId === deliveryOption.id
+       
+      html +=`
+        <div>
+     <div  class="shipping-date-flex">
+    <div class="radio-input-div">
+        <input type="radio" 
+        ${isChecked ?'checked':''}
+        name ="name-${matchingProduct.Id}">
+    </div>
+    <div>
+        <div class ="date">
+         ${dateString}
+        </div>
+        <div class="shipping-cost">
+        <div>${priceString}</div>
+         <div>
+         &#160 Shipping
+         </div>
+        </div>
+    </div>
+     </div>
+     </div>
+
+        `
+    })
+
+  return html
+}
+
+
 
 document.querySelector('.js-products-side').innerHTML=cartItemsHTML
 
@@ -233,3 +248,5 @@ document.querySelectorAll('.js-save-quantity')
 
 })
 }
+
+console.log(dayjs())
