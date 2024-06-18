@@ -225,7 +225,7 @@ document.querySelectorAll('.js-save-quantity')
                 
             }else{
     
-                 document.querySelector(`.quantity-update-caution-${productId}`).innerHTML ='please provide correct quantity'
+                 document.querySelector(`.quantity-update-caution-${productId}`).innerHTML ='Please provide correct quantity!'
                 setTimeout(()=>{
     
                     document.querySelector(`.quantity-update-caution-${productId}`).innerHTML =' 0 < quantity <=100'
