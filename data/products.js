@@ -1,7 +1,7 @@
 export const products = [
    { 
     Id:'g4s2-e8hj-1l3m-4n',
-    image:'images/products/Laptops&monitors/Apple MacBook.webp',
+    image:'images/products/Laptops&Monitors/Apple MacBook.webp',
     name:' Apple MacBook',
     price: 22000,
     specs:{
@@ -24,7 +24,7 @@ export const products = [
 
   { 
     Id:'p9r8-d3f2-b1c4-e2',
-    image:'images/products/Laptops&monitors/Dell Laptop.webp',
+    image:'images/products/Laptops&Monitors/Dell Laptop.webp',
     name:' Dell Latitude 7490',
     price: 11986.6,
     specs:{
@@ -46,7 +46,7 @@ export const products = [
 
   { 
     Id:'a1b2-c3d4-e5f6-g3',
-    image:'images/products/Laptops&monitors/Asus Laptop.webp',
+    image:'images/products/Laptops&Monitors/Asus Laptop.webp',
     name:' Asus VivoBook 15',
     price: 9699.9,
     specs:{
@@ -65,7 +65,7 @@ export const products = [
 ,
   { 
     Id: 'k7m3-n9p8-r2t1-y4',
-    image:'images/products/Laptops&monitors/dell-desktop-computer.png',
+    image:'images/products/Laptops&Monitors/dell-desktop-computer.png',
     name:'Dell Inspiron Desktop ',
     price: 17659.9,
     specs:{
@@ -86,7 +86,7 @@ export const products = [
 ,
   { 
     Id: 'e5f6-g7h8-i1j2-k5',
-    image:'images/products/Laptops&monitors/Lenovo Laptop.webp',
+    image:'images/products/Laptops&Monitors/Lenovo Laptop.webp',
     name:'Lenovo Thinkpad X1 Carbon',
     price: 10000,
     specs:{
@@ -106,7 +106,7 @@ export const products = [
 ,
   { 
     Id:'2c3d-4e5f-6g7h-8i',
-    image:'images/products/Laptops&monitors/HP Notebook.webp',
+    image:'images/products/Laptops&Monitors/HP Notebook.webp',
     name:'HP Envy 13',
     price: 22000,
     specs:{
@@ -127,7 +127,7 @@ export const products = [
 ,
   { 
     Id:'g2s2-e8hj-le3m-4n',
-    image:'images/products/Laptops&monitors/Dell-monitor.png',
+    image:'images/products/Laptops&Monitors/Dell-monitor.png',
     name:' Dell SE2722H Monitor',
     price: 6500,
     specs:{
@@ -146,7 +146,7 @@ export const products = [
  ,
   { 
     Id:'2b3d-4e5f-6g7h-8d',
-    image:'images/products/Laptops&monitors/Qled-Samsung-laptop.jpeg',
+    image:'images/products/Laptops&Monitors/Qled-Samsung-laptop.jpeg',
     name:'Samsung Galaxy Book flex 15',
     price: 22000,
     specs:{
@@ -165,7 +165,7 @@ export const products = [
  
   { 
      Id:'7c8d-9e1f-0i1h-2f',
-     image:'images/products/Laptops&monitors/Dell-all-in-one.jpeg',
+     image:'images/products/Laptops&Monitors/Dell-all-in-one.jpeg',
      name:'Dell XPS 8930',
      price: 22000,
      specs:{
@@ -189,7 +189,7 @@ export const products = [
  
    { 
      Id:'2z3d-4e5f-6g7y-8j',
-     image:'images/products/Laptops&monitors/Dell-desktop-all-in-one.jpeg',
+     image:'images/products/Laptops&Monitors/Dell-desktop-all-in-one.jpeg',
      name:'Dell Inspiron 27 Desktop',
      price: 22000,
      specs:{
@@ -211,7 +211,7 @@ export const products = [
  
    { 
      Id:'3c4d-5e6f-6g7h-9i',
-     image:'images/products/Laptops&monitors/Lenovo-desktop-pc-black.jpeg',
+     image:'images/products/Laptops&Monitors/Lenovo-desktop-pc-black.jpeg',
      name:'Lenovo Legion Tower ',
      price: 22000,
      specs:{
@@ -232,7 +232,7 @@ export const products = [
    
    { 
      Id:'1c3d-2e5f-5g7h-2i',
-     image:'images/products/Laptops&monitors/Samsung - galaxy-laptop-4.jpeg',
+     image:'images/products/Laptops&Monitors/Samsung - galaxy-laptop-4.jpeg',
      name:'Samsung Galaxy Book 3',
      price: 4499.9,
      specs:{
@@ -248,7 +248,7 @@ export const products = [
    },
    { 
   Id:'9c8d-7e6f-5g4h-3i',
-     image:'images/products/Laptops&monitors/Lenovo-Thinkcentre-gray.jpeg',
+     image:'images/products/Laptops&Monitors/Lenovo-Thinkcentre-gray.jpeg',
      name:'Lenovo Ideapad 330S',
      price: 4999.9,
      specs:{
