@@ -3,7 +3,7 @@ import { products,getProduct }from '../../data/products.js'
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 import { deliveryOptions,getDeliveryOption } from "../../data/deliveryOptions.js";
 import { updatingItemQuantity } from "../checkout.js";
-
+import { renderPaymentSummary } from "./paymentSummary.js";
 
 
 
@@ -169,7 +169,7 @@ deletingItem()
 button.addEventListener('click',()=>{
  const productId = button.dataset.productId
  removeFromCart(productId)
-
+ renderPaymentSummary()
 
  const container = document.querySelector(`.js-all-items-info-${productId}`)
      
@@ -177,6 +177,7 @@ button.addEventListener('click',()=>{
 })
 
 })
+
 }
 
 
@@ -189,7 +190,8 @@ button.addEventListener('click',()=>{
  updateDeliveryOption(productId,deliveryOptionId)
 renderOrderSummary();
 updatingItemQuantity()
-u
+renderPaymentSummary()
+
     })
  })
 

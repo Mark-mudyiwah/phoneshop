@@ -108,7 +108,7 @@ updateCartQuantity()
 
 
 
-function updateCartQuantity(){
+ export function updateCartQuantity(){
 
   let cartQuantity = 0
 

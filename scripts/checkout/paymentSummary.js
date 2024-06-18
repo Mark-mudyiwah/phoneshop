@@ -2,10 +2,32 @@ import { cart } from "../../data/cart.js";
 import { getProduct } from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
 
+ 
+
+
+function cartItemsCount(){
+ let cartQuantity = 0
+cart.forEach((cartItem)=>{
+ cartQuantity += cartItem.quantity 
+
+})
+return cartQuantity
+}
+
+
+
+
+
+
+
 export function renderPaymentSummary(){
     
+
  let productsCost = 0
  let shippingCost = 0
+
+
+
  cart.forEach((cartItem) => {
 const product = getProduct(cartItem.productId);
  productsCost += product.price*cartItem.quantity;
@@ -26,9 +48,9 @@ const paymentSummaryHTML=
 
      <div>
 
-    <div>Items(2):</div>
+    <div>Items(${cartItemsCount()}):</div>
     <div class="item-summary-price">
-        ${productsCost}
+       R &#160 ${productsCost.toFixed(2)}
     </div>
 </div>
 <div>
@@ -36,7 +58,7 @@ const paymentSummaryHTML=
     <div>
         Shipping&Handling:</div>
     <div class="shipping-handling-cost">
-        ${shippingCost}
+       ${shippingCost.toFixed(2)}
     </div>
 </div>
 
@@ -44,7 +66,7 @@ const paymentSummaryHTML=
     <div class="total-before-tax-text">
         Total before tax:</div>
    <div class="amount-before-tax">
-    ${costBeforeTax}
+    R &#160 ${costBeforeTax.toFixed(2)}
    </div>
 </div>
 <div>
@@ -59,7 +81,7 @@ const paymentSummaryHTML=
 <div class="order-total-text">
    Order Total:</div>
     <div class="actual-total-amount">
-        ${totalCost}
+        R &#160 ${totalCost.toFixed(2)}
     </div>
 </div>
 

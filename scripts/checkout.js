@@ -51,6 +51,7 @@ document.querySelectorAll('.js-save-quantity')
                 quantityLabel.innerHTML=updatedQuantity
         
                 updateQuantity(productId,updatedQuantity)
+                renderPaymentSummary()
     
                 inputElement.value = ''
                 itemContainer.classList.remove('is-editing-quantity')
@@ -73,6 +74,7 @@ document.querySelectorAll('.js-save-quantity')
     inputElement.addEventListener('keydown',()=>{
         if(event.key==='Enter'){
             saveNewQuantity()
+            renderPaymentSummary()
         }
     })
 
