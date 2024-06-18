@@ -1,9 +1,13 @@
 import { cart,removeFromCart,updateQuantity,updateDeliveryOption } from "../data/cart.js";
 import { products } from "../data/products.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
-let cartItemsHTML='';
-
 import { deliveryOptions } from "../data/deliveyOptions.js";
+
+
+
+
+function renderOrderSummary(){
+let cartItemsHTML='';
 
 cart.forEach((cartItem)=>{
 const productId = cartItem.productId
@@ -262,6 +266,9 @@ document.querySelectorAll('.js-save-quantity')
   const{productId,deliveryOptionId}= element.dataset;
 
  updateDeliveryOption(productId,deliveryOptionId)
-
+renderOrderSummary();
     })
  })
+
+}
+renderOrderSummary()

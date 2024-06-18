@@ -214,6 +214,7 @@ max-width: 100%;
 .shipping-cost{
    color: rgba(173, 11, 11, 0.938);
    font-size: 13.6px;
+   cursor: pointer;
 }
 
 .quantity-update-buttons{
