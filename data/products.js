@@ -450,7 +450,7 @@ export const products = [
  
    },
    { 
-     Id:'2c3d-4c5f-6c7h- 2c',
+     Id:'2z3z-115f-6c7h-9c',
      image:'images/products/cellphones/Samsung-galaxy-A32-4G.jpg',
      name:'Samsung Galaxy A32',
      price: 5000.,
