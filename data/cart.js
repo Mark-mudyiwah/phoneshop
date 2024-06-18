@@ -68,7 +68,7 @@ export function addToCart(productId,quantity){
     matchingItem = cartItem
   }
 })
-matchingItem.quantity=updatedQuantity
+matchingItem.quantity = updatedQuantity
 saveToStorage();
   }
 
