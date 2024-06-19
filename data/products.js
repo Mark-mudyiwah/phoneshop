@@ -318,7 +318,7 @@ export const products = [
    },
  
    { 
-    // Id:'2c3d-4e5f-6g7h-8i',
+     Id:'2c3d-4e5f-6g7h-8i',
      image:'images/products/cellphones/huawei-p30-pro-3.jpg',
      name:'Huawei P30 pro',
      price: 9599.9,
@@ -351,7 +351,7 @@ export const products = [
  
    },
    { 
-    Id:'2y3d-4z5f-6v7x-2a',
+    Id:'7y3d-4z5f-6v7x-2a',
      image:'images/products/cellphones/Nokia-C12.jpg',
      name:'Nokia C12',
      price: 2499.99,
