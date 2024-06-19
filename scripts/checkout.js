@@ -26,7 +26,11 @@ itemContainer.classList.add('is-editing-quantity')
 })
 
 
-
+document.querySelectorAll('.quantity-update-input')
+    .forEach((input)=>{
+        input.addEventListener('input',()=>{
+            input.value=input.value.replace(/[,.]/g,"")
+        })
  
  
 document.querySelectorAll('.js-save-quantity')
