@@ -81,4 +81,4 @@ document.querySelectorAll('.js-save-quantity')
     })
 
 })
-}
+};
