@@ -36,28 +36,30 @@ document.querySelectorAll('.js-save-quantity')
         const productId = button.dataset.productId
         const itemContainer =document.querySelector(`.js-all-items-info-${productId}`)
         const inputElement=document.querySelector(`.js-quantity-update-input-${productId}`)
-       
+
+        
         saveNewQuantity()
+        
 
         function saveNewQuantity(){
             const updatedQuantity= Number(inputElement.value)
 
             if(updatedQuantity >= 1 && updatedQuantity <=100){
      
-    
-    
                 const quantityLabel = document.querySelector(`.js-item-quantity-${productId}`)
     
                 quantityLabel.innerHTML=updatedQuantity
         
                 updateQuantity(productId,updatedQuantity)
+
+       
                 renderPaymentSummary()
     
                 inputElement.value = ''
                 itemContainer.classList.remove('is-editing-quantity')
                 
             }else{
-    
+                 inputElement.value = ''
                  document.querySelector(`.quantity-update-caution-${productId}`).innerHTML ='Please provide correct quantity!'
                 setTimeout(()=>{
     
@@ -66,19 +68,18 @@ document.querySelectorAll('.js-save-quantity')
              
             }
     
-
         }
        
-
-       
-    inputElement.addEventListener('keydown',()=>{
-        if(event.key==='Enter'){
-            saveNewQuantity()
-            renderPaymentSummary()
-        }
-    })
-
     })
 
 })
+
+
 };
+//blockingming  input from accepting commas
+document.querySelectorAll('.quantity-update-input')
+    .forEach((input)=>{
+        input.addEventListener('input',()=>{
+            input.value=input.value.replace(/[,.]/g,"")
+        })
+    })
