@@ -19,7 +19,7 @@ export const products = [
     Id:'g4s2-e8hj-1l3m-4n',
     image:'images/products/Laptops&Monitors/Apple MacBook.webp',
     name:' Apple MacBook',
-    price: 22000,
+    price: 800,
     specs:{
       
       rom: 512,
@@ -42,7 +42,7 @@ export const products = [
     Id:'p9r8-d3f2-b1c4-e2',
     image:'images/products/Laptops&Monitors/Dell Laptop.webp',
     name:' Dell Latitude 7490',
-    price: 11986.6,
+    price: 449.99,
     specs:{
       
       rom: 256,
@@ -64,7 +64,7 @@ export const products = [
     Id:'a1b2-c3d4-e5f6-g3',
     image:'images/products/Laptops&Monitors/Asus Laptop.webp',
     name:' Asus VivoBook 15',
-    price: 9699.9,
+    price: 250,
     specs:{
       
       rom: 256,
@@ -83,7 +83,7 @@ export const products = [
     Id: 'k7m3-n9p8-r2t1-y4',
     image:'images/products/Laptops&Monitors/dell-desktop-computer.png',
     name:'Dell Inspiron Desktop ',
-    price: 17659.9,
+    price: 399.99,
     specs:{
       
       rom: 1000,
@@ -104,7 +104,7 @@ export const products = [
     Id: 'e5f6-g7h8-i1j2-k5',
     image:'images/products/Laptops&Monitors/Lenovo Laptop.webp',
     name:'Lenovo Thinkpad X1 Carbon',
-    price: 10000,
+    price: 520,
     specs:{
       
       rom: 512,
@@ -124,7 +124,7 @@ export const products = [
     Id:'2c3d-4e5f-6g7h-8i',
     image:'images/products/Laptops&Monitors/HP Notebook.webp',
     name:'HP Envy 13',
-    price: 22000,
+    price: 349.99,
     specs:{
       
       rom: 512,
@@ -145,7 +145,7 @@ export const products = [
     Id:'g2s2-e8hj-le3m-4n',
     image:'images/products/Laptops&Monitors/Dell-monitor.png',
     name:' Dell SE2722H Monitor',
-    price: 6500,
+    price: 100,
     specs:{
       
       rom: ' ',
@@ -164,13 +164,13 @@ export const products = [
     Id:'2b3d-4e5f-6g7h-8d',
     image:'images/products/Laptops&Monitors/Qled-Samsung-laptop.jpeg',
     name:'Samsung Galaxy Book flex 15',
-    price: 22000,
+    price: 480,
     specs:{
       
-      rom: 256,
-      ram: 16,
+      rom: 512,
+      ram: 12,
       Osystem:'Windows',
-      version:'10pro',
+      version:'11',
       romType:'(SSD)',
       more:`The Samsung Galaxy Book Flex 15 laptop features a 15.6-incch 1080p QLED display,powered by an Intel Core i7-1065g7 CPU and NVIDIA GeForce MX250 GPU.It comes with 12GB of RAM and 512GB of storage,providing a seamless perfomance for demanding tasks.This laptop offers a great balance of perfomance,portability and affordability
       
@@ -183,13 +183,13 @@ export const products = [
      Id:'7c8d-9e1f-0i1h-2f',
      image:'images/products/Laptops&Monitors/Dell-all-in-one.jpeg',
      name:'Dell XPS 8930',
-     price: 22000,
+     price: 560,
      specs:{
        
        rom: 1000,
        ram: 16,
        Osystem:'Windows',
-       version:'10pro',
+       version:'11pro',
        romType:'(SSD)',
        more:`The Dell XPS 8930 is a high-perfomance desktop that offers a 12th Gen Intel Core i9 processor,16GB of RAM,and a 1TB SSD.It's compact design and range of ports make it perfect for power users and gamers.The NVIDIA GeForce GTX 1660 Super Graphics card delivers smooth perfomance for gaming and graphics-intensive tasks
        
@@ -207,13 +207,13 @@ export const products = [
      Id:'2z3d-4e5f-6g7y-8j',
      image:'images/products/Laptops&Monitors/Dell-desktop-all-in-one.jpeg',
      name:'Dell Inspiron 27 Desktop',
-     price: 22000,
+     price:  380,
      specs:{
        
        rom: 256,
        ram: 16,
        Osystem:'Windows',
-       version:'10pro',
+       version:'11',
        romType:'(SSD)',
        more:`
       The Dell Inspiron 27 All-In-One is a great option for those on a budget,with a 27-inch FHD screen that is touch-enabled,an Intel Core i7-1355U processor,and 16 GB of RAM.This all-in-one desktop is perfect for everyday tasks,streaming and working from home.It also features a sleek and compact design,making it ideal for small spaces.Additionally,it comes with a range of ports,including USBA,USB-C and HDMI making it easy to connect to external libraries 
@@ -229,13 +229,13 @@ export const products = [
      Id:'3c4d-5e6f-6g7h-9i',
      image:'images/products/Laptops&Monitors/Lenovo-desktop-pc-black.jpeg',
      name:'Lenovo Legion Tower ',
-     price: 22000,
+     price: 430,
      specs:{
        
        rom: 256,
        ram: 16,
        Osystem:'Windows',
-       version:'10pro',
+       version:'11',
        romType:'(SSD)',
        more:`This traditional tower desktop offers a more affodable and customizable gaming experience.It features a sturdy metal chasis,plastic trims and vents,and a glass side panel,giving users easy access to upgrade their components.With options for up to 13th Gen Intel Core i7 processor, and up to 64 GB of DDR4 RAM,this desktop is ideal for casual gamers and content creators who want a reliable and upgradable machine.
        
@@ -250,15 +250,15 @@ export const products = [
      Id:'1c3d-2e5f-5g7h-2i',
      image:'images/products/Laptops&Monitors/Samsung - galaxy-laptop-4.jpeg',
      name:'Samsung Galaxy Book 3',
-     price: 4499.9,
+     price: 150,
      specs:{
        
-       rom: 216,
-       ram: 3,
+       rom: 256,
+       ram: 4,
        Osystem:'Windows',
        version:'7',
        romType:'SSD ',
-       more:`The Samsung Galaxy Book3 360 is a laptop that features a 13.3 inch FHD touchscreen display,Intel Core i7 processor,16GB of RAM and a 512 GB SSD.It also has a long lasting batttery and support S Pen and S Pen Pro.It is capable for both gaming and studying purposes`
+       more:`The Samsung Galaxy Book3 360 is a laptop that features a 13.3 inch FHD touchscreen display,Intel Core i7 processor,4GB of RAM and a 256 GB SSD.It also has a long lasting batttery and support S Pen and S Pen Pro.It is capable for both gaming and studying purposes`
      }
  
    },
@@ -266,15 +266,15 @@ export const products = [
   Id:'9c8d-7e6f-5g4h-3i',
      image:'images/products/Laptops&Monitors/Lenovo-Thinkcentre-gray.jpeg',
      name:'Lenovo Ideapad 330S',
-     price: 4999.9,
+     price:  180,
      specs:{
        
-       rom: 128,
+       rom:256,
        ram: 4,
        Osystem:'Windows',
        version:'11pro',
        romType:'SSD ',
-       more:`The Lenovo IdeaPad is a slim and lightweightlaptop that offers  a 12th Gen Intel Core i5 processor,8 GB of RAM and a 256 GB SSD.It's 15.6 FHD display provides crisp and vibrant visuals,while the intel Iris Xe graphics card handles graphics and video playback with ease.With arange of ports and long-lasting battery,this laptop is perfect for everyday activity
+       more:`The Lenovo IdeaPad is a slim and lightweightlaptop that offers  a 12th Gen Intel Core i5 processor,4 GB of RAM and a 256 GB SSD.It's 15.6 FHD display provides crisp and vibrant visuals,while the intel Iris Xe graphics card handles graphics and video playback with ease.With arange of ports and long-lasting battery,this laptop is perfect for everyday activity
        
        `
 
@@ -286,7 +286,7 @@ export const products = [
     Id:'9c0d-1e3f-2g1h-0i',
      image:'images/products/cellphones/Nokia-235-4g-black.jpg',
      name:'Nokia 235 4G',
-     price: 1499.9,
+     price:  25,
      specs:{
        
        rom: 0.128,
@@ -304,7 +304,7 @@ export const products = [
     Id:'8i-4e5f-2c3d-6g7h',
      image:'images/products/cellphones/huawei-nova-y90-2.jpg',
      name:'Huawei NovaY90',
-     price: 5499.9,
+     price: 130,
      specs:{
        
        rom: 128,
@@ -321,7 +321,7 @@ export const products = [
      Id:'2c3d-4e5f-6g7h-8i',
      image:'images/products/cellphones/huawei-p30-pro-3.jpg',
      name:'Huawei P30 pro',
-     price: 9599.9,
+     price: 199.99,
      specs:{
        
        rom: 128,
@@ -338,7 +338,7 @@ export const products = [
     Id:'2a3z-4b5y-6c7x-7d',
      image:'images/products/cellphones/huawei-y6p.jpg',
      name:'Huawei Y6p 2020',
-     price: 4000,
+     price: 80,
      specs:{
        
        rom: 64,
@@ -354,7 +354,7 @@ export const products = [
     Id:'7y3d-4z5f-6v7x-2a',
      image:'images/products/cellphones/Nokia-C12.jpg',
      name:'Nokia C12',
-     price: 2499.99,
+     price: 45,
      specs:{  
        
        rom: 64,
@@ -372,7 +372,7 @@ export const products = [
     Id:'2c3d-2e4f-2g3h-1i',
      image:'images/products/cellphones/Nokia-c32.jpg',
      name:' Nokia C32 4G',
-     price: 3999.9,
+     price:  50,
      specs:{
        
        rom: 64,
@@ -388,7 +388,7 @@ export const products = [
     Id:'9c3d-4e5f-9g7h-9i',
      image:'images/products/cellphones/Nokia-G42.jpg',
      name:'NokiaG42 5G',
-     price: 6499.9,
+     price:  65,
      specs:{
        
        rom: 64,
@@ -404,7 +404,7 @@ export const products = [
      Id:'2c2d-3e3f-6g6h-7i',
      image:'images/products/cellphones/Nokia-G45-red.jpg',
      name:' Nokia G45',
-     price: 6999.9,
+     price:  69.99,
      specs:{
        
        rom: 128,
@@ -421,7 +421,7 @@ export const products = [
      Id:'2a3d-4z5e-6z7b-3i',
      image:'images/products/cellphones/Samsung-A03-core.jpg',
      name:'Samsung Galaxy A03 Core',
-     price: 2499.9,
+     price:  80,
      specs:{
        
        rom: 64,
@@ -437,7 +437,7 @@ export const products = [
      Id:'6a3d-4z5f-6t7h-8n',
      image:'images/products/cellphones/Samsung-A15-Lte.jpg',
      name:'Samsung A15 LTE',
-     price: 4450,
+     price: 110,
      specs:{
        
        rom: 128,
@@ -453,7 +453,7 @@ export const products = [
     Id:'2c3d-4eef-6g7d-3b',
      image:'images/products/cellphones/samsung-galaxy-a03-2.jpg',
      name:'Samsung Galaxy A03',
-     price: 5499.9,
+     price: 75,
      specs:{
        
        rom: 32,
@@ -469,7 +469,7 @@ export const products = [
      Id:'2z3z-115f-6c7h-9c',
      image:'images/products/cellphones/Samsung-galaxy-A32-4G.jpg',
      name:'Samsung Galaxy A32',
-     price: 5000.,
+     price:  64.99,
      specs:{
        
        rom: 64,
@@ -485,7 +485,7 @@ export const products = [
     Id:'2c9d-4e7f-6e8h-8e',
      image:'images/products/cellphones/samsung-galaxy-m34-5g-4.jpg',
      name:'Samsung Galaxy M34 5G',
-     price:5999.9,
+     price:170,
      specs:{
        
        rom: 128,
@@ -501,7 +501,7 @@ export const products = [
      Id:'2a3d-4a5f-6a7h-8k',
      image:'images/products/cellphones/Samsung-galaxy-M34.jpg',
      name:'Samsung Galaxy M34',
-     price: 5000.,
+     price: 115,
      specs:{
        
        rom: 64,
@@ -517,7 +517,7 @@ export const products = [
     Id:'2a3d-4e5f-6y7z-8a',
      image:'images/products/cellphones/samsung-galaxy-s6-edge-black.jpg',
      name:'Samsung Galaxy S6',
-     price: 2999.9,
+     price: 55,
      specs:{
        
        rom: 64,
@@ -533,11 +533,11 @@ export const products = [
     Id:'2b3d-4e1f-3g4h-2i',
      image:'images/products/cellphones/samsung-galaxy-z-fold5-.jpg',
      name:'Samsung Galaxy  Z Fold 5',
-     price: 4499.9,
+     price: 210,
      specs:{
        
-       rom: 64,
-       ram: 4,
+       rom: 128,
+       ram: 8,
        Osystem:' Android',
        version:'10',
        romType:' ',
@@ -549,7 +549,7 @@ export const products = [
      Id:'2c3a-6e9f-1g2h-5i',
      image:'images/products/cellphones/samsung-galaxy-s8-edge.jpg',
      name:'Samsung Galaxy S8 edge',
-     price: 5499.9,
+     price: 125,
      specs:{
        
        rom: 64,
@@ -565,7 +565,7 @@ export const products = [
      Id:'3b3d-4e4f-6g6h-7i',
      image:'images/products/cellphones/samsung-galaxy-s9-edge-blue.jpg',
      name:'Samsung Galaxy  S9',
-     price: 5499.9,
+     price: 115,
      specs:{
        
        rom: 64,
@@ -581,7 +581,7 @@ export const products = [
       Id:'2z3d-4e5f-5g4h-2i',
      image:'images/products/cellphones/samsung-galaxy-s9-edge-plus.jpg',
      name:'Samsung Galaxy S9+',
-     price: 6499.9,
+     price: 149.99,
      specs:{
        
        rom: 128,
@@ -597,7 +597,7 @@ export const products = [
      Id:'2c3d-4e5l-6x7c-8y',
      image:'images/products/cellphones/Samsung-galaxy-s10-edge.jpg',
      name:'Samsung Galaxy S10',
-     price: 8499.9,
+     price: 155,
      specs:{
        
        rom: 128,
@@ -613,7 +613,7 @@ export const products = [
      Id:'2c2d-4e9f-6g7h-9i',
      image:'images/products/cellphones/samsung-galaxy-s20-5g-blue.jpg',
      name:'Samsung Galaxy S20 ultra',
-     price: 12999.9,
+     price: 380,
      specs:{
        
        rom: 512,
@@ -629,7 +629,7 @@ export const products = [
     Id:'9c3d-4e5g-6h7j-8i',
      image:'images/products/cellphones/samsung-galaxy-s20-black.jpg',
      name:'Samsung Galaxy  S20',
-     price: 9999.9,
+     price: 320,
      specs:{
        
        rom: 512,
@@ -645,7 +645,7 @@ export const products = [
     Id:'2e3d-4x5f-6d7k-3i',
      image:'images/products/cellphones/samsung-galaxy-s21-ultra5g.jpg',
      name:'Samsung Galaxy S21 Ultra',
-     price: 14999.9,
+     price: 499.9,
      specs:{
        
        rom: 512,

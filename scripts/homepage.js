@@ -66,7 +66,7 @@ products.forEach((product)=>{
     Price :
     </div>
     <div class = "amount-container">
-    R${(product.price).toFixed(2)}
+    $${(product.price).toFixed(2)}
     </div>
     </div>
      

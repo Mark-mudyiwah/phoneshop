@@ -57,7 +57,7 @@ js-all-items-info-${matchingProduct.Id}">
 
  
 <div class="item-price">
-    R${(matchingProduct.price).toFixed(2)}
+    $${(matchingProduct.price).toFixed(2)}
 </div>
 
 <div class="quantity-info">
@@ -117,7 +117,7 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
       //use a ternary operator to check if price is 0 we display free
       const priceString = deliveryOption.price === 0 ?'FREE'
       :
-      `R${deliveryOption.price} -`
+      `$${deliveryOption.price} -`
 
 /*using a ternary operator to make the variable true if both deliveryOptions are equal*/
       const isChecked = cartItem.deliveryOptionId === deliveryOption.id

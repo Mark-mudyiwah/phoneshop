@@ -50,7 +50,7 @@ const paymentSummaryHTML=
 
     <div>Items(${cartItemsCount()}):</div>
     <div class="item-summary-price">
-       R &#160 ${productsCost.toFixed(2)}
+       $ &#160 ${productsCost.toFixed(2)}
     </div>
 </div>
 <div>
@@ -66,7 +66,7 @@ const paymentSummaryHTML=
     <div class="total-before-tax-text">
         Total before tax:</div>
    <div class="amount-before-tax">
-    R &#160 ${costBeforeTax.toFixed(2)}
+    $ &#160 ${costBeforeTax.toFixed(2)}
    </div>
 </div>
 <div>
@@ -77,18 +77,18 @@ const paymentSummaryHTML=
     </div>
 
 </div>
-<div>
+<div class = "order-cost-flex">
 <div class="order-total-text">
    Order Total:</div>
     <div class="actual-total-amount">
-        R &#160 ${totalCost.toFixed(2)}
+         $ &#160 ${totalCost.toFixed(2)}
     </div>
 </div>
 
  </div>
  <div class="place-order-div">
     <button class="place-order-button">
-        Confirm</button>
+    Place an Order</button>
     </div>
 `
 

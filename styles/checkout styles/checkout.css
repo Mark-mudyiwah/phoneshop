@@ -60,7 +60,7 @@ align-items: center;
    padding-top: 10px;
    padding-left: 10px;
    border: 1px solid gray;
-   background-color: whitesmoke;
+   background-color: white;
    max-width: 700px;
    margin-bottom: 8px;
 }
@@ -76,14 +76,13 @@ align-items: center;
    
 }
 .all-summary-info{
-   border: 1px solid black;
    height: max-content;
-   padding: 4px;
+border: 1px solid black;
    background-color:rgb(19, 19, 2);
 }
 .summary-side{
    height: max-content;
-  
+  background-color: whitesmoke;
    max-width: 1fr;
    margin: 0;
    
@@ -91,10 +90,10 @@ align-items: center;
 }
 
 .summary-side div{
-   background-color:  wheat;
+    background-color: whitesmoke;
    display: flex;
-   align-items: center;
-padding: 4px;
+    align-items: center;
+    padding: 4px;
    justify-content: space-between;
 }
 
@@ -212,8 +211,8 @@ max-width: 100%;
     cursor: pointer;
 }
 .shipping-cost{
-   color: rgba(173, 11, 11, 0.938);
-   font-size: 13.6px;
+   color: rgba(211, 6, 6, 0.993);
+   font-size: 14px;
    cursor: pointer;
 }
 
@@ -325,12 +324,21 @@ display: none;
 
 .amount-before-tax{
    font-weight: bold;
+   color: rgb(8, 8, 94);
 }
 
-.actual-total-amount,
+
 .amount-before-tax{
-   border-top: 1px solid black ;
+   border-top: 1px dashed black ;
 }
+
+.order-cost-flex{
+   border-top: 1px dashed black;
+    
+   
+
+}
+
 .order-total-text,
 .actual-total-amount{
    color:darkred;
@@ -339,18 +347,19 @@ display: none;
 .place-order-div{
 display: flex;
 justify-content: center;
-background-color:  wheat;
+background-color: whitesmoke;
 padding: 8px 6px;
 
 }
 .place-order-button{
    cursor: pointer;
-   width: 100px;
+   width: 50%;
    padding: 8px 6px;
    color: white;
-   background-color:rgb(3, 88, 3);
+   background-color:rgb(5, 96, 124);
    border: none;
    font-size: 15px;
    border-radius: 3px;
+   font-family: roboto;
    flex-shrink: none;
 }

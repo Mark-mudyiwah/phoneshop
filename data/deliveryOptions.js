@@ -8,14 +8,14 @@ price: 0
 {
 id:'2',
 deliveryDays:3,
-price:80,
+price:10,
 },
 
 {
 
 id:'3',
 deliveryDays:1,
-price: 150
+price:  15
 
 }]
 
