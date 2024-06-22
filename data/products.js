@@ -318,7 +318,7 @@ export const products = [
    },
  
    { 
-     Id:'2c3d-4e5f-6g7h-8i',
+     Id:'2c3d-4e5f-6s7h-8e',
      image:'images/products/cellphones/huawei-p30-pro-3.jpg',
      name:'Huawei P30 pro',
      price: 199.99,
