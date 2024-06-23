@@ -106,7 +106,14 @@ color: rgb(35, 70, 110);
 font-weight: 800;
 }
 
-@media(max-width:740px){
+@media(max-width:600px){
+
+.item-image-container{
+      max-width: 120px;
+   }
+}
+
+@media(max-width:500px){
 
    .products-summary-grid{
       grid-template-columns: repeat(1,100%);
@@ -120,7 +127,7 @@ max-width: 100%;
 }
 
 .item-image-container{
-   max-width: 130px;
+   max-width: 120px;
 }
 
 .product-container{
@@ -129,6 +136,14 @@ max-width: 100%;
 }
 }
 
+@media(max-width:450px){
+  
+.product-container{
+    flex-direction: column;
+    align-items: start;
+  }
+
+   }
 
 .item-image-container{
    display: flex;
