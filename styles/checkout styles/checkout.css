@@ -69,7 +69,7 @@ align-items: center;
    display: flex;
    height: max-content;
    align-items: center;
-   justify-content:safe;
+   justify-content:space-between;
    max-width:100%;
    padding: 4px;
     
@@ -106,7 +106,7 @@ color: rgb(35, 70, 110);
 font-weight: 800;
 }
 
-@media(max-width:500px){
+@media(max-width:740px){
 
    .products-summary-grid{
       grid-template-columns: repeat(1,100%);
@@ -120,12 +120,12 @@ max-width: 100%;
 }
 
 .item-image-container{
-   max-width: 120px;
+   max-width: 130px;
 }
 
 .product-container{
-  flex-direction: column;
-  align-items:start;
+
+  align-items:center;
 }
 }
 
