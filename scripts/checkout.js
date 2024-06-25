@@ -7,10 +7,10 @@ import { renderPaymentSummary } from "./checkout/paymentSummary.js"
 
 
 
- renderOrderSummary()
+  renderOrderSummary()
   renderPaymentSummary()
-
-updatingItemQuantity()
+  denyingCommas()
+ updatingItemQuantity()
  
 export function updatingItemQuantity(){
 document.querySelectorAll('.js-update-button')
@@ -76,10 +76,14 @@ document.querySelectorAll('.js-save-quantity')
 
 
 };
-//blockingming  input from accepting commas
+//blocking input from accepting commas
+
+
+export function denyingCommas(){
 document.querySelectorAll('.quantity-update-input')
     .forEach((input)=>{
         input.addEventListener('input',()=>{
             input.value=input.value.replace(/[,.]/g,"")
         })
     })
+}

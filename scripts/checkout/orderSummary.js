@@ -1,8 +1,8 @@
 import { cart,removeFromCart,updateDeliveryOption } from "../../data/cart.js";
 import { products,getProduct }from '../../data/products.js'
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
-import { deliveryOptions,getDeliveryOption } from "../../data/deliveryOptions.js";
-import { updatingItemQuantity } from "../checkout.js";
+import { deliveryOptions,getDeliveryOption,calculateDeliveryDate } from "../../data/deliveryOptions.js";
+import { updatingItemQuantity,denyingCommas } from "../checkout.js";
 import { renderPaymentSummary } from "./paymentSummary.js";
 
 
@@ -20,11 +20,7 @@ const deliveryOptionId = cartItem.deliveryOptionId
 const deliveryOption= getDeliveryOption(deliveryOptionId)
  
 //this code takes the delivery option/date we selected and calculate it so that we can use it down in our code
-const today = dayjs();
-const deliveryDate =  today.add(deliveryOption.deliveryDays,'days')
-
-const dateString = deliveryDate.format('dddd, MMMM D')  
-
+ const dateString = calculateDeliveryDate(deliveryOption)
  
 cartItemsHTML+=`<div class="all-item-info-div 
 js-all-items-info-${matchingProduct.Id}">
@@ -110,10 +106,8 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
  /*Looping through the delivery options and creating html for each delivery option and substituting date of delivery and price */
 
     deliveryOptions.forEach((deliveryOption)=>{
-        const today = dayjs();
-        const deliveryDate =  today.add(deliveryOption.deliveryDays,'days')
-
-      const dateString = deliveryDate.format('dddd, MMMM D')  
+         
+      const dateString = calculateDeliveryDate(deliveryOption)  
       //use a ternary operator to check if price is 0 we display free
       const priceString = deliveryOption.price === 0 ?'FREE'
       :
@@ -170,10 +164,10 @@ button.addEventListener('click',()=>{
  const productId = button.dataset.productId
  removeFromCart(productId)
  renderPaymentSummary()
-
- const container = document.querySelector(`.js-all-items-info-${productId}`)
-     
- container.remove();
+ renderOrderSummary()
+//the code remove the product manually so its replaced by MVC above
+// const container = document.querySelector(`.js-all-items-info-${productId}`)
+// container.remove();
 })
 
 })
@@ -191,8 +185,10 @@ button.addEventListener('click',()=>{
 renderOrderSummary();
 updatingItemQuantity()
 renderPaymentSummary()
+ denyingCommas()
 
     })
  })
 
 }
+
