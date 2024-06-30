@@ -1,0 +1,95 @@
+
+body{
+    font-family: roboto;
+  background-color: rgb(40, 32, 110);
+    background-size: 100%;
+    background-position: center;
+
+}
+
+.main-flex{
+    
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     font-family: roboto;
+     position: absolute;
+     bottom: 30%;
+     top:50%;
+     left:10%;
+     right: 10%;
+     flex-direction: column;
+}
+
+.heading{
+    position: absolute;
+    color:white;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     font-family: roboto;
+     top:10%;
+     left: 10%;
+     right: 10%;
+}
+
+.main-container{
+     
+    color:black;
+    width: 400px;
+    border: none;
+    font-size: 18px;
+    font-family: roboto;
+    
+}
+
+.main-container div{
+  border: none;
+    display:grid;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 12px;
+    align-items: center;
+    font-family: roboto;
+    
+}
+.main-container div div{
+    margin: 0;
+    color :rgb(213, 224, 222)
+}
+
+input,
+select{
+ padding: 4px 4px;
+outline: none;
+}
+
+input:focus,
+select:focus{
+    border-color: blue;
+    border-width: 1px;
+}
+
+input::placeholder{
+    
+    color: rgb(56, 56, 161);
+
+}
+.date-of-birth,
+select{
+    font-family: roboto;
+}
+
+
+.save-info-paragraph{
+    
+    display: flex;
+    justify-content: end;
+}
+
+.save-info{
+    padding: 4px 8px ;
+    cursor: pointer;  
+    background-color: green;  
+    color: white;
+    border: 1px solid rgb(0, 255, 34);
+}
