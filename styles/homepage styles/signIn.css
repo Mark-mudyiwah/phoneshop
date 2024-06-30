@@ -1,10 +1,24 @@
 
 body{
     font-family: roboto;
-  background-color: rgb(40, 32, 110);
+  background-color: rgb(6, 42, 51);
     background-size: 100%;
     background-position: center;
 
+}
+
+p{
+    margin-top: -4px;
+    margin-bottom: 5px;
+    display:  flex;
+    justify-content: end;
+     
+   
+}
+
+span{
+    color: rgb(212, 13, 13);
+    font-size: 13px;
 }
 
 .main-flex{
@@ -38,7 +52,7 @@ body{
     color:black;
     width: 400px;
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     font-family: roboto;
     
 }
@@ -47,14 +61,14 @@ body{
   border: none;
     display:grid;
     grid-template-columns: 100px 1fr;
-    margin-bottom: 12px;
     align-items: center;
     font-family: roboto;
+    margin-bottom: 6px;
     
 }
 .main-container div div{
     margin: 0;
-    color :rgb(213, 224, 222)
+    color :rgb(9, 143, 221)
 }
 
 input,
@@ -93,3 +107,37 @@ select{
     color: white;
     border: 1px solid rgb(0, 255, 34);
 }
+
+.log-in-span{
+    color: rgb(210, 211, 210);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+ .yes-save{
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+ }
+ .no-save{
+    background-color: brown;
+    border: none;
+    cursor: pointer;
+ }
+ .terms-conditions-paragraph{
+    margin-left: 12px;
+    width: 300px;
+    margin-bottom: 20px;
+    color:rgb(87, 7, 192);
+    font-size: 14px;
+   
+ }
+
+ .confimation-buttons-container{
+    display: inline-block;
+    margin-left: 15px;
+ }
+ .pivacy-policy-span{
+    font-size: 15px;
+    color:blueviolet;
+ }

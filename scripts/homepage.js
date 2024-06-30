@@ -237,7 +237,9 @@ function dropDownAnimation(){
      
       `
       dropDownMenu.innerHTML= `
+      <a href ="signIn.html"
       <div class="Sign In">Sign In</div>
+      </a>
       <div class="categories"> Categories</div>
      <div class="about-us">About Us </div>
      

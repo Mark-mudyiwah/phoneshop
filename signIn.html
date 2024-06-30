@@ -13,57 +13,95 @@
 </head>
 
 <body>
-    <h2 class="heading">Please provide your details below:</h2> 
+    <h2 class="heading">Please provide your credentials below:</h2> 
     <div class="main-flex">
          
-        <div class="main-container">
-        <div>
-        <div>First Name:</div>
-        <input type="text" class="first-name" placeholder="Enter your first name (not Surname)">
-        </div>
-        <div>
-        <div>Last name:</div>
-        <input type="text" class="Surname" placeholder="Enter your Surname">
-        </div>
-        <div>
-        <div> Date of Birth:</div>
-        <input type="date" class="date-of-birth">
-        </div>
+        <div class="main-container js-main-container">
 
-        <div>
+        <div class="first-name-grid">
+
+        <div>First Name:</div>
+        <input type="text" class="first-name js-first-name" placeholder="Enter your first name(not Surname)">
+       
+    </div>
+    <p class="js-first-name-caution"></p>
+
+        <div  class="last-name-grid">
+
+        <div>Last name:</div>
+        <input type="text" class="surname js-surname" placeholder="Enter your Surname">
+        </div>
+        <p class="js-surname-caution" >
+            
+        </p>
+
+        <div  class="date-of-birth-grid">
+
+        <div> Date of Birth:</div>
+        <input type="date" class="date-of-birth js-date-of-birth">
+        </div>
+        <p class="js-date-of-birth-caution"></p>
+
+        <div  class="sex-grid">
         <div>Sex:</div>
-        <select class="gender-select">
+        <select class="gender-select js-gender-select">
         <option disabled selected value="">Choose gender</option>
-        <option value="Male">Male</option>
+        <option  value="Male">Male</option>
         <option value="Female">Female</option>
         </select>
         </div>
-        <div>
+
+        <p class="js-gender-caution"></p>
+        <div  class=" user-name-grid">
         <div>Username:</div>
-        <input type="text" class="username" placeholder="Enter a Username">
+        <input type="text" class="username js-username" placeholder="Enter a Username">
         </div>
-        <div>
+        <p class="js-username-caution"></p>
+
+        <div  class=" password-grid">
         <div>Password:</div>
-        <input type="password" class="date-of-birth" placeholder="Create a password (6-8 characters)">
+        <input type="password" class=" create-password js-create-password" placeholder="Create a password (6-8 characters)">
         </div>
-
-        <div>
-            <div>Confirm password:</div>
-            <input type="password" class="date-of-birth" placeholder="Re-enter the password (6-8 characters)">
-            </div>
-
-        <p class="save-info-paragraph">
-
-            <button class="save-info">
-                Save Info
-            </button>
-        </p>
-     
+        <p class="js-first-password-caution"></p>
        
+
+        <div class="confirm-password-grid">
+            <div>Confirm password:</div>
+            <input type="password" class="retype-password js-retype-password" placeholder="Re-enter the password (6-10 characters)">
+            </div>
+         
+            <p class="js-confirm-password-caution"></p>
+
+            <p class="save-info-paragraph">
+           
+                <button class="save-info js-save-button">
+                    Save Info
+                </button>
+                
+            </p>   
+                
     </div>
+
+
+    <div class="terms-conditions-paragraph">
+        By clicking <b>Yes</b>, you agree to Mark's terms , conditions & <span class="pivacy-policy-span">Privacy policy</span>
+    
+        <div class="confimation-buttons-container">
+            <button class="yes-save">Yes</button> <button class="no-save">No</button>
+        </div>
+    
+    </div>
+
+    
+
+    <div class="Link-to-login-div">Already have an account ?  <a href="logIn.html">
+        <span class="log-in-span js-login-span">Log In</span>
+    </a></div>
+
+
 </div>
 
-<script src="scripts/signIn.js"></script>
+<script src="scripts/signIn.js" type="module"></script>
 
 
 </body>
