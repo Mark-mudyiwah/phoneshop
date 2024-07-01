@@ -1,7 +1,7 @@
 
 body{
     font-family: roboto;
-  background-color: rgb(6, 42, 51);
+  background-color: wheat;
     background-size: 100%;
     background-position: center;
 
@@ -19,6 +19,7 @@ p{
 span{
     color: rgb(212, 13, 13);
     font-size: 13px;
+    font-weight: 500;
 }
 
 .main-flex{
@@ -27,30 +28,38 @@ span{
     justify-content: center;
      align-items: center;
      font-family: roboto;
-     position: absolute;
-     bottom: 30%;
-     top:50%;
-     left:10%;
-     right: 10%;
+     
      flex-direction: column;
+     padding: 20px 2px;
+    
 }
 
 .heading{
-    position: absolute;
-    color:white;
+    
+    color:rgb(10, 33, 167);
     display: flex;
     justify-content: center;
      align-items: center;
      font-family: roboto;
-     top:10%;
-     left: 10%;
-     right: 10%;
+     
+}
+
+
+@media( max-width:500px) {
+    .main-container{
+        width: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    
 }
 
 .main-container{
      
     color:black;
     width: 400px;
+
     border: none;
     font-size: 14px;
     font-family: roboto;
@@ -68,7 +77,7 @@ span{
 }
 .main-container div div{
     margin: 0;
-    color :rgb(9, 143, 221)
+    color :rgb(99, 20, 202)
 }
 
 input,
@@ -80,12 +89,12 @@ outline: none;
 input:focus,
 select:focus{
     border-color: blue;
-    border-width: 1px;
+    border-width: 2px;
 }
 
 input::placeholder{
     
-    color: rgb(56, 56, 161);
+    color: rgb(167, 69, 12);
 
 }
 .date-of-birth,
@@ -109,27 +118,35 @@ select{
 }
 
 .log-in-span{
-    color: rgb(210, 211, 210);
+    color: rgb(8, 20, 128);
     font-size: 15px;
     cursor: pointer;
+    font-weight: 500;
 }
 
  .yes-save{
-    background-color: aqua;
+    background-color: rgb(7, 104, 28);
     border: none;
     cursor: pointer;
+    color: white;
  }
  .no-save{
-    background-color: brown;
+    background-color: rgb(179, 17, 17);
     border: none;
     cursor: pointer;
+    color: white;
  }
  .terms-conditions-paragraph{
-    margin-left: 12px;
+    display: none;
+    margin-left: 100px;
     width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 3px;
     color:rgb(87, 7, 192);
     font-size: 14px;
+    
+    padding: 10px;
+    line-height: 20px;
    
  }
 
@@ -139,5 +156,38 @@ select{
  }
  .pivacy-policy-span{
     font-size: 15px;
-    color:blueviolet;
+    color:rgb(160, 8, 97);
+    cursor: pointer;
+    text-decoration: underline;
  }
+
+  
+ 
+
+ .hide{
+    display: none;
+ }
+
+ .show{
+ display:initial;
+
+ }
+
+ .complete-sign-in-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     
+ }
+
+ .complete-sign-in-div div{
+
+    margin: 10px;
+    font-size: larger;
+    color: rgb(29, 17, 199);
+ }
+
+.complete-sign-in-div div span{
+    font-size: large;
+}

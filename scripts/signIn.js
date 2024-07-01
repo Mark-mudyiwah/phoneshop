@@ -1,32 +1,40 @@
 
 
-let clientInfo = [
-
-{ firstName:'Mark',
-  surName  :'Mudyiwa',
-  dateOfBirth:'2024/04/24',
-  gender:'male',
-  userName:'markmudyiwah0@gmail.com',
-  password:'mark2004',
-  
+let clientInfo = JSON.parse(localStorage.getItem('clientInfo'))
 
 
 
-},
+if(!clientInfo){
 
-{
-    firstName:'Leon',
-    surName  :'Nemauyu',
-    dateOfBirth:'2000/09/17',
-    gender:'male',
-    userName:'leonnemauyu0@gmail.com',
-    password:'leon2000yew',
+    clientInfo = [
+        { firstName:'Mark',
+            surName  :'Mudyiwa',
+            dateOfBirth:'2024/04/24',
+            gender:'male',
+            userName:'markmudyiwah0@gmail.com',
+            password:'mark2004',
+            
+          
+          
+          
+          },
+          
+          {
+              firstName:'Leon',
+              surName  :'Nemauyu',
+              dateOfBirth:'2000/09/17',
+              gender:'male',
+              userName:'leonnemauyu0@gmail.com',
+              password:'leon2000yew',
+              
+          }
+          
+          
+          
+          ]
+          
     
 }
-
-
-
-]
 
 
 
@@ -38,11 +46,32 @@ let clientInfo = [
 
  const saveInfoElement = document.querySelector('.js-save-button')
 
-savingClientInfo(saveInfoElement)
+ 
+ 
 
- function savingClientInfo(saveInfoElement){
  saveInfoElement.addEventListener('click',()=>{
 
+    let properties = savingClientInfo()
+
+    if(properties.correctName && properties.correctDateOfBirth && properties.usernameLength&&properties.correctGender && properties.matchPassword &&properties.passwordLength >= 6 && properties.passwordLength <= 10 && !properties.matchingClient){
+
+        document.querySelector('.js-save-info-paragraph').classList.add('hide')
+        document.querySelector('.terms-conditions-paragraph').classList.add('show')
+            
+    
+    } 
+   console.log(properties)
+
+ })
+
+ 
+ document.querySelector('.js-no-save-button').addEventListener('click',()=>{
+    alert('hello')
+ })
+
+
+
+ function savingClientInfo(){
     const firstNameInputElement = document.querySelector('.js-first-name')
     const firstName = firstNameInputElement.value
    
@@ -105,30 +134,57 @@ if(matchingClient){
 
 }else{
 
- 
-    if(matchPassword && passwordLength && usernameLength &&correctName &&correctSurName && correctGender && correctDateOfBirth){
+document.querySelector('.js-yes-save-button').addEventListener('click',()=>{
+    clientInfo.push(
+        {
+            firstname:firstName,
+            surName:surName,
+            dateOfBirth:dateOfBirth,
+            gender:gender,
+            userName:userName,
+            password :password,
 
-        clientInfo.push(
-            {
-                firstname:firstName,
-                surName:surName,
-                dateOfBirth:dateOfBirth,
-                gender:gender,
-                userName:userName,
-                password :password,
-                
-        
-            })
     
-            firstNameInputElement.value =''
-            surNameElement.value=''
-            dateinputElement.value=''
-            genderInputElement.value=''
-            userNameInputElement.value=''
-            firstPasswordInputElement.value=''
-            confirmPasswordInputElement.value=''
-         }
-         console.log(clientInfo)
+        })
+
+  firstNameInputElement.value=``    
+  surNameElement.value=``  
+  dateinputElement.vale=``
+  genderInputElement.value = ``
+
+  userNameInputElement.value = ``
+  firstPasswordInputElement.value = ``
+  confirmPasswordInputElement.value = ``
+
+
+document.body.innerHTML =`
+<div class = "complete-sign-in-div">
+
+
+<div>
+
+Thank you for Signing In <b> ${ firstName} ${surName} </b>
+
+</div>
+
+<div>
+
+ You can now proceed to <a href="logIn.html">
+        <span class="log-in-span js-login-span"> Log In </span>
+    </a>
+
+</div>
+
+</div>
+
+
+`
+console.log(clientInfo)
+
+localStorage.setItem('clientInfo',JSON.stringify(clientInfo))
+console.log(localStorage)
+ })
+ 
 }
 
    
@@ -178,13 +234,21 @@ if(!matchPassword){
 
  }else if(matchPassword && passwordLength < 6 ||passwordLength > 10){
 
-        document.querySelector('.js-confirm-password-caution').innerHTML =`<span>Password too short</span>`
+        document.querySelector('.js-confirm-password-caution').innerHTML =`<span>Password too short!</span>`
  }else if(matchPassword && passwordLength >= 6 && passwordLength <= 10 ){
     document.querySelector('.js-confirm-password-caution').innerHTML =`  `
    
 }
 
 
- })}
 
- 
+return {
+    usernameLength,
+    matchPassword,
+    passwordLength,
+    correctGender,
+    correctName,
+    correctDateOfBirth,
+    matchingClient,
+}
+}
