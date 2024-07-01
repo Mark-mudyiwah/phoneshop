@@ -20,6 +20,8 @@ span{
     color: rgb(212, 13, 13);
     font-size: 13px;
     font-weight: 500;
+    margin-top: -10px;
+    margin-bottom: 6px;
 }
 
 .main-flex{
@@ -27,7 +29,7 @@ span{
     display: flex;
      font-family: roboto;
      flex-direction: column;
-     padding: 20px 2px;
+     padding: 30px 2px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: aliceblue;
@@ -38,7 +40,8 @@ span{
 .heading{
     
     color:rgb(10, 33, 167);
-     
+     display: flex;
+     justify-content: center;
      align-items: center;
      font-family: roboto;
      
@@ -78,7 +81,8 @@ span{
     grid-template-columns: 100px 1fr;
     align-items: center;
     font-family: roboto;
-    margin-bottom: 6px;
+    margin-bottom: 15px;
+    
     
 }
 .main-container div div{
@@ -135,16 +139,18 @@ select{
     border: none;
     cursor: pointer;
     color: white;
+    padding: 3px 6px;
  }
  .no-save{
     background-color: rgb(179, 17, 17);
     border: none;
     cursor: pointer;
     color: white;
+    padding: 3px 6px;
  }
  .terms-conditions-paragraph{
     display: none;
-    margin-left: 100px;
+   
     width: 300px;
     margin-bottom: 10px;
     margin-top: 3px;
