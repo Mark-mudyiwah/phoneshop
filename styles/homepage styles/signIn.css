@@ -2,7 +2,7 @@
 body{
     font-family: roboto;
   background-color: wheat;
-    background-size: 100%;
+    
     background-position: center;
 
 }
@@ -26,12 +26,12 @@ span{
     
     display: flex;
      font-family: roboto;
-     width: 600px;
      flex-direction: column;
      padding: 20px 2px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: aliceblue;
+   
     
 }
 
@@ -68,6 +68,7 @@ span{
     border: none;
     font-size: 14px;
     font-family: roboto;
+    
     
 }
 
