@@ -25,20 +25,20 @@ span{
 .main-flex{
     
     display: flex;
-    justify-content: center;
-     align-items: center;
      font-family: roboto;
-     
+     width: 600px;
      flex-direction: column;
      padding: 20px 2px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
     
 }
 
 .heading{
     
     color:rgb(10, 33, 167);
-    display: flex;
-    justify-content: center;
+     
      align-items: center;
      font-family: roboto;
      
@@ -47,9 +47,14 @@ span{
 
 @media( max-width:500px) {
     .main-container{
-        width: 100%;
+        max-width:95%;
         margin-left: 5px;
         margin-right: 5px;
+
+    }
+
+    .main-flex{
+        width: 100%;
     }
 
     
@@ -58,7 +63,7 @@ span{
 .main-container{
      
     color:black;
-    width: 400px;
+    width:100%;
 
     border: none;
     font-size: 14px;
