@@ -1,6 +1,5 @@
 
-
-let clientInfo = JSON.parse(localStorage.getItem('clientInfo'))
+export let clientInfo = JSON.parse(localStorage.getItem('clientInfo'))
 
 
 
@@ -143,7 +142,6 @@ document.querySelector('.js-yes-save-button').addEventListener('click',()=>{
             gender:gender,
             userName:userName,
             password :password,
-
     
         })
 
