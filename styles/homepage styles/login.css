@@ -1,0 +1,102 @@
+
+
+body{
+    background-color:rgb(86, 73, 202);
+}
+
+.enter-info{
+    color: rgb(255, 123, 0);
+    display: flex;
+    justify-content: center;
+
+}
+.main{
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    row-gap: 20px;
+    font-family: roboto;
+    margin-top: 200px;
+    border: 1px solid rgb(45, 17, 173);
+    padding: 40px 50px;
+   
+    border-radius:8px ;
+    background-color: aqua;
+    
+
+}
+
+.main:hover{
+  
+ box-shadow: 0px 0px 20px aqua;
+  
+
+
+}
+
+.main div{
+    display: grid;
+     grid-template-columns: 80px 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}
+
+@media(max-width:600px){
+    body{
+        background-color: black;
+    }
+
+    .enter-info{
+      color:  rgb(172, 23, 218);
+
+
+    }
+
+}
+
+
+
+
+input{
+    padding: 6px 6px;
+    
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: noe;
+}
+
+ 
+
+.username-input,
+.password-input{
+ width:100%;
+}
+
+
+.username-input ::placeholder{
+    color: darkgreen;
+    padding: 6px 4px;
+    
+}
+
+
+.password-input ::placeholder{
+    color: blueviolet;
+    padding: 6px 4px;
+}
+
+.username-text{
+    color:darkblue;
+    font-weight: 600;
+}
+
+.password-text{
+    color: darkred;
+    font-weight: 600;
+}
