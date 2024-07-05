@@ -1,7 +1,11 @@
 
-export let clientInfo = JSON.parse(localStorage.getItem('clientInfo'))
 
+ export function loadFromStorage(){
 
+    return JSON.parse(localStorage.getItem('clientInfo'))
+}
+
+const clientInfo = loadFromStorage()  
 
 if(!clientInfo){
 
@@ -13,9 +17,6 @@ if(!clientInfo){
             userName:'markmudyiwah0@gmail.com',
             password:'mark2004',
             
-          
-          
-          
           },
           
           {
@@ -28,28 +29,30 @@ if(!clientInfo){
               
           }
           
-          
-          
           ]
           
-    
+          
+         
 }
-
-
-
-
-
+    
+function saveToStorage(){
+    localStorage.setItem('clientInfo',JSON.stringify(clientInfo))
+}
 
 
    
 
- const saveInfoElement = document.querySelector('.js-save-button')
-
  
+
+
+
+ const saveInfoElement = document.querySelector('.js-save-button')
+ 
+
  
 
  saveInfoElement.addEventListener('click',()=>{
-
+ 
     let properties = savingClientInfo()
 
     if(properties.correctName && properties.correctDateOfBirth && properties.usernameLength&&properties.correctGender && properties.matchPassword &&properties.passwordLength >= 6 && properties.passwordLength <= 10 && !properties.matchingClient){
@@ -70,7 +73,7 @@ if(!clientInfo){
 
 
 
- function savingClientInfo(){
+  function savingClientInfo(){
     const firstNameInputElement = document.querySelector('.js-first-name')
     const firstName = firstNameInputElement.value
    
@@ -179,7 +182,8 @@ Thank you for Signing In <b> ${ firstName} ${surName} </b>
 `
 console.log(clientInfo)
 
-localStorage.setItem('clientInfo',JSON.stringify(clientInfo))
+ saveToStorage()
+
 console.log(localStorage)
  })
  
@@ -249,4 +253,4 @@ return {
     correctDateOfBirth,
     matchingClient,
 }
-}
+ }
