@@ -1,10 +1,10 @@
 
 body{
     font-family: roboto;
-  background-color: wheat;
+  background-color: black;
     
     background-position: center;
-
+color:white;
 }
 
 p{
@@ -30,16 +30,21 @@ span{
      font-family: roboto;
      flex-direction: column;
      padding: 30px 2px;
-    border: 1px solid black;
+    border: 1px solid  rgb(45, 17, 173) ;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: black;
+    padding: 80px 20px;
    
     
 }
 
+.main-flex:hover{
+    box-shadow: 0px 0px 50px  rgb(45, 17, 173)  ;
+}
+
 .heading{
     
-    color:rgb(10, 33, 167);
+    color:darkred;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -87,7 +92,8 @@ span{
 }
 .main-container div div{
     margin: 0;
-    color :rgb(99, 20, 202)
+    color :rgb(152, 17, 156);
+    font-weight: bold;
 }
 
 input,
@@ -128,44 +134,14 @@ select{
 }
 
 .log-in-span{
-    color: rgb(8, 20, 128);
-    font-size: 15px;
+    color: rgb(15, 34, 212);
+    font-size: 16px;
     cursor: pointer;
     font-weight: 500;
 }
 
- .yes-save{
-    background-color: rgb(7, 104, 28);
-    border: none;
-    cursor: pointer;
-    color: white;
-    padding: 3px 6px;
- }
- .no-save{
-    background-color: rgb(179, 17, 17);
-    border: none;
-    cursor: pointer;
-    color: white;
-    padding: 3px 6px;
- }
- .terms-conditions-paragraph{
-    display: none;
-   
-    width: 300px;
-    margin-bottom: 10px;
-    margin-top: 3px;
-    color:rgb(87, 7, 192);
-    font-size: 14px;
-    
-    padding: 10px;
-    line-height: 20px;
-   
- }
-
- .confimation-buttons-container{
-    display: inline-block;
-    margin-left: 15px;
- }
+ 
+  
  .pivacy-policy-span{
     font-size: 15px;
     color:rgb(160, 8, 97);
@@ -193,6 +169,14 @@ select{
      
  }
 
+ .terms-conditions-paragraph{
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.save-info-span{
+    color: green;
+}
  .complete-sign-in-div div{
 
     margin: 10px;
@@ -202,4 +186,14 @@ select{
 
 .complete-sign-in-div div span{
     font-size: large;
+}
+
+.heading5{
+    
+    color:blue;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: roboto;
+     
 }
