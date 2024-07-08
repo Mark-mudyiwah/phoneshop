@@ -18,16 +18,16 @@ body{
     justify-content: center;
     align-items: center;
     
-    row-gap: 20px;
+    row-gap: 30px;
     font-family: roboto;
-    margin-top: 200px;
+    margin-top: 100px;
     border: 1px solid rgb(45, 17, 173);
-    padding: 40px 50px;
-   
-    border-top-left-radius:8px ;
-    border-top-right-radius: 8px;
-    border-bottom: none;
-    background-color:  aqua;
+    padding: 100px 50px;
+    border-radius:8px ;
+    border-bottom-right-radius: 0px;
+
+    
+    
     
 
   
@@ -36,7 +36,7 @@ body{
 
 .main:hover{
   
- box-shadow: 0px 0px 20px rgb(3, 209, 216);
+ box-shadow: 0px 0px 50px rgb(45, 17, 173);
   
 
  
@@ -92,27 +92,38 @@ input{
 }
 
 .log-in-container{ 
-    background-color:  aqua;
+    
     display: flex;
     justify-content:  end;
     border-top: none;
     border-bottom-left-radius:8px ;
     border-bottom-right-radius: 8px;
-    margin-left: 1px;
-    margin-right: 1px;
+    
     padding-bottom : 8px;
-    padding-right: 15px;
+   
+  
 }
 
 
 .log-in-button{
-    padding: 5px 10px;
-    background-color: blue;
+    padding: 8px 15px;
+   background-color: black;
     color:white;
-    border: none;
+    border: 1px solid rgb(45, 17, 173);
     cursor: pointer;
     font-size: 15px;
     border-radius: 3px;
+    border-top: none;
+}
+
+.caution-span{
+    color: rgb(179, 6, 6);
+}
+
+.log-in-button:hover{
+    background-color: rgb(45, 17, 173) ;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
 }
 
  
