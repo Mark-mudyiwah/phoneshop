@@ -1,11 +1,11 @@
 
 
 body{
-    background-color:rgb(86, 73, 202);
+    background-color :black;
 }
 
 .enter-info{
-    color: rgb(255, 123, 0);
+    color: rgba(219, 30, 30, 0.966);
     display: flex;
     justify-content: center;
 
@@ -24,18 +24,22 @@ body{
     border: 1px solid rgb(45, 17, 173);
     padding: 40px 50px;
    
-    border-radius:8px ;
-    background-color: aqua;
+    border-top-left-radius:8px ;
+    border-top-right-radius: 8px;
+    border-bottom: none;
+    background-color:  aqua;
     
+
+  
 
 }
 
 .main:hover{
   
- box-shadow: 0px 0px 20px aqua;
+ box-shadow: 0px 0px 20px rgb(3, 209, 216);
   
 
-
+ 
 }
 
 .main div{
@@ -47,21 +51,7 @@ body{
    
 }
 
-@media(max-width:600px){
-    body{
-        background-color: black;
-    }
-
-    .enter-info{
-      color:  rgb(172, 23, 218);
-
-
-    }
-
-}
-
-
-
+ 
 
 input{
     padding: 6px 6px;
@@ -100,3 +90,29 @@ input{
     color: darkred;
     font-weight: 600;
 }
+
+.log-in-container{ 
+    background-color:  aqua;
+    display: flex;
+    justify-content:  end;
+    border-top: none;
+    border-bottom-left-radius:8px ;
+    border-bottom-right-radius: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-bottom : 8px;
+    padding-right: 15px;
+}
+
+
+.log-in-button{
+    padding: 5px 10px;
+    background-color: blue;
+    color:white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+ 

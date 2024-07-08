@@ -1,69 +1,14 @@
+import {  clientInfo, saveToStorage} from "./utils/client-info.js"
 
-
- export function loadFromStorage(){
-
-    return JSON.parse(localStorage.getItem('clientInfo'))
-}
-
-const clientInfo = loadFromStorage()  
-
-if(!clientInfo){
-
-    clientInfo = [
-        { firstName:'Mark',
-            surName  :'Mudyiwa',
-            dateOfBirth:'2024/04/24',
-            gender:'male',
-            userName:'markmudyiwah0@gmail.com',
-            password:'mark2004',
-            
-          },
-          
-          {
-              firstName:'Leon',
-              surName  :'Nemauyu',
-              dateOfBirth:'2000/09/17',
-              gender:'male',
-              userName:'leonnemauyu0@gmail.com',
-              password:'leon2000yew',
-              
-          }
-          
-          ]
-          
-          
-         
-}
-    
-function saveToStorage(){
-    localStorage.setItem('clientInfo',JSON.stringify(clientInfo))
-}
-
-
-   
-
+  
+console.log(clientInfo)
  
-
-
 
  const saveInfoElement = document.querySelector('.js-save-button')
  
-
- 
-
  saveInfoElement.addEventListener('click',()=>{
  
-    let properties = savingClientInfo()
-
-    if(properties.correctName && properties.correctDateOfBirth && properties.usernameLength&&properties.correctGender && properties.matchPassword &&properties.passwordLength >= 6 && properties.passwordLength <= 10 && !properties.matchingClient){
-
-        document.querySelector('.js-save-info-paragraph').classList.add('hide')
-        document.querySelector('.terms-conditions-paragraph').classList.add('show')
-            
-    
-    } 
-   console.log(properties)
-
+    savingClientInfo()
  })
 
  
@@ -134,9 +79,8 @@ if(matchingClient){
 
     console.log(matchingClient.userName)
 
-}else{
+}else if( correctName && correctDateOfBirth && usernameLength && correctGender && matchPassword && passwordLength >= 6 && passwordLength <= 10 && !matchingClient){
 
-document.querySelector('.js-yes-save-button').addEventListener('click',()=>{
     clientInfo.push(
         {
             firstname:firstName,
@@ -185,19 +129,14 @@ console.log(clientInfo)
  saveToStorage()
 
 console.log(localStorage)
- })
+return
+
  
 }
-
-   
-
-
-
 
 
 if(!correctName){
      document.querySelector('.js-first-name-caution').innerHTML =`<span>Name too short!</span>`
-
 }else{
     document.querySelector('.js-first-name-caution').innerHTML =``
 }
@@ -243,7 +182,7 @@ if(!matchPassword){
 }
 
 
-
+/*
 return {
     usernameLength,
     matchPassword,
@@ -252,5 +191,5 @@ return {
     correctName,
     correctDateOfBirth,
     matchingClient,
-}
+}*/
  }
