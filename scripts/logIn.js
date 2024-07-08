@@ -45,12 +45,18 @@ document.querySelector('.js-log-in-button').addEventListener('click',()=>{
     }else
 
     if(inCorrectPassword){
-        console.log('incorrect password')
+        document.querySelector('.js-caution-span')
+         .innerHTML =`
+          Incorrect password!
+        `
+       
     }else
 
     if(incorrectUsername){
-
-        console.log('Incorrect Username or password')
+        document.querySelector('.js-caution-span')
+        .innerHTML =`
+       Incorrect Username or password!
+       `
     }
  })
 
