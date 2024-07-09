@@ -24,16 +24,17 @@ span{
     margin-bottom: 6px;
 }
 
+  
 .main-flex{
     
     display: flex;
      font-family: roboto;
      flex-direction: column;
      padding: 30px 2px;
-    border: 1px solid  rgb(45, 17, 173) ;
+    border: 2px solid  rgb(45, 17, 173) ;
     border-radius: 10px;
     background-color: black;
-    padding: 80px 20px;
+    padding: 50px 20px;
    
     
 }
@@ -44,7 +45,7 @@ span{
 
 .heading{
     
-    color:darkred;
+    color:green;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -62,7 +63,7 @@ span{
     }
 
     .main-flex{
-        width: 100%;
+       max-width: 100%;
     }
 
     
@@ -70,7 +71,6 @@ span{
 
 .main-container{
      
-    color:black;
     width:100%;
 
     border: none;
@@ -81,25 +81,20 @@ span{
 }
 
 .main-container div{
-  border: none;
-    display:grid;
-    grid-template-columns: 100px 1fr;
-    align-items: center;
-    font-family: roboto;
-    margin-bottom: 15px;
-    
+ margin-bottom: 15px;
     
 }
 .main-container div div{
-    margin: 0;
-    color :rgb(152, 17, 156);
+    margin: 4px 0px;
+    color :rgb(14, 118, 150);
     font-weight: bold;
 }
 
 input,
 select{
- padding: 4px 4px;
+ padding: 8px 4px;
 outline: none;
+width: 98%;
 }
 
 input:focus,
@@ -143,7 +138,6 @@ select{
  
   
  .pivacy-policy-span{
-    font-size: 15px;
     color:rgb(160, 8, 97);
     cursor: pointer;
     text-decoration: underline;
@@ -172,7 +166,12 @@ select{
  .terms-conditions-paragraph{
     font-size: 13px;
     margin-top: 12px;
+    
+    display: flex;
+    justify-content: end;
 }
+
+ 
 
 .save-info-span{
     color: green;
@@ -190,7 +189,7 @@ select{
 
 .heading5{
     
-    color:blue;
+    color:white;
      display: flex;
      justify-content: center;
      align-items: center;

@@ -21,7 +21,7 @@ body{
     row-gap: 30px;
     font-family: roboto;
     margin-top: 100px;
-    border: 1px solid rgb(45, 17, 173);
+    border: 2px solid rgb(45, 17, 173);
     padding: 100px 50px;
     border-radius:8px ;
     border-bottom-right-radius: 0px;
@@ -43,22 +43,19 @@ body{
 }
 
 .main div{
-    display: grid;
-     grid-template-columns: 80px 1fr;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    margin-bottom: 4px;
    
 }
 
  
 
 input{
-    padding: 6px 6px;
+    padding: 10px 6px;
     
     border: 1px solid black;
     border-radius: 5px;
-    outline: noe;
+    outline: none;
 }
 
  
@@ -68,17 +65,24 @@ input{
  width:100%;
 }
 
-
-.username-input ::placeholder{
-    color: darkgreen;
-    padding: 6px 4px;
+ 
+input:focus{
+    border-color:  blue;
+    border-width: 2px;
     
 }
 
 
-.password-input ::placeholder{
-    color: blueviolet;
-    padding: 6px 4px;
+.username-input::placeholder{
+    color: rgb(0, 18, 100);
+    padding: 8px 4px;
+    
+}
+
+
+.password-input::placeholder{
+    color: rgb(226, 30, 56);
+    padding: 8px 4px;
 }
 
 .username-text{
@@ -109,7 +113,7 @@ input{
     padding: 8px 15px;
    background-color: black;
     color:white;
-    border: 1px solid rgb(45, 17, 173);
+    border: 2px solid rgb(45, 17, 173);
     cursor: pointer;
     font-size: 15px;
     border-radius: 3px;

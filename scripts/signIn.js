@@ -12,9 +12,6 @@ console.log(clientInfo)
  })
 
  
- document.querySelector('.js-no-save-button').addEventListener('click',()=>{
-    alert('hello')
- })
 
 
 
