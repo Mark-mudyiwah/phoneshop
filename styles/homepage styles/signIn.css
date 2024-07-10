@@ -157,10 +157,17 @@ select{
  }
 
  .complete-sign-in-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+     display: flex;
+     justify-content: center;
+     position: absolute;
+     flex-direction: column;
+     align-items: center;
+     background-color: white;
+     top: 0;
+     bottom:  0;
+     right: 0;
+     left: 0;
+     
      
  }
 
