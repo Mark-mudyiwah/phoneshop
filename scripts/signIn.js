@@ -97,7 +97,8 @@ if(matchingClient){
   userNameInputElement.value = ``
   firstPasswordInputElement.value = ``
   confirmPasswordInputElement.value = ``
-
+  
+  document.body.classList.add('proceeding')
 
 document.body.innerHTML =`
 <div class = "complete-sign-in-div">
@@ -121,6 +122,8 @@ Thank you for Signing In <b> ${ firstName} ${surName} </b>
 
 
 `
+
+
 console.log(clientInfo)
 
  saveToStorage()

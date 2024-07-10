@@ -2,8 +2,7 @@
 body{
     font-family: roboto;
 
-    background:linear-gradient(red,blue,yellow,red,blue,green,red,blue,red,blue);
-    background-position: center;
+    background-image:linear-gradient(rgba(255, 0, 0, 0.534),white,rgba(28, 218, 218, 0.966),rgb(61, 5, 5));
    color:black;
 }
 
@@ -35,7 +34,7 @@ span{
     border-radius: 10px;
     background-color:transparent;
     padding: 50px 20px;
-    background-color: rgb(194, 194, 194); 
+   
    
     
 }
@@ -74,7 +73,6 @@ span{
 .main-container{
      
     width:100%;
-    background-color: rgb(194, 194, 194); 
     border: none;
     font-size: 14px;
     
@@ -86,7 +84,7 @@ span{
 }
 .main-container div div{
     margin: 4px 0px;
-    background: linear-gradient( blue,purple, aqua);
+    background: linear-gradient( rgb(31, 24, 1),rgb(86, 7, 231));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight:900;
@@ -186,6 +184,10 @@ select{
     margin: 10px;
     font-size: larger;
     color: rgb(29, 17, 199);
+ }
+
+ .proceeding{
+    background: linear-gradient(white);
  }
 
 .complete-sign-in-div div span{
