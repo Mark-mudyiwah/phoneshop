@@ -13,7 +13,7 @@ return matchingProduct
 };
 
 class Product {
-id;
+Id;
 image;
 name;
 price;
@@ -21,7 +21,7 @@ specs;
 
 constructor(productDetails){
 
-  this.id = productDetails.Id;
+  this.Id = productDetails.Id;
   this.image= productDetails.image;
   this.name =productDetails.name;
   this.price = productDetails.price;

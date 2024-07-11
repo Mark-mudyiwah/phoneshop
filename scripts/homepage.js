@@ -100,7 +100,7 @@ products.forEach((product)=>{
 
 
     <div class="add-to-cart-container">
-    <button class="add-to-cart-button" data-product-Id= "${product.Id}">
+    <button class="add-to-cart-button" data-product-id= "${product.Id}">
     Add to cart
     </button>
     </div>
@@ -141,7 +141,8 @@ updateCartQuantity()
   button.addEventListener('click',()=>{
  const productId = button.dataset.productId
  const selectElement = document.querySelectorAll(`.js-select-quantity-${productId}`)
-
+ 
+ //console.log(productId)
  let quantity;
   
 selectElement.forEach((select)=>{
