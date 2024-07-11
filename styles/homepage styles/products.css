@@ -218,10 +218,30 @@ body{
    
 }
 .product-quantity-container{
-display: inline-block;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+
  
   height: 25px;
 
+}
+
+.star-icon{
+  height: 20px;
+}
+.stars-container{
+  height: 30px;
+}
+
+.stars-div{
+  margin-right: 10px;
+   padding: 4px 2px;
+   color:rgb(255, 0, 119);
+   font-weight: bold;
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
 }
 .added-text-container{
   display:flex;

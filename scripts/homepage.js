@@ -71,7 +71,7 @@ products.forEach((product)=>{
     </div>
      
     <div class="product-quantity-container">
-        <select class="js-select-quantity-${product.Id}">
+       <select class="js-select-quantity-${product.Id}">
             <option selected value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -83,7 +83,18 @@ products.forEach((product)=>{
             <option value="9">9</option>
             <option value="10">10</option>
         </select>
+          <div class= "stars-div">
+          <div class = "image-container">
+           <img class ="star-icon"src = "images/other images/star-50.png">
+          </div>
+
+          <div>
+          4.5
+          </div>
+
+          </div>
         </div>
+
         <div class="added-text-container js-added-text-${product.Id}">
         Added&#10004</div>
 

@@ -12,6 +12,48 @@ products.forEach((product)=>{
 return matchingProduct
 };
 
+class Product {
+id;
+image;
+name;
+price;
+specs;
+
+constructor(productDetails){
+
+  this.id = productDetails.Id;
+  this.image= productDetails.image;
+  this.name =productDetails.name;
+  this.price = productDetails.price;
+  this.specs = productDetails.specs;
+
+};
+
+};
+
+
+const product1 = new Product({ 
+  Id:'p9r8-d3f2-b1c4-e2',
+  image:'images/products/Laptops&Monitors/Dell Laptop.webp',
+  name:' Dell Latitude 7490',
+  price: 449.99,
+  specs:{
+    
+    rom: 256,
+    ram: 16,
+    Osystem:'Windows',
+    version:'10+',
+    processor:'corei7',
+    romType:'(SSD)',
+    more: `The Dell Latitude is a 14-inch bussiness laptop designed for productivity and reliability.The laptop has an Intel Core i7-8650U processor and provides  a 14 FHD LED display,Intel UHD Graphics 620,and a range of ports including USB 3.0,HDMI,and Type-C.Running 
+    on Windows 10 proffesional.It's a solid choice for professionals and businesses seeking a dependable and efficient laptop
+    
+    `
+  },
+ 
+})
+
+console.log(product1)
 
 
 export const products = [
@@ -154,7 +196,8 @@ export const products = [
       romType:' ',
       more:`The Dell SE2722H is a 27-inch FHD flat monitor with sleek and slim design, offering crystal-clear visuals and vibrant colors.It features a 1920x1080p resolution,60Hz refresh rate,and 5ms response time,providing crisp and clear visuals for work and play
       
-      `
+      `,
+      type:'monitor'
     }
 
   }
@@ -660,4 +703,9 @@ export const products = [
 
     
     
-] 
+].map( (productDetails) => {
+
+ return  new Product(productDetails); 
+})
+
+console.log(products)
