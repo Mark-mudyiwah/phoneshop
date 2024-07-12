@@ -221,14 +221,14 @@ body{
  display: flex;
  justify-content: space-between;
  align-items: center;
-
- 
+margin-top: 15px;
   height: 25px;
 
 }
 
 .star-icon{
-  height: 20px;
+  height: 38px;
+   
 }
 .stars-container{
   height: 30px;
@@ -240,7 +240,7 @@ body{
    color:rgb(255, 0, 119);
    font-weight: bold;
    display: flex;
-   align-items: baseline;
+   align-items: center;
    justify-content: space-between;
 }
 .added-text-container{

@@ -85,11 +85,11 @@ products.forEach((product)=>{
         </select>
           <div class= "stars-div">
           <div class = "image-container">
-           <img class ="star-icon"src = "images/other images/star-${(product.rating.stars)*10 < 50 ? 35 : (product.rating.stars)*10}.png">
+           <img class ="star-icon"src = "images/other images/star-rating-${(product.rating.stars)*10}.jpg">
           </div>
 
           <div>
-          ${(product.rating.stars).toFixed(1)}
+          ${product.rating.count}
           </div>
 
           </div>
