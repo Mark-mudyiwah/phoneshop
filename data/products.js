@@ -18,6 +18,7 @@ image;
 name;
 price;
 specs;
+rating;
 
 constructor(productDetails){
 
@@ -26,7 +27,7 @@ constructor(productDetails){
   this.name =productDetails.name;
   this.price = productDetails.price;
   this.specs = productDetails.specs;
-
+ this.rating = productDetails.rating;
 };
 
 };
@@ -49,7 +50,14 @@ const product1 = new Product({
     on Windows 10 proffesional.It's a solid choice for professionals and businesses seeking a dependable and efficient laptop
     
     `
-  },
+  }
+  ,
+  rating:{
+    stars:4.5,
+    count:45
+
+ }
+
  
 })
 
@@ -75,8 +83,11 @@ export const products = [
       
       `
     },
-   
+    rating:{
+      stars:4.5,
+      count:45
 
+   }
   }
 ,
 
@@ -98,6 +109,12 @@ export const products = [
       
       `
     },
+    rating:{
+      stars:4.5,
+      count:45
+
+   }
+
    
   }
 ,
@@ -116,7 +133,12 @@ export const products = [
       romType:'',
       more: `The ASUS VivoBook 15 is a versatile laptop that features a 12th Gen Intel Core i5 processor,8Gb of RAM and a 256 GB SSD.Its 15.6 FHD display provides crisp and vibrant visuals,while the Intel Iris Xe graphics card handle graphics and video playback with ease.With a range of ports and a long-lasting battery,this laptop is ideal for everyday use and productivity.
       `
-    }
+    },
+    rating:{
+      stars:4.5,
+      count:45
+
+   }
 
   }
 
@@ -137,7 +159,13 @@ export const products = [
       
       
       `
-    }
+    },
+    rating:{
+      stars:2.5,
+      count:25
+
+   }
+
 
   }
 
@@ -157,7 +185,13 @@ export const products = [
       more:`The Lenovo ThinkPad X1 Carbon is a high-perfomance laptop that features a 12th Gen Intel Core i7 processor,16GB of RAM,and a 512 GB SSD.It's 14 FHD display provides crisp abnd vibrant visuals,while the intel Iris Xe graphics card handles graphics and video playback smoothly.With a long-lasting, this laptop is perfect for proffessionals and power uses
       
       `
-    }
+    },
+    rating:{
+      stars:4.5,
+      count:45
+
+   }
+
 
   }
 
@@ -178,7 +212,13 @@ export const products = [
       
       
        `
-    }
+    },
+    rating:{
+      stars:4.0,
+      count:40
+
+   }
+
 
   }
 
@@ -198,7 +238,13 @@ export const products = [
       
       `,
       type:'monitor'
-    }
+    },
+    rating:{
+      stars:1.5,
+      count:15
+
+   }
+
 
   }
 
@@ -218,7 +264,13 @@ export const products = [
       more:`The Samsung Galaxy Book Flex 15 laptop features a 15.6-incch 1080p QLED display,powered by an Intel Core i7-1065g7 CPU and NVIDIA GeForce MX250 GPU.It comes with 12GB of RAM and 512GB of storage,providing a seamless perfomance for demanding tasks.This laptop offers a great balance of perfomance,portability and affordability
       
       `
-    }
+    },
+    rating:{
+      stars:5,
+      count:50
+
+   }
+
 
   },
  
@@ -237,11 +289,14 @@ export const products = [
        more:`The Dell XPS 8930 is a high-perfomance desktop that offers a 12th Gen Intel Core i9 processor,16GB of RAM,and a 1TB SSD.It's compact design and range of ports make it perfect for power users and gamers.The NVIDIA GeForce GTX 1660 Super Graphics card delivers smooth perfomance for gaming and graphics-intensive tasks
        
        
-       
-       
-       
        `
-     }
+     },
+     rating:{
+      stars:5,
+      count:50
+
+   }
+
  
    },
   
@@ -264,7 +319,13 @@ export const products = [
        
        
        `
-     }
+     },
+     rating:{
+      stars:3.0,
+      count:30
+
+   }
+
  
    },
  
@@ -285,7 +346,13 @@ export const products = [
        
        
        `
-     }
+     },
+     rating:{
+      stars:1.5,
+      count:15
+
+   }
+
  
    },
    
@@ -302,7 +369,14 @@ export const products = [
        version:'7',
        romType:'SSD ',
        more:`The Samsung Galaxy Book3 360 is a laptop that features a 13.3 inch FHD touchscreen display,Intel Core i7 processor,4GB of RAM and a 256 GB SSD.It also has a long lasting batttery and support S Pen and S Pen Pro.It is capable for both gaming and studying purposes`
-     }
+     },
+
+     rating:{
+      stars:2.0,
+      count:20
+
+   }
+
  
    },
    { 
@@ -321,7 +395,13 @@ export const products = [
        
        `
 
-     }
+     },
+     rating:{
+      stars:2.5,
+      count:25
+
+   }
+
  
    },
  
@@ -338,7 +418,13 @@ export const products = [
        version:'3.2.1',
        romType:' MB',
        more:`The Nokia 235 4G(2024) is an entry-level phone that offers a 2.8 inch TFT LCD Display with a resolution of 240 x 320 pixels.It has a 22nm Unisoc T107 chipset and 64 MB of RAM with 128 MB storage support.The phone supports 4G network and also equips a 2MP rear camera and has  a removable 1450 mAh Li-ion battery and is available in black and purple colors`
-     }
+     },
+     rating:{
+      stars:2.0,
+      count:20
+
+   }
+
  
    },
 
@@ -356,7 +442,13 @@ export const products = [
        version:'EMUI 11',
        romType:' ',
        more:`The Huawei Nova Y90 features a 6.7 inch displaay with a resolution of 1080 x 2388 pixels,a Qualcomm SM6225 Snapdragon 680 4g chipset,6 GB RAM ,128 GB atorage,a tripple camera setup with a 50MP primary sensor,and a 5000 mAh battery with 40W fast charging.`
-     }
+     },
+     rating:{
+      stars:1.0,
+      count:10
+
+   }
+
  
    },
  
@@ -374,7 +466,13 @@ export const products = [
        romType:'(No SD)',
        more:`The Huawei P30 Pro features a 6.47 inch display with a resolution of1080 x 2340 pixels and runs on Android 9.0(Pie),upgradable to Android 10.It is powered by a Kirin 980(7nm)chipset with an octa-core processor and Mali G-76MMP10 GPU.The phone has a triple camera setup,consisting of a 40MP primary sensor with a wide-angle and OIS, a20 MP ultra-wide-angle lens and an 8MP telephoto lens with OIS.The phonecomes with 6GB RAM and 128 GB ROM.It has a 4200 mAh battery with fast charging up to 40W and wireless charging up to 15W
        `
-     }
+     },
+     rating:{
+      stars:4.5,
+      count:45
+
+   }
+
  
    },
    { 
@@ -390,7 +488,13 @@ export const products = [
        version:'EMUI 10.1.0',
        romType:' ',
        more:`The Huawei Y6p,released on May 5,2020,features a 6.3-inch IPS LCD display with a resolution of 720 x 1600 pixels and a 20 :9 aspect ratio.Powered by a Mediatek MT6762R Helio P22 chipset,the phone comes with an octa-core processor and PowerVR GE8320 GPU.It has 32GB or 64 GB of internal storage,paired with 3GB or 4GB of RAM.The triple rear camera setup includes a 13MP primary sensor,while the front camera is 8MP.The phone runs on Android 10 with EMUI 10.1,but lacks Google Play Services.it has a lage 500mAh non-removable battery.`
-     }
+     },
+     rating:{
+      stars:5.0,
+      count:50
+
+   }
+
  
    },
    { 
@@ -407,7 +511,13 @@ export const products = [
        romType:'(Go Edition)',
        more:`The Nokia C12 features a 6.3-inch IPS LCD display,Unisoc SC9863A1 chipset,octa-core processor,2 GB/3GB RAM,64 GB storage,single 8MP rear camera,5MP front camera, Android 12(Go Edition),3000 mAh removable battery,micro-USB and measures 160.6 x 74.3 x 8.8mm,weighing 177.4 grams
        `
-     }
+     },
+     rating:{
+      stars:3.5,
+      count:35
+
+   }
+
  
    },
    
@@ -424,7 +534,13 @@ export const products = [
        version:'9',
        romType:' ',
        more:`The Nokia C32 4G features a 6.5-inch HD+ display,Android 12 (Go edition),Unisoc SC9863A1 chipset,2GB/3GB RAM,64 GB storage,microSD card slot,8MP dual rear camera,5MP front camera,5000mAh battery,micro-USB,3.5mm audio jack,and supports 4G LTE connectivity.It measures 164.6 x 75.9 x 8.5mm and weighs 199.4 grams.The phone comes Charcoal,Mint and Purple colors and has a sleek design with a textured back.It's a budget-friendly option for those seeking a reliable and efficient smartphone with modern features`
-     }
+     },
+     rating:{
+      stars:1.5,
+      count:15
+
+   }
+
  
    },
    { 
@@ -440,7 +556,13 @@ export const products = [
        version:'10',
        romType:' ',
        more:`The NOkia G 42 features a 6.5-inch HD + display with a 90HZ refresh rate,a 50MP camera with AI algorithms,and aSnapdragon 480+ 5G chipset.It boasts a long-lasting 3-day battery life,5GB of storage and runs on Android 13,with apromise of 3 years of monthly security updates and 2 yrs of OS upgrades.The rear tripple camera is equiped with AI algorithms,and it also features OZO 3D audio capture.Additionally,the phone is designed with Quickfix repairability in mind,making it a great option for those looking for a reliable and efficient smartphone with modern features`
-     }
+     },
+     rating:{
+      stars:4.0,
+      count:40
+
+   }
+
  
    },
    { 
@@ -456,7 +578,13 @@ export const products = [
        version:'13',
        romType:' ',
        more:`The Nokia G45 5G features a 6.56-inch HD+ display with a 120Hz refresh rate, a 50Mp quad-camera setup with AI algoriths, and a powerful Snapdragon 695 5G chipset.It boasts a long -lasting 500mAh battery with fast charging capabilities,6GB of RAM and 128 GB of storage.The phone runs on android 13,with a promise of 3 years monthly security updates and 2 years of OS upgrades.Adiitionally,it features OZO 3D audio capture ,IP68 water and dust resistance,and QuickFix repairability,making it a great option for those looking for a reliable and and efficient smartphone with modern features and a sleek design`
-     }
+     },
+     rating:{
+      stars:3.5,
+      count:35
+
+   }
+
 
    },
   
@@ -473,7 +601,13 @@ export const products = [
        version:'11',
        romType:' ',
        more:`The Samsung Galaxy A03 features a 6.5-inch HD+ Infinity-V display,a quad-camera setup with a 48MP main camera,2MP macro camera and 2MP depth sensor,and a powerful octa-core processor...It comes with 3GB/4GB of RAM and 32GB/64GB of internal storage,expandable up to 1TB via microSD card.The phone runs on Android 11 and is powered by a large 5000mAh battery with 15W fast charging support.Additionaly,it features a sleek design,Dolby Atmos audio,and a range of security features likefingerprint recognition and face unlock,making it a great budget-friendly option for those looking for a reliable and feature-packed smartphone`
-     }
+     },
+     rating:{
+      stars:2,
+      count:20
+
+   }
+
  
    },
    { 
@@ -489,7 +623,13 @@ export const products = [
        version:'12',
        romType:' ',
        more:`The Samsung Galaxy A15 LTE has a 6.5-inch HD+ Infinity-V display,a quad-camera setup with a 50 MP main camera ,2 MP macro camera,2MP depth sensor , and a 5MP ultra-wide-angle lens,and a powerful octa-core processor.It comes with 4GB/6GB of RAM and 64GB/128GB of internal storage,expandable up to 1TBvia microSD card.The phone  runs on Android 12 and is powered by a large 5000mAh battery with 15W fast charging support.Additionally,it has a range of security features like fingerprint recognition,face unlock and samsung knox security making it a great mobile`
-     }
+     },
+     rating:{
+      stars:5.0,
+      count:50
+
+   }
+
  
    },
    { 
@@ -505,7 +645,13 @@ export const products = [
        version:'11',
        romType:' ',
        more:`The Samsung Galaxy A03 Core is an entry-level smartphone that features a 6.5-inch HD+ Infinity-V display, a single 8MP rear camera, and a 5MP front camera. It is powered by a quad-core processor, comes with 3GB of RAM and 32GB of internal storage, expandable up to 1TB via microSD card. The phone runs on Android 11 (Go edition) and is powered by a large 5000mAh battery with 15W fast charging support. It also features a sleek design, Dolby Atmos audio, and basic security features like fingerprint recognition, making it a great option for those looking for a budget-friendly and easy-to-use smartphone for basic tasks like calling, texting, and browsing.`
-     }
+     },
+     rating:{
+      stars:2.5,
+      count:25
+
+   }
+
  
    },
    { 
@@ -521,7 +667,13 @@ export const products = [
        version:'11',
        romType:' ',
        more:`The Samsung Galaxy A32 features a 6.5-inch FHD+ Infinity-V display, a quad-camera setup with a 64MP main camera, 8MP ultra-wide-angle lens, 5MP macro camera, and 5MP depth sensor, and a powerful octa-core processor. It comes with 4GB/6GB/8GB of RAM and 64GB/128GB of internal storage, expandable up to 1TB via microSD card. The phone runs on Android 11 and is powered by a large 5000mAh battery with 15W fast charging support. Additionally, it features a sleek design, Dolby Atmos audio, and advanced security features like fingerprint recognition, face unlock, and Samsung Knox security, making it a great option for those looking for a feature-packed and reliable smartphone with a large display and long-lasting battery life.`
-     }
+     },
+      rating:{
+      stars:1.5,
+      count:15
+
+   }
+
  
    },
    { 
@@ -537,7 +689,13 @@ export const products = [
        version:'12',
        romType:' ',
        more:`The Samsung Galaxy M34 5G is a budget-friendly 5G smartphone that features a 6.5-inch FHD+ Infinity-V display, a triple-camera setup with a 48MP main camera, 8MP ultra-wide-angle lens, and 5MP depth sensor, and a powerful Dimensity 700 5G processor. It comes with 4GB/6GB of RAM and 64GB/128GB of internal storage, expandable up to 1TB via microSD card. The phone runs on Android 12 and is powered by a large 6000mAh battery with 15W fast charging support. Additionally, it features a sleek design, Dolby Atmos audio, and advanced security features like fingerprint recognition, face unlock, and Samsung Knox security, making it a great option for those looking for a reliable and affordable 5G smartphone with a long-lasting battery and decent camera capabilities.`
-     }
+     },
+     rating:{
+      stars:3.0,
+      count:30
+
+   }
+
  
    },
    { 
@@ -553,7 +711,13 @@ export const products = [
        version:'11',
        romType:' ',
        more:`The Samsung Galaxy M34 (non-5G variant) features a 6.5-inch FHD+ Infinity-V display, a triple-camera setup with a 48MP main camera, 8MP ultra-wide-angle lens, and 5MP depth sensor, and a powerful octa-core processor. It comes with 4GB/6GB of RAM and 64GB/128GB of internal storage, expandable up to 1TB via microSD card. The phone runs on Android 12 and is powered by a large 6000mAh battery with 15W fast charging support. Additionally, it features a sleek design, Dolby Atmos audio, and basic security features like fingerprint recognition, making it a great option for those looking for a reliable and affordable smartphone with a long-lasting battery and decent camera capabilities, without the need for 5G connectivity.`
-     }
+     },
+     rating:{
+      stars:4.0,
+      count:40
+
+   }
+
  
    },
    { 
@@ -569,7 +733,13 @@ export const products = [
        version:'5.0.2',
        romType:'(No SD) ',
        more:`The Samsung Galaxy S6 Edge is a premium smartphone that features a 5.7-inch Quad HD Super AMOLED display with a curved edge screen, a 16MP rear camera, and a 5MP front camera. It is powered by a powerful Exynos 7420 octa-core processor, comes with 3GB of RAM and 32GB/64GB/128GB of internal storage, and runs on Android 5.0.2 (Lollipop) out of the box. The phone also features a sleek and durable design, wireless charging capabilities, and advanced security features like fingerprint recognition, making it a great option for those looking for a high-end smartphone with a unique design and top-notch features. Note that this phone is an older model, released in 2015, and may not receive the latest software updates or security patches.`
-     }
+     },
+     rating:{
+      stars:5.0,
+      count:50
+
+   }
+
  
    },
    { 
@@ -585,7 +755,13 @@ export const products = [
        version:'10',
        romType:' ',
        more:`The Samsung Galaxy Z Fold5 has a 7.6-inch screen and weighs 253 grams, making it the lightest and most compact Galaxy Z Fold yet ¹. The phone has a 4400mAh battery and an advanced processor that makes one charge last longer than ever before ¹. The phone also has a 50MP wide-angle camera, 12MP ultra-wide camera and 10MP telephoto camera ¹.`
-     }
+     },
+     rating:{
+      stars:4.5,
+      count:45
+
+   }
+
  
    },
    { 
@@ -601,7 +777,13 @@ export const products = [
        version:'7',
        romType:' ',
        more:`The Samsung Galaxy S8 Edge is a flagship smartphone that features a 5.8-inch Quad HD+ Super AMOLED display with a curved edge screen, a 12MP rear camera, and an 8MP front camera. It is powered by a powerful Exynos 8895 octa-core processor, comes with 4GB of RAM and 64GB of internal storage, and runs on Android 7.0 (Nougat) out of the box. The phone also features a sleek and durable design, IP68 water and dust resistance, wireless charging capabilities, and advanced security features like iris scanning and fingerprint recognition, making it a great option for those looking for a high-end smartphone with a unique design and top-notch features. Note that this phone is an older model, released in 2017, and may not receive the latest software updates or security patches.`
-     }
+     }, 
+     rating:{
+      stars:4.0,
+      count:40
+
+   }
+
  
    },
    { 
@@ -617,7 +799,13 @@ export const products = [
        version:'12(Oreo)',
        romType:' ',
        more:`There is no Samsung Galaxy S9 Edge. Samsung released the Galaxy S9 and S9+ in 2018, but not an Edge variant. The S9+ has a 6.2-inch screen, while the S9 has a 5.8-inch screen, both with Super AMOLED technology and Quad HD+ resolution. Both phones feature a 12MP rear camera, 8MP front camera, Exynos 9810 octa-core processor, 4GB/6GB RAM, and Android 8.0 (Oreo) out of the box. They also have IP68 water and dust resistance, wireless charging, and advanced security features like iris scanning and fingerprint recognition. If you're looking for a phone with a curved edge screen, consider the Galaxy S8 Edge or later models like the Galaxy S10, S20, or S21 series, which feature the "Edge" design.`
-     }
+     },
+     rating:{
+      stars:4.5,
+      count:45
+
+   }
+
  
    },
    { 
@@ -633,7 +821,13 @@ export const products = [
        version:'8.0(Oreo)',
        romType:' ',
        more:`The Samsung Galaxy S9+ (not officially called Edge) features a 6.2-inch Quad HD+ Super AMOLED display, a dual 12MP rear camera setup, and an 8MP front camera. It is powered by a powerful Exynos 9810 octa-core processor, comes with 6GB of RAM and 64GB/128GB/256GB of internal storage, and runs on Android 8.0 (Oreo) out of the box. The phone also features a sleek and durable design, IP68 water and dust resistance, wireless charging capabilities, and advanced security features like iris scanning and fingerprint recognition. While not officially called Edge, the S9+ has a curved screen design similar to the previous  Edge models, making it a great option for those looking for a high-end smartphone with a large, curved display and top-notch features.`
-     }
+     },
+     rating:{
+      stars:5.0,
+      count:50
+
+   }
+
  
    },
    { 
@@ -649,7 +843,13 @@ export const products = [
        version:'11',
        romType:' ',
        more:`The Samsung Galaxy S10e is a compact and affordable variant of the S10 series, featuring a 5.8-inch Flat Dynamic AMOLED display with Full HD+ resolution. It is powered by a powerful Exynos 9820 octa-core processor, comes with 6GB/8GB of RAM and 128GB/256GB of internal storage, and runs on Android 9.0 (Pie) out of the box. The phone has a dual 12MP rear camera setup, a 10MP front camera, and advanced security features like fingerprint recognition and facial recognition. With its compact design, flat screen, and lower price point, the S10e is a great option for those looking for a high-end smartphone with a smaller form factor and top-notch features.`
-     }
+     },
+     rating:{
+      stars:3.5,
+      count:35
+
+   }
+
  
    },
    { 
@@ -665,7 +865,13 @@ export const products = [
        version:'13',
        romType:' ',
        more:`The Samsung Galaxy S20 Ultra is a flagship smartphone that features a large 6.8-inch Dynamic AMOLED display with Quad HD+ resolution, a long-lasting 5000mAh battery, and a powerful Exynos 990 octa-core processor. It comes with up to 16GB of RAM and 512GB of internal storage, and features a quad-camera setup with a 108MP primary sensor, a 40MP front camera, and support for 8K video recording. The phone also features advanced security features like fingerprint recognition and facial recognition, and supports 5G connectivity. With its large screen, powerful performance, and advanced camera capabilities, the S20 Ultra is ideal for those who want a top-of-the-line smartphone with the latest features and technology.`
-     }
+     },
+     rating:{
+      stars:4.5,
+      count:45
+
+   }
+
  
    },
    { 
@@ -681,7 +887,13 @@ export const products = [
        version:'12',
        romType:' ',
        more:`The Samsung Galaxy S20 Ultra is a flagship smartphone that features a large 6.8-inch Dynamic AMOLED display with Quad HD+ resolution, a long-lasting 5000mAh battery, and a powerful Exynos 990 octa-core processor. It comes with up to 16GB of RAM and 512GB of internal storage, and features a quad-camera setup with a 108MP primary sensor, a 40MP front camera, and support for 8K video recording. The phone also features advanced security features like fingerprint recognition and facial recognition, and supports 5G connectivity. With its large screen, powerful performance, and advanced camera capabilities, the S20 Ultra is ideal for those who want a top-of-the-line smartphone with the latest features and technology.`
-     }
+     },
+     rating:{
+      stars:4.0,
+      count:40
+
+   }
+
  
    },
    { 
@@ -697,7 +909,13 @@ export const products = [
        version:'13',
        romType:' ',
        more:`The Samsung Galaxy S21 Ultra is a flagship smartphone that features a large 6.8-inch Dynamic AMOLED display with Quad HD+ resolution, a long-lasting 5000mAh battery, and a powerful Exynos 2100 octa-core processor. It comes with up to 16GB of RAM and 512GB of internal storage, and features a quad-camera setup with a 108MP primary sensor, a 40MP front camera, and support for 8K video recording. The phone also features advanced security features like fingerprint recognition and facial recognition, and supports 5G connectivity. Additionally, it is compatible with the S Pen stylus, making it a great option for those who want a top-of-the-line smartphone with the latest features and technology, as well as the flexibility of a stylus for note-taking and creativity. With its large screen, powerful performance, and advanced camera capabilities, the S21 Ultra is ideal for those who want the best of the best.`
-     }
+     },
+     rating:{
+      stars:5.0,
+      count:50
+
+   }
+
  
    },
 

@@ -129,6 +129,9 @@ color: rgb(73, 69, 69);
 
 }
 
+.drop-down-menu div a{
+    text-decoration: none;
+}
 .drop-down-menu div:hover{
 background-color: rgb(3, 170, 192);
 text-decoration: underline;
