@@ -1,9 +1,22 @@
 
 
 body{
-    background:linear-gradient(45deg,red,white 50%,aqua,blue);
+    background-image:linear-gradient(45deg,rgb(22, 238, 58),rgb(179, 9, 221) 50%,aqua,blue);
+    animation: move-it 50s infinite alternate;
+    background-size: 400%;
+  
+
 }
 
+
+@keyframes move-it {
+    0%{
+   background-position: left;
+    }
+   100%{
+ background-position: right;
+    }
+}
 .enter-info{
     color: white;
     display: flex;
@@ -21,7 +34,7 @@ body{
     row-gap: 30px;
     font-family: roboto;
     margin-top: 100px;
-    border: 2px solid rgb(187, 180, 218);
+    border: 2px solid black;
     padding: 100px 50px;
     border-radius:8px ;
     border-bottom-right-radius: 0px;
@@ -37,7 +50,7 @@ body{
 .main:hover{
   border: 3px solid blue;
  box-shadow: 0px 0px 50px rgb(45, 17, 173);
-  
+ transition: 1.5s;
 
  
 }
@@ -113,7 +126,7 @@ input:focus{
 .log-in-button{
     padding: 8px 15px;
   color: blue;
-   border: 2px solid rgb(187, 180, 218);
+   border: 2px solid black;
     cursor: pointer;
     font-size: 15px;
     border-radius: 3px;
@@ -129,9 +142,11 @@ input:focus{
 
 .log-in-button:hover{
     background-color: rgb(45, 17, 173) ;
+    border-color: blue;
     border-top-left-radius:0px;
     color: white;
     border-top-right-radius:0px;
+    transition: 2s;
 }
 
  

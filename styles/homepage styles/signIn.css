@@ -2,8 +2,22 @@
 body{
     font-family: roboto;
 
-    background-image:linear-gradient(rgba(255, 0, 0, 0.534),white,rgba(28, 218, 218, 0.966),rgb(61, 5, 5));
+    background-image:linear-gradient(45deg,rgba(255, 0, 0, 0.719),rgba(28, 218, 218, 0.966),rgb(29, 231, 11));
    color:black;
+
+   animation: move-it 30s infinite alternate;
+   background-size: 400%;
+ 
+}
+
+
+@keyframes move-it {
+    0%{
+   background-position: left;
+    }
+   100%{
+ background-position: right;
+    }
 }
 
 p{
@@ -142,6 +156,7 @@ select{
     color:rgb(160, 8, 97);
     cursor: pointer;
     text-decoration: underline;
+    font-size: 14px;
  }
 
   
@@ -172,12 +187,16 @@ select{
  }
 
  .terms-conditions-paragraph{
-    font-size: 13px;
     margin-top: 12px;
-    
     display: flex;
     justify-content: end;
+    align-items: center;
 }
+
+.terms-conditions-paragraph p{
+    font-size: 14px;
+}
+ 
 
  
 

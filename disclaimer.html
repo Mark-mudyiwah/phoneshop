@@ -27,31 +27,52 @@
         font-size: 16px;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
     }
     h3{
         background:linear-gradient(purple,blue);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     p{
         background:linear-gradient(purple,blue);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     .regards{
         background:linear-gradient(rgb(24, 21, 226),rgb(17, 17, 5));
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 18px;
         font-weight: bold;
     }
     .name{
         background:linear-gradient(rgb(35, 17, 192),rgb(207, 5, 56));
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
-    font-size: 18px;
-    font-weight: bold;
+     font-size: 18px;
+     font-weight: bold;
+    }
+    button{
+        background:linear-gradient(rgb(35, 17, 192),rgb(207, 5, 56));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border: 1px solid black;
+      cursor: pointer;
+      transition: 1s ease;
+     
+    }
+
+    .understood-button:hover{
+        background: rgb(4, 37, 187);
+        color: tomato;
+        -webkit-text-fill-color: rgb(255, 252, 252);
+        transform: scale(1.2);
+        transition: 1s ease;
     }
     
    
@@ -74,6 +95,12 @@
     <span class="regards">Kind Regards</span>
     <span class="name">Mark</Span>
     </div>
+
+      <div>
+        <a href="signIn.html" target ="_blank">
+        <button class="understood-button">Understood</button>
+     </a>
+        </div>
 
 </body>
 
