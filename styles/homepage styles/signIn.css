@@ -20,14 +20,6 @@ body{
     }
 }
 
-p{
-    margin-top: -4px;
-    margin-bottom: 5px;
-    display:  flex;
-    justify-content: end;
-     
-   
-}
 
 span{
     color: rgb(212, 13, 13);
@@ -99,7 +91,7 @@ span{
 .main-container div div{
     margin: 4px 0px;
     background: linear-gradient( rgb(31, 24, 1),rgb(86, 7, 231));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight:900;
      
@@ -191,13 +183,13 @@ select{
     display: flex;
     justify-content: end;
     align-items: center;
+    
 }
 
 .terms-conditions-paragraph p{
     font-size: 14px;
 }
  
-
  
 
 .save-info-span{
