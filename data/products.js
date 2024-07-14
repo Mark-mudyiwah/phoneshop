@@ -19,6 +19,7 @@ name;
 price;
 specs;
 rating;
+type;
 
 constructor(productDetails){
 
@@ -28,6 +29,7 @@ constructor(productDetails){
   this.price = productDetails.price;
   this.specs = productDetails.specs;
  this.rating = productDetails.rating;
+ this.type  = productDetails.type;
 };
 
 };
@@ -56,7 +58,8 @@ const product1 = new Product({
     stars:4,
     count:60
 
- }
+ },
+  type:'laptop'
 
  
 })
@@ -87,7 +90,10 @@ export const products = [
       stars:4,
       count:140
 
-   }
+   },
+
+  type:'laptop'
+
   }
 ,
 
@@ -113,7 +119,9 @@ export const products = [
       stars:5,
       count:155
 
-   }
+   },
+
+    type:'laptop'
 
    
   }
@@ -138,7 +146,11 @@ export const products = [
       stars:3,
       count:67
 
-   }
+   },
+
+   type:'laptop'
+
+
 
   }
 
@@ -167,8 +179,9 @@ export const products = [
    }
 
 
+  ,
+   type:'laptop'
   }
-
 ,
   { 
     Id: 'e5f6-g7h8-i1j2-k5',
@@ -190,7 +203,9 @@ export const products = [
       stars:1,
       count:18
 
-   }
+   },
+
+    type:'laptop'
 
 
   }
@@ -217,7 +232,9 @@ export const products = [
       stars:2,
       count:36
 
-   }
+   },
+
+    type:'laptop'
 
 
   }
@@ -236,14 +253,15 @@ export const products = [
       romType:' ',
       more:`The Dell SE2722H is a 27-inch FHD flat monitor with sleek and slim design, offering crystal-clear visuals and vibrant colors.It features a 1920x1080p resolution,60Hz refresh rate,and 5ms response time,providing crisp and clear visuals for work and play
       
-      `,
-      type:'monitor'
+      ` 
     },
     rating:{
       stars:2,
       count:39
 
-   }
+   },
+
+    type:'monitor'
 
 
   }
@@ -269,7 +287,10 @@ export const products = [
       stars:3,
       count:65
 
-   }
+   },
+
+    type:'laptop'
+
 
 
   },
@@ -295,7 +316,9 @@ export const products = [
       stars:5,
       count:179
 
-   }
+   },
+
+    type:'laptop'
 
  
    },
@@ -324,7 +347,9 @@ export const products = [
       stars:4,
       count:110
 
-   }
+   },
+
+    type:'laptop'
 
  
    },
@@ -351,7 +376,9 @@ export const products = [
       stars:2,
       count:37
 
-   }
+   },
+
+    type:'laptop'
 
  
    },
@@ -375,7 +402,9 @@ export const products = [
       stars:1,
       count:14
 
-   }
+   },
+
+    type:'laptop'
 
  
    },
@@ -400,7 +429,9 @@ export const products = [
       stars:2,
       count:31
 
-   }
+   },
+
+    type:'laptop'
 
  
    },
@@ -423,7 +454,9 @@ export const products = [
       stars:3,
       count:62
 
-   }
+   },
+
+    type:'mobile'
 
  
    },
@@ -447,7 +480,9 @@ export const products = [
       stars:3,
       count:69
 
-   }
+   },
+
+    type:'mobile'
 
  
    },
@@ -471,7 +506,9 @@ export const products = [
       stars:4,
       count:118
 
-   }
+   },
+
+    type:'mobile'
 
  
    },
@@ -493,7 +530,10 @@ export const products = [
       stars:3,
       count:71
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -516,7 +556,10 @@ export const products = [
       stars:2,
       count:35
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -539,7 +582,10 @@ export const products = [
       stars:2,
       count:27
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -561,7 +607,10 @@ export const products = [
       stars:3,
       count:65
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -583,7 +632,10 @@ export const products = [
       stars:3,
       count:57
 
-   }
+   },
+
+   type:'mobile'
+
 
 
    },
@@ -606,7 +658,10 @@ export const products = [
       stars:2,
       count:30
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -628,7 +683,10 @@ export const products = [
       stars:4,
       count:120
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -650,7 +708,10 @@ export const products = [
       stars:3,
       count:75
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -672,7 +733,10 @@ export const products = [
       stars:4,
       count:95
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -694,7 +758,10 @@ export const products = [
       stars:3,
       count:72
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -716,7 +783,10 @@ export const products = [
       stars:2,
       count:40
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -738,7 +808,10 @@ export const products = [
       stars:3,
       count:59
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -760,7 +833,10 @@ export const products = [
       stars:4,
       count:99
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -782,7 +858,10 @@ export const products = [
       stars:3,
       count:80
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -804,7 +883,10 @@ export const products = [
       stars:3,
       count:75
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -826,7 +908,10 @@ export const products = [
       stars:5,
       count:158
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -848,7 +933,10 @@ export const products = [
       stars:3,
       count:55
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -870,7 +958,10 @@ export const products = [
       stars:4,
       count:105
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -892,7 +983,10 @@ export const products = [
       stars:3,
       count:70
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
@@ -914,7 +1008,10 @@ export const products = [
       stars:5,
       count:169
 
-   }
+   },
+
+   type:'mobile'
+
 
  
    },
