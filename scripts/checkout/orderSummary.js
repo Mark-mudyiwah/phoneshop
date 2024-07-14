@@ -53,7 +53,7 @@ js-all-items-info-${matchingProduct.Id}">
 
  
 <div class="item-price">
-    $${(matchingProduct.price).toFixed(2)}
+    ${matchingProduct.getPriceUrl()}
 </div>
 
 <div class="quantity-info">

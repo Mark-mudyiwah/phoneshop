@@ -66,7 +66,7 @@ products.forEach((product)=>{
     Price :
     </div>
     <div class = "amount-container">
-    $${(product.price).toFixed(2)}
+    ${product.getPriceUrl()}
     </div>
     </div>
      
@@ -85,7 +85,7 @@ products.forEach((product)=>{
         </select>
           <div class= "stars-div">
           <div class = "image-container">
-           <img class ="star-icon"src = "images/other images/star-rating-${(product.rating.stars)*10}.jpg">
+           <img class ="star-icon"src = "${product.getStarsUrl()}">
           </div>
 
           <div>

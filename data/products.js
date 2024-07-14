@@ -30,41 +30,17 @@ constructor(productDetails){
   this.specs = productDetails.specs;
  this.rating = productDetails.rating;
  this.type  = productDetails.type;
-};
+}
+
+getStarsUrl(){
+return `  images/other images/star-rating-${(this.rating.stars)*10}.jpg`
+}
+
+getPriceUrl(){
+return `$${(this.price).toFixed(2)}`
+}
 
 };
-
-
-const product1 = new Product({ 
-  Id:'p9r8-d3f2-b1c4-e2',
-  image:'images/products/Laptops&Monitors/Dell Laptop.webp',
-  name:' Dell Latitude 7490',
-  price: 449.99,
-  specs:{
-    
-    rom: 256,
-    ram: 16,
-    Osystem:'Windows',
-    version:'10+',
-    processor:'corei7',
-    romType:'(SSD)',
-    more: `The Dell Latitude is a 14-inch bussiness laptop designed for productivity and reliability.The laptop has an Intel Core i7-8650U processor and provides  a 14 FHD LED display,Intel UHD Graphics 620,and a range of ports including USB 3.0,HDMI,and Type-C.Running 
-    on Windows 10 proffesional.It's a solid choice for professionals and businesses seeking a dependable and efficient laptop
-    
-    `
-  }
-  ,
-  rating:{
-    stars:4,
-    count:60
-
- },
-  type:'laptop'
-
- 
-})
-
-console.log(product1)
 
 
 export const products = [
@@ -1022,5 +998,3 @@ export const products = [
 
  return  new Product(productDetails); 
 })
-
-console.log(products)
