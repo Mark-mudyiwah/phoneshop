@@ -189,7 +189,7 @@ if(!matchPassword){
 
 if(!isChecked){
      document.querySelector('.js-terms-caution').innerHTML =`<span>You must first agree to the terms and conditions!</span>`
+}else{
+    document.querySelector('.js-terms-caution').innerHTML =``
 }
-
-
  }
