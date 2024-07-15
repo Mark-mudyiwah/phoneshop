@@ -11,6 +11,14 @@ body{
 }
 
 
+
+p{
+    display:flex;
+    justify-content: end;
+    margin-top: -4px;
+    margin-bottom: 1px;
+}
+
 @keyframes move-it {
     0%{
    background-position: left;
@@ -40,7 +48,7 @@ span{
     border-radius: 10px;
     background-color:transparent;
     padding: 50px 20px;
-   
+    transition: ease 0.2s;
    
     
 }
@@ -73,7 +81,11 @@ span{
        
     }
 
-    
+    .terms-conditions-paragraph{
+     justify-content: start;
+      font-size: 13px;
+    }
+
 }
 
 .main-container{
@@ -91,7 +103,7 @@ span{
 .main-container div div{
     margin: 4px 0px;
     background: linear-gradient( rgb(31, 24, 1),rgb(86, 7, 231));
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight:900;
      
@@ -128,11 +140,27 @@ select{
 }
 
 .save-info{
-    padding: 4px 8px ;
-    cursor: pointer;  
-    background-color: green;  
-    color: white;
-    border: 1px solid rgb(0, 255, 34);
+    background:linear-gradient(rgb(35, 17, 192),rgb(207, 5, 56));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 1s ease;
+    
+}
+
+.save-info:hover{
+    
+    background: rgb(4, 37, 187);
+    color: tomato;
+    -webkit-text-fill-color: rgb(255, 252, 252);
+    transform: scale(1.1);
+    transition: 1s ease;
+    box-shadow: 0px 0px 20px rgb(206, 27, 3);
 }
 
 .log-in-span{
@@ -144,14 +172,15 @@ select{
 
  
   
- .pivacy-policy-span{
+ .privacy-policy-span{
     color:rgb(160, 8, 97);
     cursor: pointer;
     text-decoration: underline;
     font-size: 14px;
+    margin: 0;
  }
 
-  
+
  
 
  .hide{
@@ -179,22 +208,38 @@ select{
  }
 
  .terms-conditions-paragraph{
-    margin-top: 12px;
     display: flex;
-    justify-content: end;
-    align-items: center;
+   justify-content: end;
+   align-items: center;
     
+}
+
+.terms-conditions-paragraph div span{
+    font-size:14px;
+    text-decoration-color: rgb(201, 34, 165);
+
+}
+
+  
+
+ input[type = "checkbox"]{
+ width: 18px;  
+ height: 18px;
+ cursor: pointer;
+ 
+ 
 }
 
 .terms-conditions-paragraph p{
     font-size: 14px;
+
 }
  
  
 
-.save-info-span{
-     color: black;
-    font-size: 14px;
+.js-terms-caution{
+    margin-top: -6px;
+    margin-bottom: 20px;
     
 }
  .complete-sign-in-div div{
