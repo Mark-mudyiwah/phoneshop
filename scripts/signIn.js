@@ -16,12 +16,17 @@ console.log(clientInfo)
 
 
   function savingClientInfo(){
+
+    const checkbox = document.querySelector('.js-check-box')
+
+    const isChecked = checkbox.checked
+
     const firstNameInputElement = document.querySelector('.js-first-name')
-    const firstName = firstNameInputElement.value
+    const firstName = firstNameInputElement.value.trim()
    
     
  const surNameElement = document.querySelector('.js-surname')
- const surName = surNameElement.value
+ const surName = surNameElement.value.trim()
 
  const dateinputElement = document.querySelector('.js-date-of-birth')
 
@@ -33,7 +38,7 @@ const gender = genderInputElement.value
 
  const userNameInputElement = document.querySelector('.js-username')
 
- const userName = userNameInputElement.value
+ const userName = userNameInputElement.value.trim()
 
 
 
@@ -47,10 +52,11 @@ const firstPassword = firstPasswordInputElement.value
  const password = confirmPasswordInputElement.value
 
 
+//validating the  name not to include numbers
+ const correctName =  firstName.length > 3 && isNaN(parseInt(firstName, 10)) && /^[a-zA-Z]+$/.test(firstName)
 
- const correctName =  firstName.length > 3
- const correctSurName = surName.length > 3
-
+ //validating the surname not to include numbers
+ const correctSurName =  surName.length > 3 && isNaN(parseInt(surName, 10)) && /^[a-zA-Z]+$/.test(surName)
 const correctDateOfBirth = dateOfBirth !==''
 
  const correctGender = gender.length > 3
@@ -76,7 +82,7 @@ if(matchingClient){
 
     console.log(matchingClient.userName)
 
-}else if( correctName && correctDateOfBirth && usernameLength && correctGender && matchPassword && passwordLength >= 6 && passwordLength <= 10 && !matchingClient){
+}else if( correctName && correctDateOfBirth && usernameLength && correctGender && matchPassword && passwordLength >= 6 && passwordLength <= 10 && !matchingClient&& isChecked){
 
     clientInfo.push(
         {
@@ -136,19 +142,19 @@ return
 
 
 if(!correctName){
-     document.querySelector('.js-first-name-caution').innerHTML =`<span>Name too short!</span>`
+     document.querySelector('.js-first-name-caution').innerHTML =`<span>Name must contain only letters and over 3 characters long!</span>`
 }else{
     document.querySelector('.js-first-name-caution').innerHTML =``
 }
 
 if(!correctSurName){
-    document.querySelector('.js-surname-caution').innerHTML =`<span> Surname too short!</span>`
-
-}else{
+    document.querySelector('.js-surname-caution').innerHTML =`<span> Surname must contain only letters and over 3 characters long!</span>`
+}
+else{
     document.querySelector('.js-surname-caution').innerHTML =``
 }
 if(!correctDateOfBirth){
-    document.querySelector('.js-date-of-birth-caution').innerHTML =`<span>Invalid date of birth!</span>`
+    document.querySelector('.js-date-of-birth-caution').innerHTML =`<span>Provide your date of birth!</span>`
 
 }else{
     document.querySelector('.js-date-of-birth-caution').innerHTML =``
@@ -160,7 +166,7 @@ if(!correctGender){
     document.querySelector('.js-gender-caution').innerHTML =``
 }
 if(!usernameLength){
-    document.querySelector('.js-username-caution').innerHTML =`<span>Username too short!</span>`
+    document.querySelector('.js-username-caution').innerHTML =`<span>Username must be more than 5 characters long!</span>`
 
 }else if(matchingClient){
     document.querySelector('.js-username-caution').innerHTML =`<span>Username already exists,proceed to Log-In</span>`
@@ -175,21 +181,15 @@ if(!matchPassword){
 
  }else if(matchPassword && passwordLength < 6 ||passwordLength > 10){
 
-        document.querySelector('.js-confirm-password-caution').innerHTML =`<span>Password too short!</span>`
+        document.querySelector('.js-confirm-password-caution').innerHTML =`<span>Password is too short!</span>`
  }else if(matchPassword && passwordLength >= 6 && passwordLength <= 10 ){
     document.querySelector('.js-confirm-password-caution').innerHTML =`  `
    
 }
 
+if(!isChecked){
+     document.querySelector('.js-terms-caution').innerHTML =`<span>You must first agree to the terms and conditions!</span>`
+}
 
-/*
-return {
-    usernameLength,
-    matchPassword,
-    passwordLength,
-    correctGender,
-    correctName,
-    correctDateOfBirth,
-    matchingClient,
-}*/
+
  }
