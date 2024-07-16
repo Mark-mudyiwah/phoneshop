@@ -18,12 +18,11 @@ body{
    grid-template-columns:repeat(5,1fr);
    column-gap: 0;
    row-gap: 0;
-   border-left: 2px solid darkgrey;
-   border-right: 1px solid darkgrey;
-   border-bottom: 2px solid darkgrey;
-   background-color: white;
+   border-left: 1px solid lightgrey;
+   background-color:white;
    justify-content: space-between;
    flex: 1;
+   
   
  }
 
@@ -113,9 +112,9 @@ body{
    display: flex;
    justify-content: center;
    font-size: 16px;
-   font-weight: 400;
+   font-weight: 500;
    margin-top: 0px;
-  height: 45px;
+   height: 45px;
 
  }
  .product-specs{
