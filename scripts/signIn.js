@@ -51,12 +51,23 @@ const firstPassword = firstPasswordInputElement.value
  const confirmPasswordInputElement = document.querySelector('.js-retype-password')
  const password = confirmPasswordInputElement.value
 
-
+const nameLength = firstName.length > 3
+const nameIsCharacters = isNaN(parseInt(firstName, 10))
+const nameNoNumber = /^[a-zA-Z]+$/.test(firstName)
 //validating the  name not to include numbers
- const correctName =  firstName.length > 3 && isNaN(parseInt(firstName, 10)) && /^[a-zA-Z]+$/.test(firstName)
+ const correctName = nameLength && nameIsCharacters && nameNoNumber 
 
+ console.log(nameLength)
+ console.log(nameIsCharacters)
+ console.log(nameNoNumber)
+ console.log(correctName)
+
+ const surNameLength =surName.length > 3
+ const surNameNoNumber = /^[a-zA-Z]+$/.test(surName)
+ const surNameIsCharacter = isNaN(parseInt(firstName, 10))
  //validating the surname not to include numbers
- const correctSurName =  surName.length > 3 && isNaN(parseInt(surName, 10)) && /^[a-zA-Z]+$/.test(surName)
+
+ const correctSurName =  surNameLength && nameIsCharacters && surNameNoNumber
 const correctDateOfBirth = dateOfBirth !==''
 
  const correctGender = gender.length > 3
@@ -141,37 +152,53 @@ return
 }
 
 
-if(!correctName){
-     document.querySelector('.js-first-name-caution').innerHTML =`<span>Name must contain only letters and over 3 characters long!</span>`
+if(!nameLength){
+    document.querySelector('.js-first-name-caution').innerHTML =`<span>Name must be more than 3 characters&#10005</span>`
+}else if(!nameNoNumber||!nameIsCharacters){
+      document.querySelector('.js-first-name-caution').innerHTML =`<span>Name must contain olny characters &#10005</span>`
 }else{
-    document.querySelector('.js-first-name-caution').innerHTML =``
+      document.querySelector('.js-first-name-caution').innerHTML =`
+     &#10004`
 }
 
-if(!correctSurName){
-    document.querySelector('.js-surname-caution').innerHTML =`<span> Surname must contain only letters and over 3 characters long!</span>`
+if(!surNameLength){
+    document.querySelector('.js-surname-caution').innerHTML =`
+    <span> Surname must be more than 3 characters&#10005</span>`
 }
-else{
-    document.querySelector('.js-surname-caution').innerHTML =``
+else if(!surNameNoNumber ||!surNameIsCharacter){
+    document.querySelector('.js-surname-caution').innerHTML =`
+    <span>Surname must contain olny characters &#10005</span>
+    `
+}else{
+ document.querySelector('.js-surname-caution').innerHTML =`
+    &#10004`
 }
+
 if(!correctDateOfBirth){
     document.querySelector('.js-date-of-birth-caution').innerHTML =`<span>Provide your date of birth!</span>`
 
 }else{
-    document.querySelector('.js-date-of-birth-caution').innerHTML =``
+    document.querySelector('.js-date-of-birth-caution').innerHTML =`
+    &#10004
+    `
 }
 if(!correctGender){
     document.querySelector('.js-gender-caution').innerHTML =`<span>Please choose your gender!</span>`
 
 }else{
-    document.querySelector('.js-gender-caution').innerHTML =``
+    document.querySelector('.js-gender-caution').innerHTML =`
+    &#10004
+    `
 }
 if(!usernameLength){
-    document.querySelector('.js-username-caution').innerHTML =`<span>Username must be more than 5 characters long!</span>`
+    document.querySelector('.js-username-caution').innerHTML =`<span>Username must be more than 5 characters long&#10005</span>`
 
 }else if(matchingClient){
     document.querySelector('.js-username-caution').innerHTML =`<span>Username already exists,proceed to Log-In</span>`
 }else{
-    document.querySelector('.js-username-caution').innerHTML =` `
+    document.querySelector('.js-username-caution').innerHTML =`
+    &#10004
+    `
 
 }
 
@@ -183,13 +210,17 @@ if(!matchPassword){
 
         document.querySelector('.js-confirm-password-caution').innerHTML =`<span>Password is too short!</span>`
  }else if(matchPassword && passwordLength >= 6 && passwordLength <= 10 ){
-    document.querySelector('.js-confirm-password-caution').innerHTML =`  `
+    document.querySelector('.js-confirm-password-caution').innerHTML =` 
+    &#10004
+    `
    
 }
 
 if(!isChecked){
-     document.querySelector('.js-terms-caution').innerHTML =`<span>You must first agree to the terms and conditions!</span>`
+     document.querySelector('.js-terms-caution').innerHTML =`
+     <span>You must first agree to the terms and conditions!</span>`
 }else{
     document.querySelector('.js-terms-caution').innerHTML =``
 }
+
  }
