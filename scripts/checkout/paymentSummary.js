@@ -87,7 +87,7 @@ const paymentSummaryHTML=
 
  </div>
  <div class="place-order-div">
-    <button class="place-order-button">
+    <button class="place-order-button js-place-order">
     Place an Order</button>
     </div>
 `

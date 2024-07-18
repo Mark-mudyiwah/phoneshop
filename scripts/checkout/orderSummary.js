@@ -2,7 +2,7 @@ import { cart,removeFromCart,updateDeliveryOption } from "../../data/cart.js";
 import { products,getProduct }from '../../data/products.js'
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 import { deliveryOptions,getDeliveryOption,calculateDeliveryDate } from "../../data/deliveryOptions.js";
-import { updatingItemQuantity,denyingCommas } from "../checkout.js";
+import { updatingItemQuantity,denyingCommas,placingOrder } from "../checkout.js";
 import { renderPaymentSummary } from "./paymentSummary.js";
 
 
@@ -165,6 +165,8 @@ button.addEventListener('click',()=>{
  removeFromCart(productId)
  renderPaymentSummary()
  renderOrderSummary()
+ updatingItemQuantity()
+ placingOrder()
 //the code remove the product manually so its replaced by MVC above
 // const container = document.querySelector(`.js-all-items-info-${productId}`)
 // container.remove();
@@ -186,6 +188,7 @@ renderOrderSummary();
 updatingItemQuantity()
 renderPaymentSummary()
  denyingCommas()
+ placingOrder()
 
     })
  })
