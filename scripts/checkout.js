@@ -13,6 +13,7 @@ import { loadFromStorage } from "../data/orders.js"
  updatingItemQuantity()
  
  export function updatingItemQuantity(){
+   
     document.querySelectorAll('.js-update-button')
     .forEach((button)=>{
         button.addEventListener('click',()=>{

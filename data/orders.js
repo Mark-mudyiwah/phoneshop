@@ -1,5 +1,5 @@
 import { getProduct } from "./products.js"
-
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 export function loadFromStorage(){
     let orders = JSON.parse(localStorage.getItem('orders'))
 
@@ -32,6 +32,9 @@ console.log(orders.length)
     let totalQuantity = 0
     let totalCost =0;
    let productHTML =``
+
+   const today = dayjs()
+   const orderDate = today.format('MMMM D')
 
     order.forEach((product)=>{
 
@@ -88,7 +91,7 @@ console.log(orders.length)
                         Ordered On:
                       </div>
                       <div class="ordered-date">
-                          July 12
+                        ${orderDate}
                       </div>
         
             </div>
