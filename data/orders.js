@@ -25,13 +25,22 @@ console.log(orders.length)
 
     let orderSummaryHTML = ''
 
+    
+
  orders.forEach((order)=>{
 
+    let totalQuantity = 0
+    let totalCost =0;
    let productHTML =``
 
     order.forEach((product)=>{
 
         let item = getProduct(product.productId)
+
+  
+        totalQuantity +=product.quantity
+        totalCost += item.price*totalQuantity
+      
 
         productHTML +=` <div class="main-flex">
                  
@@ -67,6 +76,9 @@ console.log(orders.length)
                   `
     })
 
+    console.log(totalQuantity)
+    console.log(totalCost)
+
     orderSummaryHTML += `
     
       <div class="main">
@@ -95,7 +107,7 @@ console.log(orders.length)
                             Total Cost
                               </div>
                               <div class="total-cost-number">
-                                $ 600
+                              $${(totalCost).toFixed(2)}
                               </div>
                 
                  </div>
