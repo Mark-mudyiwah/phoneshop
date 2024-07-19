@@ -3,12 +3,14 @@ body{
     font-family: roboto;
     background: rgb(14, 12, 46);
     margin: 0px 8px;
+    padding-top: 80px;
     
     
 }
 
 h2{
     color: white;
+   
 }
 
 button{
@@ -18,6 +20,15 @@ button{
     cursor: pointer;
 }
 
+.header{
+    background-color:rgb(14, 12, 46);
+    padding: 4px 2px;
+    position: fixed;
+    top:0px;
+    right: 0;
+    left: 0;
+
+}
 
 @media (max-width :500px) {
      
@@ -59,9 +70,8 @@ bottom: 0;
     display:flex;
      justify-content: space-between;
     align-items: center;
-    background-color:rgb(185, 207, 226);
-    border-top:1px solid rgb(170, 4, 4) ;
-    border-bottom:1px solid rgb(170, 4, 4) ;
+    background-color:rgb(206, 152, 152);
+    padding: 8px 6px;
     
 }
 
