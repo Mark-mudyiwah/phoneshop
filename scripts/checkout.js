@@ -2,6 +2,8 @@ import { renderOrderSummary } from "./checkout/orderSummary.js"
 import { cart, updateQuantity } from "../data/cart.js"
 import { renderPaymentSummary } from "./checkout/paymentSummary.js"
 import { loadFromStorage } from "../data/orders.js"
+import { getDeliveryOption } from "../data/deliveryOptions.js"
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 //import '../data/cart-class.js';
 //import '../data/backend-practise.js';
 
@@ -95,6 +97,17 @@ document.querySelectorAll('.quantity-update-input')
 document.querySelector('.js-place-order').addEventListener('click',()=>{
 
 let orders =loadFromStorage()
+const today = dayjs()
+const orderDate = today.format('MMMM D')
+
+
+cart.forEach((cartItem)=>{
+    const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId)
+    const deliveryDate = (today.add(`${deliveryOption.deliveryDays}`,'days')).format('MMMM D')
+    cartItem.deliveryDate = `${deliveryDate}`
+    cartItem.orderDate =`${orderDate}`
+})
+console.log(cart)
 
 orders.push(cart)
 

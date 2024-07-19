@@ -32,17 +32,19 @@ console.log(orders.length)
     let totalQuantity = 0
     let totalCost =0;
    let productHTML =``
+   let orderDate;
+ let deliveryDate;
 
-   const today = dayjs()
-   const orderDate = today.format('MMMM D')
 
     order.forEach((product)=>{
 
         let item = getProduct(product.productId)
-
   
         totalQuantity +=product.quantity
         totalCost += item.price*totalQuantity
+        orderDate = product.orderDate
+        
+
       
 
         productHTML +=` <div class="main-flex">
@@ -56,11 +58,12 @@ console.log(orders.length)
                            ${item.name}
                         </div>
                         <div class="product-quantity">
-                            Quantity ${product.quantity}
+                            Quantity : ${product.quantity}
                                
                         </div>
                         <div class="arriving-date">
-                            Arriving on: July 24
+                            Arriving on :  
+                            ${product.deliveryDate}
     
                         </div>
                     </div>
