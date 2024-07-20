@@ -102,6 +102,8 @@ document.querySelector('.js-place-order').addEventListener('click',()=>{
     const today = dayjs()
     const orderDate = today.format('MMMM D')
 
+const idNumber = Math.random() 
+const orderId = (idNumber*100000).toFixed(0).padEnd(5,'0')
 
 
 
@@ -116,6 +118,7 @@ cart.forEach((cartItem)=>{
    shippingCost += deliveryOption.price
     cartItem.deliveryDate = `${deliveryDate}`
     cartItem.orderDate =`${orderDate}`
+    cartItem.orderId =`${orderId}`
    
 })
 
@@ -124,19 +127,21 @@ const tax =  costBeforeTax * 0.05
 
 const totalCost =  costBeforeTax+tax
 
+console.log(cart)
 cart.forEach((cartItem)=>{
    cartItem.totalCost = `${totalCost}`
 })
- 
+
 orders.push(cart)
 
-//console.log(orders)
-
+ localStorage.removeItem('cart')
+ 
 localStorage.setItem('orders',JSON.stringify(orders))
 
 window.location.href ='orders.html'
 
 })
+
 }
 
 placingOrder()

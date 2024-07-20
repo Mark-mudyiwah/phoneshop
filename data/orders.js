@@ -33,6 +33,7 @@ if (!orders) {
     let totalCost =0;
    let productHTML =``
    let orderDate;
+   let orderId;
  
 
 
@@ -42,7 +43,7 @@ if (!orders) {
         let deliveryOption =getDeliveryOption(product.deliveryOptionId)
         totalCost =product.totalCost
         orderDate = product.orderDate
-        
+        orderId = product.orderId
 
       
 
@@ -105,7 +106,7 @@ if (!orders) {
                     Order ID
                   </div>
                   <div class="order-id-number">
-                        #499240
+                        #${orderId}
                   </div>
     
                     </div>
