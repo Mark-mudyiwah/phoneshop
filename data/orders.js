@@ -1,9 +1,10 @@
+import { getDeliveryOption } from "./deliveryOptions.js"
 import { getProduct } from "./products.js"
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 export function loadFromStorage(){
     let orders = JSON.parse(localStorage.getItem('orders'))
 
-    console.log(orders)
+   // console.log(orders)
     
 if (!orders) {
     
@@ -20,7 +21,6 @@ if (!orders) {
 
  export let orders  = loadFromStorage()
  
-console.log(orders.length)
  export  function renderFullOrderSummary(orders){
 
     let orderSummaryHTML = ''
@@ -33,15 +33,14 @@ console.log(orders.length)
     let totalCost =0;
    let productHTML =``
    let orderDate;
- let deliveryDate;
+ 
 
 
     order.forEach((product)=>{
 
         let item = getProduct(product.productId)
-  
-        totalQuantity +=product.quantity
-        totalCost += item.price*totalQuantity
+        let deliveryOption =getDeliveryOption(product.deliveryOptionId)
+        totalCost =product.totalCost
         orderDate = product.orderDate
         
 
@@ -58,7 +57,12 @@ console.log(orders.length)
                            ${item.name}
                         </div>
                         <div class="product-quantity">
-                            Quantity : ${product.quantity}
+                            Quantity :${product.quantity}
+                               
+                        </div>
+
+                        <div class="shipping-method">
+                        Shipping method: ${deliveryOption.method}
                                
                         </div>
                         <div class="arriving-date">
@@ -82,9 +86,7 @@ console.log(orders.length)
                   `
     })
 
-    console.log(totalQuantity)
-    console.log(totalCost)
-
+    
     orderSummaryHTML += `
     
       <div class="main">
@@ -113,7 +115,7 @@ console.log(orders.length)
                             Total Cost
                               </div>
                               <div class="total-cost-number">
-                              $${(totalCost).toFixed(2)}
+                              $${Number((totalCost)).toFixed(2)}
                               </div>
                 
                  </div>

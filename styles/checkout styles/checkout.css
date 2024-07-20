@@ -378,3 +378,33 @@ padding: 8px 6px;
    font-family: roboto;
    flex-shrink: none;
 }
+
+.empty-cart{
+   color:black;
+   font-weight: 900;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+.view-products-container{
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.view-products-container button{
+
+   padding: 6px 9px;
+   cursor: pointer;
+   background-color: aqua;
+   border: 1px black solid;
+   font-weight: 700;
+   transition: 1s ease;
+}
+
+.view-products-container button:hover{
+   background-color: aquamarine;
+   color: brown;
+   transform: scale(1.2);
+   transition: 1s ease;
+}

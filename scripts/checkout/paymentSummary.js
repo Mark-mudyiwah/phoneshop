@@ -27,7 +27,7 @@ export function renderPaymentSummary(){
  let shippingCost = 0
 
 
-
+if (cart.length > 0){
  cart.forEach((cartItem) => {
 const product = getProduct(cartItem.productId);
  productsCost += product.price*cartItem.quantity;
@@ -95,4 +95,21 @@ const paymentSummaryHTML=
 document.querySelector('.js-summary-side')
 .innerHTML = paymentSummaryHTML
 return paymentSummaryHTML;
+} else {
+    document.body
+    .innerHTML = `<div class ="empty-cart">
+    <div>
+    You don't have any products in the cart
+    <div>
+    </div>
+
+    <div class="view-products-container">
+    <a href = "index.html">
+    <button>View Products</button>
+    </a>
+    </div>
+    
+    `
+
+}
 }

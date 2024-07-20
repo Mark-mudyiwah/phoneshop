@@ -2,14 +2,15 @@
 body{
     font-family: roboto;
     background: rgb(14, 12, 46);
-    margin: 0px 8px;
+    margin: 0px 30px;
     padding-top: 80px;
     
     
 }
 
-h2{
+h2 a{
     color: white;
+
    
 }
 
@@ -39,10 +40,24 @@ button{
 }
 
 .buttons button{
-    padding:4px 8px;
+    padding:4px 3px;
     border-radius: 4px;
     
 }
+
+.product-name,
+.product-quantity,
+.arriving-date,
+.shipping-method{
+ 
+ font-weight: 600;
+ font-size: small;
+}
+ .body{
+    margin: 0;
+ }
+
+
 }
 
 .main{
@@ -139,8 +154,9 @@ border-radius: 6px;
 
 .product-name,
 .product-quantity,
-.arriving-date{
-margin-bottom: 10px;
+.arriving-date,
+.shipping-method{
+margin-bottom: 4px;
  font-weight: 600;
 }
 
@@ -151,7 +167,9 @@ margin-bottom: 10px;
 .product-name{
     color: navy;
 }
-
+.shipping-method{
+    color: rgb(4, 170, 235);
+}
 .arriving-date{
     color: green;
 }
