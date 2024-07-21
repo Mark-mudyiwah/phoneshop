@@ -2,7 +2,7 @@
 body{
     font-family: roboto;
     background: rgb(14, 12, 46);
-    margin: 0px 30px;
+    margin: auto;
     padding-top: 80px;
     
     
@@ -35,12 +35,23 @@ button{
      
     .product-image{
         
-       max-width: 110px;
+       max-width: 130px;
+       margin-bottom: 8px;
       
 }
 
+.product-container{
+    display: flex;
+    align-items:center;
+    border-radius: 6px;
+    flex-direction: column;
+    
+    
+    }
+    
+
 .buttons button{
-    padding:4px 3px;
+    padding:4px 0px;
     border-radius: 4px;
     
 }
@@ -135,6 +146,8 @@ bottom: 0;
 display: flex;
 align-items:end;
 border-radius: 6px;
+ 
+
 
 }
 
