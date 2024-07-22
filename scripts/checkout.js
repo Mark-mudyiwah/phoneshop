@@ -95,6 +95,7 @@ document.querySelectorAll('.quantity-update-input')
 
 
  export function placingOrder(){
+    cart.length > 0 ?
 document.querySelector('.js-place-order').addEventListener('click',()=>{
     let productsCost = 0
     let shippingCost = 0
@@ -141,6 +142,8 @@ localStorage.setItem('orders',JSON.stringify(orders))
 window.location.href ='orders.html'
 
 })
+
+:''
 
 }
 

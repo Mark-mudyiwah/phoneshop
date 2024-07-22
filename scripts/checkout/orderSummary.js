@@ -151,9 +151,9 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
 }
 
 
-
+cart.length > 0 ?
 document.querySelector('.js-products-side').innerHTML=cartItemsHTML
-
+:''
 deletingItem()
 
 
