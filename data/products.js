@@ -57,16 +57,14 @@ export const products = [
         Osystem: 'IOS',
         version: 'MacOs',
         romType: '(SSD)',
-        more: `
-          13.6 inch Liquid Retina Display
-          1080p HD camera; 8-core CPU; 10-Core GPU
+        more: `The Apple MacBook features a 13.3-inch Retina display with a resolution of 2560x1600 pixels, powered by a 2.0GHz dual-core 7th-gen Intel Core i5 processor, 24GB of RAM, and a 512GB SSD. It also boasts an Intel Iris Plus Graphics 650 card, a 58.2Wh battery that lasts up to 10 hours, and a sleek aluminum unibody design that weighs just 3.02 pounds. Additional features include a Force Touch trackpad, a backlit keyboard, and two Thunderbolt 3 (USB-C) ports for charging and data transfer. The MacBook also comes with macOS High Sierra out of the box, ensuring a seamless and secure user experience.
         `
       },
       rating: {
         stars: 4,
         count: 140
       },
-      keywords: ['Apple', 'MacBook', 'laptop', 'IOS', 'MacOs', 'SSD']
+      keywords: ['apple', 'macbook', 'laptop', 'ios', 'mac', 'ssd']
     },
     { 
       Id: 'p9r8-d3f2-b1c4-e2',
@@ -89,7 +87,7 @@ export const products = [
         count: 155
       },
     
-      keywords: ['Dell', 'Latitude', 'laptop', 'Windows', 'corei7', 'SSD']
+      keywords: ['dell', 'latitude', 'laptop', 'windows', 'corei7', 'ssd']
     },
     { 
       Id: 'a1b2-c3d4-e5f6-g3',
@@ -110,7 +108,7 @@ export const products = [
         stars: 3,
         count: 67
       },
-      keywords: ['Asus', 'VivoBook', 'laptop', 'Linux', 'corei5', 'SSD']
+      keywords: ['asus', 'vivobook', 'laptop', 'linux', 'corei5', 'ssd']
     },
     { 
       Id: 'k7m3-n9p8-r2t1-y4',
@@ -132,7 +130,7 @@ export const products = [
         count: 138
       },
      
-      keywords: ['Dell', 'Inspiron', 'desktop', 'Windows', 'corei5', 'HDD']
+      keywords: ['dell', 'inspiron', 'desktop', 'windows', 'corei5', 'hdd']
     },
     { 
       Id: 'e5f6-g7h8-i1j2-k5',
@@ -153,7 +151,7 @@ export const products = [
         stars: 1,
         count: 18
       },
-      keywords: ['Lenovo', 'ThinkPad', 'laptop', 'Windows', 'corei7', 'SSD']
+      keywords: ['lenovo', 'thinkPad', 'laptop', 'windows', 'corei7', 'ssd']
     },
     { 
       Id: '2p3d-4e5f-6g7h-8v',
@@ -174,7 +172,7 @@ export const products = [
         stars: 2,
         count: 36
       },
-      keywords: ['HP', 'Envy', 'laptop', 'Windows', 'corei7', 'SSD']
+      keywords: ['hp', 'envy', 'laptop', 'windows', 'corei7', 'ssd']
     },
     { 
       Id: 'g2s2-e8hj-le3m-4n',
@@ -194,7 +192,7 @@ export const products = [
         stars: 2,
         count: 39
       },
-      keywords: ['Dell', 'monitor', 'SE2722H', '27-inch', 'FHD']
+      keywords: ['dell', 'monitor', 'monitors', '27-inch', 'fhd']
     },
     { 
       Id: '2b3d-4e5f-6g7h-8d',
@@ -215,7 +213,7 @@ export const products = [
         stars: 3,
         count: 65
       },
-      keywords: ['Samsung', 'Galaxy Book', 'Flex 15', 'laptop', 'Windows', 'corei7', 'SSD']
+      keywords: ['samsung', 'galaxy book', 'flex 15', 'laptop', 'windows', 'corei7', 'ssd']
     },
  
   { 
@@ -241,7 +239,7 @@ export const products = [
 
    },
 
-   keywords: ['Dell', 'XPS', 'Flex 15', 'laptop', 'Windows', 'corei7', 'Desktop']
+   keywords: ['dell', 'xps', 'laptop', 'windows', 'corei7', 'desktop','gaming']
 
  
    },
@@ -272,7 +270,7 @@ export const products = [
 
    },
 
-   keywords: ['Dell', 'All in One', 'Desktop', 'laptop', 'Windows', 'corei7', 'SSD']
+   keywords: ['dell', 'all in one', 'desktop', 'laptop', 'windows', 'corei7', 'ssd']
 
  
    },
@@ -301,7 +299,7 @@ export const products = [
 
    },
 
-   keywords: ['Lenovo', 'Legion', 'Tower', 'laptop', 'Windows', 'corei7', 'Desktop','All in One']
+   keywords: ['lenovo', 'legion', 'tower', 'laptop', 'lindows', 'corei7', 'desktop','all in one']
 
  
    },
@@ -327,7 +325,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy Book', 'Book3', 'laptop', 'Windows', 'corei7', 'SSD']
+   keywords: ['samsung', 'galaxy book', 'book3', 'laptop', 'windows', 'corei7', 'ssd']
 
  
    },
@@ -354,7 +352,7 @@ export const products = [
 
    },
 
-   keywords: ['Lenovo', 'Ideapad', 'slim', 'laptop', 'Windows', 'corei7', 'SSD']
+   keywords: ['lenovo', 'ideapad', 'slim', 'laptop', 'windows', 'corei7', 'ssd']
 
  
    },
@@ -379,7 +377,7 @@ export const products = [
 
    },
 
-   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'small phone', 'cheap']
+   keywords: ['nokia', 'smartphone', 'cellphone', 'mobile', 'kambudzi', 'small phone', 'cheap']
 
  
    },
@@ -388,7 +386,7 @@ export const products = [
    {
     Id:'8i-4e5f-2c3d-6g7h',
      image:'images/products/cellphones/huawei-nova-y90-2.jpg',
-     name:'Huawei NovaY90',
+     name:'Huawei Nova Y90',
      price: 130,
      specs:{
        
@@ -406,7 +404,7 @@ export const products = [
    },
 
   
-   keywords: ['Huawei', 'smartphone', 'cellphone', 'mobile', 'Android', 'Nova', ]
+   keywords: ['huawei', 'smartphone', 'cellphone', 'mobile', 'android', 'nova', ]
 
 
  
@@ -433,7 +431,7 @@ export const products = [
 
    },
 
-   keywords: ['Huawei', 'smartphone', 'cellphone', 'mobile', 'Android', 'P30', ]
+   keywords: ['huawei', 'smartphone', 'cellphone', 'mobile', 'android', 'p30', ]
 
  
    },
@@ -457,7 +455,7 @@ export const products = [
 
    },
 
-   keywords: ['Huawei', 'smartphone', 'cellphone', 'mobile', 'Android', 'Y6p', ]
+   keywords: ['huawei', 'smartphone', 'cellphone', 'mobile', 'android', 'y6p', ]
 
 
  
@@ -483,7 +481,7 @@ export const products = [
 
    },
 
-   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'C12','phone' ]
+   keywords: ['nokia', 'smartphone', 'cellphone', 'mobile', 'android', 'c12','phone' ]
 
 
  
@@ -509,7 +507,7 @@ export const products = [
 
    },
 
-   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'C32', ]
+   keywords: ['nokia', 'smartphone', 'cellphone', 'mobile', 'android', 'c32', ]
 
 
  
@@ -517,7 +515,7 @@ export const products = [
    { 
     Id:'9c3d-4e5f-9g7h-9i',
      image:'images/products/cellphones/Nokia-G42.jpg',
-     name:'NokiaG42 5G',
+     name:'Nokia G42 5G',
      price:  65,
      specs:{
        
@@ -534,7 +532,7 @@ export const products = [
 
    },
 
-   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'G42', ]
+   keywords: ['nokia', 'smartphone', 'cellphone', 'mobile', 'android', 'g42', ]
 
 
  
@@ -559,7 +557,7 @@ export const products = [
 
    },
 
-   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'Nova','5G','phone' ]
+   keywords: ['nokia', 'smartphone', 'cellphone', 'mobile', 'android','5G','phone' ]
 
 
    },
@@ -584,7 +582,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A03','phone' ]
+   keywords: ['samsung', 'salaxy','smartphone', 'cellphone', 'mobile', 'android', ' A03','phone' ]
 
  
    },
@@ -608,7 +606,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A15','phone','LTE' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' A15','phone','LTE' ]
 
 
  
@@ -616,7 +614,7 @@ export const products = [
    { 
     Id:'2c3d-4eef-6g7d-3b',
      image:'images/products/cellphones/samsung-galaxy-a03-2.jpg',
-     name:'Samsung Galaxy A03',
+     name:'samsung galaxy A03',
      price: 75,
      specs:{
        
@@ -633,7 +631,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A03','phone' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' A03','phone' ]
 
 
  
@@ -658,7 +656,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A32','phone' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' a32','phone' ]
 
 
  
@@ -683,7 +681,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' M34','phone','5G' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' M34','phone','5G' ]
 
 
  
@@ -709,7 +707,7 @@ export const products = [
    },
 
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' M34','phone' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' M34','phone' ]
 
 
  
@@ -735,7 +733,7 @@ export const products = [
    },
 
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' edge','phone' ,'s6','no SD']
+   keywords: ['samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'android', ' edge','phone' ,'s6','no SD']
 
 
  
@@ -761,7 +759,7 @@ export const products = [
    },
 
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', 'fold','phone','Z' ]
+   keywords: ['samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'android', 'fold','phone','Z' ]
 
 
  
@@ -787,7 +785,7 @@ export const products = [
    },
 
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s8','phone','edge','curved' ]
+   keywords: ['samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'android', ' s8','phone','edge','curved' ]
 
 
  
@@ -812,7 +810,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s9','phone','curved','edge' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' s9','phone','curved','edge' ]
 
  
    },
@@ -836,7 +834,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s9','s9+','phone','curved','edge' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' s9','s9+','phone','curved','edge' ]
 
 
  
@@ -861,7 +859,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s10','phone','curved','edge' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' s10','phone','curved','edge' ]
 
 
 
@@ -876,7 +874,7 @@ export const products = [
        
        rom: 512,
        ram: 16,
-       Osystem:' Android',
+       Osystem:' android',
        version:'13',
        romType:' ',
        more:`The Samsung Galaxy S20 Ultra is a flagship smartphone that features a large 6.8-inch Dynamic AMOLED display with Quad HD+ resolution, a long-lasting 5000mAh battery, and a powerful Exynos 990 octa-core processor. It comes with up to 16GB of RAM and 512GB of internal storage, and features a quad-camera setup with a 108MP primary sensor, a 40MP front camera, and support for 8K video recording. The phone also features advanced security features like fingerprint recognition and facial recognition, and supports 5G connectivity. With its large screen, powerful performance, and advanced camera capabilities, the S20 Ultra is ideal for those who want a top-of-the-line smartphone with the latest features and technology.`
@@ -887,7 +885,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s20','phone','curved','edge','5G' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s20','phone','curved','edge','5G' ]
 
 
 
@@ -902,7 +900,7 @@ export const products = [
        
        rom: 512,
        ram: 12,
-       Osystem:'Android',
+       Osystem:'android',
        version:'12',
        romType:' ',
        more:`The Samsung Galaxy S20 Ultra is a flagship smartphone that features a large 6.8-inch Dynamic AMOLED display with Quad HD+ resolution, a long-lasting 5000mAh battery, and a powerful Exynos 990 octa-core processor. It comes with up to 16GB of RAM and 512GB of internal storage, and features a quad-camera setup with a 108MP primary sensor, a 40MP front camera, and support for 8K video recording. The phone also features advanced security features like fingerprint recognition and facial recognition, and supports 5G connectivity. With its large screen, powerful performance, and advanced camera capabilities, the S20 Ultra is ideal for those who want a top-of-the-line smartphone with the latest features and technology.`
@@ -914,7 +912,7 @@ export const products = [
    },
 
  
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s20','phone','curved','edge','5G','ultra' ]
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'android', ' s20','phone','curved','edge','5G','ultra' ]
 
 
 
@@ -940,7 +938,7 @@ export const products = [
 
    },
 
-   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s21','phone','curved','edge','5G','ultra' ]
+   keywords: ['samsung', 'galaxy','smartphone', 'cellphone', 'mobile', 'android', ' s21','phone','curved','edge','5G','ultra' ]
 
  
    },
