@@ -20,7 +20,7 @@ price;
 specs;
 rating;
 type;
-
+keywords;
 constructor(productDetails){
 
   this.Id = productDetails.Id;
@@ -30,6 +30,7 @@ constructor(productDetails){
   this.specs = productDetails.specs;
  this.rating = productDetails.rating;
  this.type  = productDetails.type;
+ this.keywords = productDetails.keywords;
 }
 
 getStarsUrl(){
@@ -44,232 +45,178 @@ return `$${(this.price).toFixed(2)}`
 
 
 export const products = [
-   { 
-    Id:'g4s2-e8hj-1l3m-4n',
-    image:'images/products/Laptops&Monitors/Apple MacBook.webp',
-    name:' Apple MacBook',
-    price: 800,
-    specs:{
-      
-      rom: 512,
-      ram: 24,
-      Osystem:'IOS',
-      version:'MacOs',
-      romType:'(SSD)',
-      more: `
-      13.6 inch Liquid  Retina Display
-      1080p HD camera ;8-core CPU;10-Core GPU
-      
-      `
+
+    { 
+      Id: 'g4s2-e8hj-1l3m-4n',
+      image: 'images/products/Laptops&Monitors/Apple MacBook.webp',
+      name: 'Apple MacBook',
+      price: 800,
+      specs: {
+        rom: 512,
+        ram: 24,
+        Osystem: 'IOS',
+        version: 'MacOs',
+        romType: '(SSD)',
+        more: `
+          13.6 inch Liquid Retina Display
+          1080p HD camera; 8-core CPU; 10-Core GPU
+        `
+      },
+      rating: {
+        stars: 4,
+        count: 140
+      },
+      keywords: ['Apple', 'MacBook', 'laptop', 'IOS', 'MacOs', 'SSD']
     },
-    rating:{
-      stars:4,
-      count:140
-
-   },
-
-  type:'laptop'
-
-  }
-,
-
-  { 
-    Id:'p9r8-d3f2-b1c4-e2',
-    image:'images/products/Laptops&Monitors/Dell Laptop.webp',
-    name:' Dell Latitude 7490',
-    price: 449.99,
-    specs:{
-      
-      rom: 256,
-      ram: 16,
-      Osystem:'Windows',
-      version:'10+',
-      processor:'corei7',
-      romType:'(SSD)',
-      more: `The Dell Latitude is a 14-inch bussiness laptop designed for productivity and reliability.The laptop has an Intel Core i7-8650U processor and provides  a 14 FHD LED display,Intel UHD Graphics 620,and a range of ports including USB 3.0,HDMI,and Type-C.Running 
-      on Windows 10 proffesional.It's a solid choice for professionals and businesses seeking a dependable and efficient laptop
-      
-      `
+    { 
+      Id: 'p9r8-d3f2-b1c4-e2',
+      image: 'images/products/Laptops&Monitors/Dell Laptop.webp',
+      name: 'Dell Latitude 7490',
+      price: 449.99,
+      specs: {
+        rom: 256,
+        ram: 16,
+        Osystem: 'Windows',
+        version: '10+',
+        processor: 'corei7',
+        romType: '(SSD)',
+        more: `
+          The Dell Latitude is a 14-inch business laptop designed for productivity and reliability. The laptop has an Intel Core i7-8650U processor and provides a 14 FHD LED display, Intel UHD Graphics 620, and a range of ports including USB 3.0, HDMI, and Type-C. Running on Windows 10 Professional, it's a solid choice for professionals and businesses seeking a dependable and efficient laptop.
+        `
+      },
+      rating: {
+        stars: 5,
+        count: 155
+      },
+    
+      keywords: ['Dell', 'Latitude', 'laptop', 'Windows', 'corei7', 'SSD']
     },
-    rating:{
-      stars:5,
-      count:155
-
-   },
-
-    type:'laptop'
-
-   
-  }
-,
-
-  { 
-    Id:'a1b2-c3d4-e5f6-g3',
-    image:'images/products/Laptops&Monitors/Asus Laptop.webp',
-    name:' Asus VivoBook 15',
-    price: 250,
-    specs:{
-      
-      rom: 256,
-      ram: 8,
-      Osystem:'Linux ',
-      version:'5',
-      romType:'',
-      more: `The ASUS VivoBook 15 is a versatile laptop that features a 12th Gen Intel Core i5 processor,8Gb of RAM and a 256 GB SSD.Its 15.6 FHD display provides crisp and vibrant visuals,while the Intel Iris Xe graphics card handle graphics and video playback with ease.With a range of ports and a long-lasting battery,this laptop is ideal for everyday use and productivity.
-      `
+    { 
+      Id: 'a1b2-c3d4-e5f6-g3',
+      image: 'images/products/Laptops&Monitors/Asus Laptop.webp',
+      name: 'Asus VivoBook 15',
+      price: 250,
+      specs: {
+        rom: 256,
+        ram: 8,
+        Osystem: 'Linux',
+        version: '5',
+        romType: '',
+        more: `
+          The ASUS VivoBook 15 is a versatile laptop that features a 12th Gen Intel Core i5 processor, 8GB of RAM, and a 256 GB SSD. Its 15.6 FHD display provides crisp and vibrant visuals, while the Intel Iris Xe graphics card handles graphics and video playback with ease. With a range of ports and a long-lasting battery, this laptop is ideal for everyday use and productivity.
+        `
+      },
+      rating: {
+        stars: 3,
+        count: 67
+      },
+      keywords: ['Asus', 'VivoBook', 'laptop', 'Linux', 'corei5', 'SSD']
     },
-    rating:{
-      stars:3,
-      count:67
-
-   },
-
-   type:'laptop'
-
-
-
-  }
-
-,
-  { 
-    Id: 'k7m3-n9p8-r2t1-y4',
-    image:'images/products/Laptops&Monitors/dell-desktop-computer.png',
-    name:'Dell Inspiron Desktop ',
-    price: 399.99,
-    specs:{
-      
-      rom: 1000,
-      ram: 12,
-      Osystem:'Windows',
-      version:'11',
-      romType:'(HHD)',
-      more:`The Dell Inspiron 24 000 is an all in one desktop that featureswith a 12th Gen Intel Corei5 processor,<strong>8 GB of RAM and a 1TB HDD</strong>.It's 24 FHD display provides a crisp and vibrant visuals,while the Intel lris Xe graphics card handles graphics and video playback with ease.With a range of ports and a sleek design,this desktop is perfect for everyday and productivity 
-      
-      
-      `
+    { 
+      Id: 'k7m3-n9p8-r2t1-y4',
+      image: 'images/products/Laptops&Monitors/dell-desktop-computer.png',
+      name: 'Dell Inspiron Desktop',
+      price: 399.99,
+      specs: {
+        rom: 1000,
+        ram: 12,
+        Osystem: 'Windows',
+        version: '11',
+        romType: '(HHD)',
+        more: `
+          The Dell Inspiron 24 000 is an all-in-one desktop that features a 12th Gen Intel Core i5 processor, 8 GB of RAM, and a 1TB HDD. Its 24 FHD display provides crisp and vibrant visuals, while the Intel Iris Xe graphics card handles graphics and video playback with ease. With a range of ports and a sleek design, this desktop is perfect for everyday use and productivity.
+        `
+      },
+      rating: {
+        stars: 4,
+        count: 138
+      },
+     
+      keywords: ['Dell', 'Inspiron', 'desktop', 'Windows', 'corei5', 'HDD']
     },
-    rating:{
-      stars:4,
-      count:138
-
-   }
-
-
-  ,
-   type:'laptop'
-  }
-,
-  { 
-    Id: 'e5f6-g7h8-i1j2-k5',
-    image:'images/products/Laptops&Monitors/Lenovo Laptop.webp',
-    name:'Lenovo Thinkpad X1 Carbon',
-    price: 520,
-    specs:{
-      
-      rom: 512,
-      ram: 16,
-      Osystem:'Windows ',
-      version:'10',
-      romType:'(SSD)',
-      more:`The Lenovo ThinkPad X1 Carbon is a high-perfomance laptop that features a 12th Gen Intel Core i7 processor,16GB of RAM,and a 512 GB SSD.It's 14 FHD display provides crisp abnd vibrant visuals,while the intel Iris Xe graphics card handles graphics and video playback smoothly.With a long-lasting, this laptop is perfect for proffessionals and power uses
-      
-      `
+    { 
+      Id: 'e5f6-g7h8-i1j2-k5',
+      image: 'images/products/Laptops&Monitors/Lenovo Laptop.webp',
+      name: 'Lenovo Thinkpad X1 Carbon',
+      price: 520,
+      specs: {
+        rom: 512,
+        ram: 16,
+        Osystem: 'Windows',
+        version: '10',
+        romType: '(SSD)',
+        more: `
+          The Lenovo ThinkPad X1 Carbon is a high-performance laptop that features a 12th Gen Intel Core i7 processor, 16GB of RAM, and a 512 GB SSD. Its 14 FHD display provides crisp and vibrant visuals, while the Intel Iris Xe graphics card handles graphics and video playback smoothly. With a long-lasting battery, this laptop is perfect for professionals and power users.
+        `
+      },
+      rating: {
+        stars: 1,
+        count: 18
+      },
+      keywords: ['Lenovo', 'ThinkPad', 'laptop', 'Windows', 'corei7', 'SSD']
     },
-    rating:{
-      stars:1,
-      count:18
-
-   },
-
-    type:'laptop'
-
-
-  }
-
-,
-  { 
-    Id:'2p3d-4e5f-6g7h-8v',
-    image:'images/products/Laptops&Monitors/HP Notebook.webp',
-    name:'HP Envy 13',
-    price: 349.99,
-    specs:{
-      
-      rom: 512,
-      ram: 16,
-      Osystem:'Windows ',
-      version:'10',
-      romType:'(SSD)',
-      more:`The HP Envy 13 is a powerful and sleek laptop that features a 12th Gen Intel Core i7 processor,16 GB of RAM,and a 512 GB SSD.It's '13.3 FHD display provides crisp and vibrant visuals,while the Intel Iris Xe graphics card handles graphics and video playback with ease.With a compact and lightweight design,this laptop is perfect forstudents and professionals on the go.
-      
-      
-       `
+    { 
+      Id: '2p3d-4e5f-6g7h-8v',
+      image: 'images/products/Laptops&Monitors/HP Notebook.webp',
+      name: 'HP Envy 13',
+      price: 349.99,
+      specs: {
+        rom: 512,
+        ram: 16,
+        Osystem: 'Windows',
+        version: '10',
+        romType: '(SSD)',
+        more: `
+          The HP Envy 13 is a powerful and sleek laptop that features a 12th Gen Intel Core i7 processor, 16 GB of RAM, and a 512 GB SSD. Its 13.3 FHD display provides crisp and vibrant visuals, while the Intel Iris Xe graphics card handles graphics and video playback with ease. With a compact and lightweight design, this laptop is perfect for students and professionals on the go.
+        `
+      },
+      rating: {
+        stars: 2,
+        count: 36
+      },
+      keywords: ['HP', 'Envy', 'laptop', 'Windows', 'corei7', 'SSD']
     },
-    rating:{
-      stars:2,
-      count:36
-
-   },
-
-    type:'laptop'
-
-
-  }
-
-,
-  { 
-    Id:'g2s2-e8hj-le3m-4n',
-    image:'images/products/Laptops&Monitors/Dell-monitor.png',
-    name:' Dell SE2722H Monitor',
-    price: 100,
-    specs:{
-      
-      rom: ' ',
-      ram: ' ',
-      Osystem:'Windows',
-      romType:' ',
-      more:`The Dell SE2722H is a 27-inch FHD flat monitor with sleek and slim design, offering crystal-clear visuals and vibrant colors.It features a 1920x1080p resolution,60Hz refresh rate,and 5ms response time,providing crisp and clear visuals for work and play
-      
-      ` 
+    { 
+      Id: 'g2s2-e8hj-le3m-4n',
+      image: 'images/products/Laptops&Monitors/Dell-monitor.png',
+      name: 'Dell SE2722H Monitor',
+      price: 100,
+      specs: {
+        rom: ' ',
+        ram: ' ',
+        Osystem: 'Windows',
+        romType: ' ',
+        more: `
+          The Dell SE2722H is a 27-inch FHD flat monitor with sleek and slim design, offering crystal-clear visuals and vibrant colors. It features a 1920x1080p resolution, 60Hz refresh rate, and 5ms response time, providing crisp and clear visuals for work and play.
+        `
+      },
+      rating: {
+        stars: 2,
+        count: 39
+      },
+      keywords: ['Dell', 'monitor', 'SE2722H', '27-inch', 'FHD']
     },
-    rating:{
-      stars:2,
-      count:39
-
-   },
-
-    type:'monitor'
-
-
-  }
-
- ,
-  { 
-    Id:'2b3d-4e5f-6g7h-8d',
-    image:'images/products/Laptops&Monitors/Qled-Samsung-laptop.jpeg',
-    name:'Samsung Galaxy Book flex 15',
-    price: 480,
-    specs:{
-      
-      rom: 512,
-      ram: 12,
-      Osystem:'Windows',
-      version:'11',
-      romType:'(SSD)',
-      more:`The Samsung Galaxy Book Flex 15 laptop features a 15.6-incch 1080p QLED display,powered by an Intel Core i7-1065g7 CPU and NVIDIA GeForce MX250 GPU.It comes with 12GB of RAM and 512GB of storage,providing a seamless perfomance for demanding tasks.This laptop offers a great balance of perfomance,portability and affordability
-      
-      `
+    { 
+      Id: '2b3d-4e5f-6g7h-8d',
+      image: 'images/products/Laptops&Monitors/Qled-Samsung-laptop.jpeg',
+      name: 'Samsung Galaxy Book Flex 15',
+      price: 480,
+      specs: {
+        rom: 512,
+        ram: 12,
+        Osystem: 'Windows',
+        version: '11',
+        romType: '(SSD)',
+        more: `
+          The Samsung Galaxy Book Flex 15 laptop features a 15.6-inch 1080p QLED display, powered by an Intel Core i7-1065G7 CPU and NVIDIA GeForce MX250 GPU. It comes with 12GB of RAM and 512GB of storage, providing a seamless performance for demanding tasks. This laptop offers a great balance of performance, portability, and affordability.
+        `
+      },
+      rating: {
+        stars: 3,
+        count: 65
+      },
+      keywords: ['Samsung', 'Galaxy Book', 'Flex 15', 'laptop', 'Windows', 'corei7', 'SSD']
     },
-    rating:{
-      stars:3,
-      count:65
-
-   },
-
-    type:'laptop'
-
-
-
-  },
  
   { 
      Id:'7c8d-9e1f-0i1h-2f',
@@ -294,7 +241,7 @@ export const products = [
 
    },
 
-    type:'laptop'
+   keywords: ['Dell', 'XPS', 'Flex 15', 'laptop', 'Windows', 'corei7', 'Desktop']
 
  
    },
@@ -325,7 +272,7 @@ export const products = [
 
    },
 
-    type:'laptop'
+   keywords: ['Dell', 'All in One', 'Desktop', 'laptop', 'Windows', 'corei7', 'SSD']
 
  
    },
@@ -354,7 +301,7 @@ export const products = [
 
    },
 
-    type:'laptop'
+   keywords: ['Lenovo', 'Legion', 'Tower', 'laptop', 'Windows', 'corei7', 'Desktop','All in One']
 
  
    },
@@ -380,7 +327,7 @@ export const products = [
 
    },
 
-    type:'laptop'
+   keywords: ['Samsung', 'Galaxy Book', 'Book3', 'laptop', 'Windows', 'corei7', 'SSD']
 
  
    },
@@ -407,7 +354,7 @@ export const products = [
 
    },
 
-    type:'laptop'
+   keywords: ['Lenovo', 'Ideapad', 'slim', 'laptop', 'Windows', 'corei7', 'SSD']
 
  
    },
@@ -432,7 +379,7 @@ export const products = [
 
    },
 
-    type:'mobile'
+   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'small phone', 'cheap']
 
  
    },
@@ -458,7 +405,9 @@ export const products = [
 
    },
 
-    type:'mobile'
+  
+   keywords: ['Huawei', 'smartphone', 'cellphone', 'mobile', 'Android', 'Nova', ]
+
 
  
    },
@@ -484,7 +433,7 @@ export const products = [
 
    },
 
-    type:'mobile'
+   keywords: ['Huawei', 'smartphone', 'cellphone', 'mobile', 'Android', 'P30', ]
 
  
    },
@@ -508,7 +457,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Huawei', 'smartphone', 'cellphone', 'mobile', 'Android', 'Y6p', ]
 
 
  
@@ -534,7 +483,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'C12','phone' ]
 
 
  
@@ -560,7 +509,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'C32', ]
 
 
  
@@ -585,7 +534,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'G42', ]
 
 
  
@@ -610,8 +559,7 @@ export const products = [
 
    },
 
-   type:'mobile'
-
+   keywords: ['Nokia', 'smartphone', 'cellphone', 'mobile', 'Android', 'Nova','5G','phone' ]
 
 
    },
@@ -636,8 +584,7 @@ export const products = [
 
    },
 
-   type:'mobile'
-
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A03','phone' ]
 
  
    },
@@ -661,7 +608,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A15','phone','LTE' ]
 
 
  
@@ -686,7 +633,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A03','phone' ]
 
 
  
@@ -711,7 +658,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' A32','phone' ]
 
 
  
@@ -736,7 +683,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' M34','phone','5G' ]
 
 
  
@@ -761,7 +708,8 @@ export const products = [
 
    },
 
-   type:'mobile'
+
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' M34','phone' ]
 
 
  
@@ -786,7 +734,8 @@ export const products = [
 
    },
 
-   type:'mobile'
+
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' edge','phone' ,'s6','no SD']
 
 
  
@@ -811,7 +760,8 @@ export const products = [
 
    },
 
-   type:'mobile'
+
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', 'fold','phone','Z' ]
 
 
  
@@ -836,7 +786,8 @@ export const products = [
 
    },
 
-   type:'mobile'
+
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s8','phone','edge','curved' ]
 
 
  
@@ -861,8 +812,7 @@ export const products = [
 
    },
 
-   type:'mobile'
-
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s9','phone','curved','edge' ]
 
  
    },
@@ -886,7 +836,7 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s9','s9+','phone','curved','edge' ]
 
 
  
@@ -911,7 +861,8 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s10','phone','curved','edge' ]
+
 
 
  
@@ -936,7 +887,8 @@ export const products = [
 
    },
 
-   type:'mobile'
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s20','phone','curved','edge','5G' ]
+
 
 
  
@@ -961,7 +913,9 @@ export const products = [
 
    },
 
-   type:'mobile'
+ 
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s20','phone','curved','edge','5G','ultra' ]
+
 
 
  
@@ -986,8 +940,7 @@ export const products = [
 
    },
 
-   type:'mobile'
-
+   keywords: ['Samsung', 'Galaxy','smartphone', 'cellphone', 'mobile', 'Android', ' s21','phone','curved','edge','5G','ultra' ]
 
  
    },
