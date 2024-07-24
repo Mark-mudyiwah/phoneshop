@@ -1,6 +1,7 @@
 import {getProduct} from './products.js'
 
 import { orders } from './orders.js'
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 
  const url= new URL(window.location.href)
  console.log(url)
@@ -12,19 +13,32 @@ import { orders } from './orders.js'
 const product = getProduct(productId)
 
 
+let matchingItem;
 
-let matchingItem=''
-orders.forEach((order)=> {
-
-    order.forEach((item)=>{
-        if(item.productId === productId && item.orderId === orderId){
-            matchingItem =  item
+orders.forEach((order) => {
+    order.forEach((item) => {
+        if (item.productId === productId && item.orderId === orderId) {
+            matchingItem = item;
         }
-    })
-
-    
-
+    });
 });
+
+
+ 
+const now = dayjs()
+
+const today = now.format('D')
+    
+    const orderTime = dayjs(matchingItem.orderDate)
+
+    const deliveryTime = dayjs(matchingItem.deliveryDate)
+
+    const currentTime = deliveryTime.format('D')
+
+    const orderedTime = orderTime.format('D')
+
+    const deliveryProgress = ((today-orderedTime)/(currentTime-orderedTime))*100
+    console.log(deliveryProgress)
 
 
 
@@ -68,7 +82,9 @@ Delivered
 
 </div>
 <div class="progress-container">
-<div class="progress-bar">
+<div class="progress-bar js-progress-bar"
+style ="width: ${deliveryProgress}%"
+>
 
 </div>
 </div>

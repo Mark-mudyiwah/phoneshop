@@ -207,8 +207,13 @@ margin-bottom: 4px;
     transition: 0.5s ease;
     background-color: green;
     color: white;
+    
 }
 
+.track-package a{
+    text-decoration: none;
+    color: white;
+}
 .track-package:hover{
     transition: 0.5s ease-in;
     transform: scale(1.1);

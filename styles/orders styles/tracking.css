@@ -52,6 +52,8 @@ body{
     width: 10%;
     border-radius: 9px;
     border: none;
+    max-width: 100%;
+    transition: 0.5s ease-in ;
 }
 
 
