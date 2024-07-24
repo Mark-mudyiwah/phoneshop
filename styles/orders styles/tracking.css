@@ -1,0 +1,74 @@
+body{
+    font-family: roboto;
+    
+    
+}
+
+ 
+
+.delivery-date{
+    font-weight: 900;
+    color: darkgreen;
+}
+
+.product-image{
+    display:flex;
+    justify-content: center;
+    width: 300px;
+}
+
+
+.product-name{
+    color: navy;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.product-quantity{
+    color:rgb(155, 29, 29);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.item{
+    width:100%;
+}
+
+.progress-span-container{
+    display: flex;
+    justify-content: space-between;
+     margin: 10px 3px;
+}
+
+.progress-container{
+    height: 25px;
+    border: 1px solid rgb(91, 92, 91);
+    border-radius: 11px;
+    padding: 0;
+}
+
+.progress-bar{
+    height: 100%;
+    background-color: green;
+    width: 10%;
+    border-radius: 9px;
+    border: none;
+}
+
+
+
+
+@media(max-width:500px) {
+    
+    .product-image{
+       
+        width: 150px;
+    }
+    
+    .progress-container{
+        height: 18px;
+        border: 1px solid rgb(91, 92, 91);
+        border-radius: 11px;
+        padding: 0;
+    }
+
+}

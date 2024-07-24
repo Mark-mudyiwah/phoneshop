@@ -78,7 +78,7 @@ if (!orders) {
                         Buy Again
                     </button>
                     <button  class="track-package">
-                        Track Package
+                      <a href = "tracking.html?productId=${item.Id}&orderId=${orderId} ">Track Package</a>
                     </button>
                 
                 </div>
