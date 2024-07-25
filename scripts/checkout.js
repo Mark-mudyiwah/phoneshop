@@ -133,7 +133,7 @@ cart.forEach((cartItem)=>{
    cartItem.totalCost = `${totalCost}`
 })
 
-orders.push(cart)
+orders.unshift(cart)
 
  localStorage.removeItem('cart')
  
