@@ -66,16 +66,16 @@ Arriving on: ${matchingItem.deliveryDate}
 
 <div class="progress-container-primary">
 <div class="progress-span-container">
-<span>
+<span class="${deliveryProgress< 50 ? 'current-status':''} ">
 Preparing
 </span>
-<span>
-Shipped
+<span class="${deliveryProgress >= 50 && deliveryProgress < 100 ? 'current-status':''}">
 
+Shipped
 
 </span>
 
-<span>
+<span class="${deliveryProgress >= 100 ? 'current-status':''}">
 Delivered
 </span>
 

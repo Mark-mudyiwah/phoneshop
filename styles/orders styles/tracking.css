@@ -4,11 +4,15 @@ body{
     
 }
 
+.product-main{
+    
+}
  
 
 .delivery-date{
     font-weight: 900;
     color: darkgreen;
+    margin-bottom: 12px;
 }
 
 .product-image{
@@ -22,12 +26,15 @@ body{
     color: navy;
     font-weight: 600;
     margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 12px;
 }
 
 .product-quantity{
     color:rgb(155, 29, 29);
     font-weight: 600;
     margin-bottom: 20px;
+    margin-left: 12px;
 }
 .item{
     width:100%;
@@ -37,6 +44,7 @@ body{
     display: flex;
     justify-content: space-between;
      margin: 10px 3px;
+     font-weight: 600;
 }
 
 .progress-container{
@@ -56,7 +64,9 @@ body{
     transition: 0.5s ease-in ;
 }
 
-
+.current-status{
+    color: green;
+}
 
 
 @media(max-width:500px) {

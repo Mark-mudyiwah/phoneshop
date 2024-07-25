@@ -1,13 +1,13 @@
 
 body{
-    font-family: roboto;
     background: rgb(14, 12, 46);
+    font-family: roboto;;
     margin: auto;
     padding-top: 80px;
     
     
 }
-
+ 
 h2 a{
     color: white;
 
@@ -62,7 +62,7 @@ button{
 .shipping-method{
  
  font-weight: 600;
- font-size: small;
+ font-size: 14px;
 }
  .body{
     margin: 0;
