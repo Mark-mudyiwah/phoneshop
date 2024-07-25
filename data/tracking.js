@@ -31,13 +31,13 @@ const today = now.format('D')
     
     const orderTime = dayjs(matchingItem.orderDate)
 
-    const deliveryTime = dayjs(matchingItem.deliveryDate)
+    const time = dayjs(matchingItem.deliveryDate)
 
-    const currentTime = deliveryTime.format('D')
+    const deliveryTime = time.format('D')
 
     const orderedTime = orderTime.format('D')
-
-    const deliveryProgress = ((today-orderedTime)/(currentTime-orderedTime))*100
+ 
+    const deliveryProgress = ((today-orderedTime)/(deliveryTime-orderedTime))*100 <= 0 ? 10 :((today-orderedTime)/(deliveryTime-orderedTime))*100
     console.log(deliveryProgress)
 
 
