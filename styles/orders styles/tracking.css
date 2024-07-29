@@ -4,8 +4,14 @@ body{
     
 }
 
-.product-main{
-    
+ 
+@keyframes  slideInLeft {
+    from{
+        transform: translateX(-20px);
+    }
+    to{
+        transform:translateX(0) ;
+    }
 }
  
 
@@ -61,7 +67,10 @@ body{
     border-radius: 9px;
     border: none;
     max-width: 100%;
-    transition: 0.5s ease-in ;
+    animation: slideInLeft ;
+    animation-duration: 3s;
+    animation-delay: 5ms;
+    
 }
 
 .current-status{

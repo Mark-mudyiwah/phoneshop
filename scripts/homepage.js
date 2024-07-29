@@ -6,194 +6,19 @@ let productsHTML = '';
 let filteredProductsHTML = '';
 
 products.forEach((product) => {
-  productsHTML += `
-    <div class="product-container">
-        <div class="product-image-container">
-            <img class="item" src="${product.image}">
-        </div>
-        <div class="product-name-container">
-            ${product.name}
-        </div>
-        <div class="product-specs">
-            <div class="storage-rom-container">
-                <div class="rom-text-container">
-                    ROM :
-                </div>
-                <div class="rom-amount">
-                    ${product.specs.rom}GB
-                </div>
-                <div class="rom-type">
-                    ${product.specs.romType}
-                </div>
-            </div>
-            <div class="storage-ram-container">
-                <div class="ram-text-container">
-                    RAM :
-                </div>
-                <div class="ram-amount">
-                    ${product.specs.ram}GB
-                </div>
-            </div>
-            <div class="product-system-container">
-                <div class="system-text-container">
-                    O.S:
-                </div>
-                <div class="product-operating-system">
-                    ${product.specs.Osystem}
-                </div>
-            </div>
-            <div class="product-system-container">
-                <div class="system-text-container">
-                    Version:
-                </div>
-                <div class="product-operating-system">
-                    ${product.specs.version}
-                </div>
-            </div>
-            <div class="see-more-info js-more-info" data-product-info="${product.specs.more}">
-                See more...
-            </div>
-        </div>
-        <div class="product-price-container">
-            <div class="product-price-text">
-                Price :
-            </div>
-            <div class="amount-container">
-                ${product.getPriceUrl()}
-            </div>
-        </div>
-        <div class="product-quantity-container">
-            <select class="js-select-quantity-${product.Id}">
-                <option selected value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <div class="stars-div">
-                <div class="image-container">
-                    <img class="star-icon" src="${product.getStarsUrl()}">
-                </div>
-                <div>
-                    ${product.rating.count}
-                </div>
-            </div>
-        </div>
-        <div class="added-text-container js-added-text-${product.Id}">
-            Added&#10004
-        </div>
-        <div class="add-to-cart-container">
-            <button class="add-to-cart-button" data-product-id="${product.Id}">
-                Add to cart
-            </button>
-        </div>
-    </div>
-  `;
+  productsHTML += AllProductsHTML(product)
 });
 
 document.querySelector('.js-product-container').innerHTML = productsHTML;
 
-document.querySelector('.js-search-button').addEventListener('click', () => {
+function  searchProducts(){
   const searchInputElement = document.querySelector('.js-search-input');
-  const keyword = searchInputElement.value.trim();
+  const keyword = searchInputElement.value.trim().toLowerCase();
   const filteredProducts = products.filter(product => product.name.includes(keyword, 'i') || product.keywords.includes(keyword,'i'))
-
   filteredProductsHTML = '';
   
   filteredProducts.forEach((product) => {
-    filteredProductsHTML += `
-      <div class="product-container">
-          <div class="product-image-container">
-              <img class="item" src="${product.image}">
-          </div>
-          <div class="product-name-container">
-              ${product.name}
-          </div>
-          <div class="product-specs">
-              <div class="storage-rom-container">
-                  <div class="rom-text-container">
-                      ROM :
-                  </div>
-                  <div class="rom-amount">
-                      ${product.specs.rom}GB
-                  </div>
-                  <div class="rom-type">
-                      ${product.specs.romType}
-                  </div>
-              </div>
-              <div class="storage-ram-container">
-                  <div class="ram-text-container">
-                      RAM :
-                  </div>
-                  <div class="ram-amount">
-                      ${product.specs.ram}GB
-                  </div>
-              </div>
-              <div class="product-system-container">
-                  <div class="system-text-container">
-                      O.S:
-                  </div>
-                  <div class="product-operating-system">
-                      ${product.specs.Osystem}
-                  </div>
-              </div>
-              <div class="product-system-container">
-                  <div class="system-text-container">
-                      Version:
-                  </div>
-                  <div class="product-operating-system">
-                      ${product.specs.version}
-                  </div>
-              </div>
-              <div class="see-more-info js-more-info" data-product-info="${product.specs.more}">
-                  See more...
-              </div>
-          </div>
-          <div class="product-price-container">
-              <div class="product-price-text">
-                  Price :
-              </div>
-              <div class="amount-container">
-                  ${product.getPriceUrl()}
-              </div>
-          </div>
-          <div class="product-quantity-container">
-              <select class="js-select-quantity-${product.Id}">
-                  <option selected value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-              </select>
-              <div class="stars-div">
-                  <div class="image-container">
-                      <img class="star-icon" src="${product.getStarsUrl()}">
-                  </div>
-                  <div>
-                      ${product.rating.count}
-                  </div>
-              </div>
-          </div>
-          <div class="added-text-container js-added-text-${product.Id}">
-              Added&#10004
-          </div>
-          <div class="add-to-cart-container">
-              <button class="add-to-cart-button" data-product-id="${product.Id}">
-                  Add to cart
-              </button>
-          </div>
-      </div>
-    `;
+    filteredProductsHTML += AllProductsHTML(product)
   });
   filteredProducts.some(product => product.name.includes(keyword) || product.keywords.includes(keyword)) ? document.querySelector('.js-product-container').innerHTML = filteredProductsHTML : document.querySelector('.js-product-container').innerHTML = productsHTML;
 
@@ -219,6 +44,10 @@ selectElement.forEach((select)=>{
 
   })
 })
+}
+
+document.querySelector('.js-search-button').addEventListener('click', () => {
+searchProducts()
 });
 
 
@@ -503,3 +332,107 @@ function dropDownAnimation(){
     })
      
   }
+
+  function AllProductsHTML(product){
+  let html =`
+      <div class="product-container">
+          <div class="product-image-container">
+              <img class="item" src="${product.image}">
+          </div>
+          <div class="product-name-container">
+              ${product.name}
+          </div>
+          <div class="product-specs">
+              <div class="storage-rom-container">
+                  <div class="rom-text-container">
+                      ROM :
+                  </div>
+                  <div class="rom-amount">
+                      ${product.specs.rom}GB
+                  </div>
+                  <div class="rom-type">
+                      ${product.specs.romType}
+                  </div>
+              </div>
+              <div class="storage-ram-container">
+                  <div class="ram-text-container">
+                      RAM :
+                  </div>
+                  <div class="ram-amount">
+                      ${product.specs.ram}GB
+                  </div>
+              </div>
+              <div class="product-system-container">
+                  <div class="system-text-container">
+                      O.S:
+                  </div>
+                  <div class="product-operating-system">
+                      ${product.specs.Osystem}
+                  </div>
+              </div>
+              <div class="product-system-container">
+                  <div class="system-text-container">
+                      Version:
+                  </div>
+                  <div class="product-operating-system">
+                      ${product.specs.version}
+                  </div>
+              </div>
+              <div class="see-more-info js-more-info" data-product-info="${product.specs.more}">
+                  See more...
+              </div>
+          </div>
+          <div class="product-price-container">
+              <div class="product-price-text">
+                  Price :
+              </div>
+              <div class="amount-container">
+                  ${product.getPriceUrl()}
+              </div>
+          </div>
+          <div class="product-quantity-container">
+              <select class="js-select-quantity-${product.Id}">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+              </select>
+              <div class="stars-div">
+                  <div class="image-container">
+                      <img class="star-icon" src="${product.getStarsUrl()}">
+                  </div>
+                  <div>
+                      ${product.rating.count}
+                  </div>
+              </div>
+          </div>
+          <div class="added-text-container js-added-text-${product.Id}">
+              Added&#10004
+          </div>
+          <div class="add-to-cart-container">
+              <button class="add-to-cart-button" data-product-id="${product.Id}">
+                  Add to cart
+              </button>
+          </div>
+          <div class= "product-divider"></div>
+      </div>
+    `;
+ return html
+
+  }
+
+
+ document.body.addEventListener('keydown',(Event)=>{
+  const key = Event.key
+  if(key ==='Enter'){
+ searchProducts()
+
+  }
+
+ })

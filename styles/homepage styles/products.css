@@ -88,13 +88,13 @@ body{
    display: inline-block;
    
    border-right: 1px solid lightgrey;
-   border-top: 1px solid lightgray ;
-   
-   
    border-spacing:0;
    max-width: 100%;
-   
-   
+ }
+
+ .product-divider{
+border-top: 1px solid lightgray;
+
  }
  .product-image-container{
    display: flex;
