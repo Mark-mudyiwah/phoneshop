@@ -1,7 +1,7 @@
 import { cart } from "../../data/cart.js";
 import { getProduct } from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
-
+//import { adjustHeight } from "../checkout.js";
  
 
 
@@ -94,25 +94,25 @@ const paymentSummaryHTML=
 <div class="client-details js-client-details">
     <div class="client-name">
       <div class="name"> Name:</div>
-       <input class="name-input" placeholder="Enter your name">
+       <input class="name-input js-customer-name" placeholder="Enter your name">
     </div>
      <div class="client-number">
     <div class="phone-number">
         Phone Number:
     </div>
-        <input type="number" class="number-input">
+        <input type="number" class="number-input js-customer-number">
     </div>
 
-    <div class="client-address">
+    <div class="client-address ">
         <div class="address">
              Shipping Address:
         </div>
-            <textarea id="address" name="address" placeholder="Enter your address here..." oninput="adjustHeight(this)"></textarea>
+            <textarea id="address" class="js-customer-address"  name="address" placeholder="Enter your address here..."></textarea>
          
     </div>
       <div class="comments">
         <div class="comment-text">Customer Comment:</div>
-        <textarea id="address" name="address" placeholder="Enter your comment here..." oninput="adjustHeight(this)"></textarea>
+        <textarea id="address" class="js-customer-comment"  name="address" placeholder="Enter your comment here..."></textarea>
       </div>
      <div class= "place-order-div">
           <button class="place-order-button js-place-order">

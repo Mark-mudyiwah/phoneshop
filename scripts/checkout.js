@@ -17,10 +17,10 @@ import { getProduct } from "../data/products.js"
 
  
 
- function adjustHeight(textarea) {
+/* export function adjustHeight(textarea) {
     textarea.style.height = 'auto'; // Reset height to auto
     textarea.style.height = textarea.scrollHeight + 'px'; // Set height to scrollHeight
-}
+}*/
  
  export function updatingItemQuantity(){
    
@@ -80,7 +80,7 @@ import { getProduct } from "../data/products.js"
                 }
 
                 placingOrder()
-        
+               AddClientDetails()
             }
            
         })
@@ -104,6 +104,16 @@ document.querySelectorAll('.quantity-update-input')
  export function placingOrder(){
     cart.length > 0 ?
 document.querySelector('.js-place-order').addEventListener('click',()=>{
+    const customerNameInputElement = document.querySelector('.js-customer-name')
+    const customerNumberInputElement = document.querySelector('.js-customer-number')
+    const customerAddressElement = document.querySelector('.js-customer-address')
+    const customerCommentElement = document.querySelector('.js-customer-comment')
+
+    const customerName = (customerNameInputElement.value) 
+    const customerNumber = (customerNumberInputElement.value) 
+    const customerAddress = customerAddressElement.value
+    const customerComment = customerCommentElement.value
+
     let productsCost = 0
     let shippingCost = 0
     let orders =loadFromStorage()
@@ -119,7 +129,7 @@ cart.forEach((cartItem)=>{
 
   
     const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId)
-    const deliveryDate = (today.add(`${deliveryOption.deliveryDays}`,'days')).format('MMMM D')
+    const deliveryDate = (today.add(`${deliveryOption.deliveryDays}`,'days')).format('ddd D MMMM YYYY')
 
     const product = getProduct(cartItem.productId);
     productsCost += product.price*cartItem.quantity;
@@ -157,7 +167,7 @@ window.location.href ='orders.html'
 
 placingOrder()
 
-function AddClientDetails(){
+export function AddClientDetails(){
     cart.length > 0 ?
     document.querySelector('.js-next-button').addEventListener('click',()=>{
       document.querySelector('.js-next-button').classList.add('hide')

@@ -46,7 +46,7 @@ let productHtml =`
 
 
 <div class="delivery-date">
-Arriving on: ${matchingItem.deliveryDate}
+ ${today >= deliveryTime?'Delivered on:' : 'Arriving on:'} ${matchingItem.deliveryDate}
 </div>
 
 <div class="product-main">
@@ -59,7 +59,7 @@ Arriving on: ${matchingItem.deliveryDate}
    ${product.name}
 </div>
 <div class="product-quantity">
- Quantiy:${matchingItem.quantity}
+ Quantity:${matchingItem.quantity}
 </div>
 
 </div>

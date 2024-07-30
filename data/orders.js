@@ -25,7 +25,11 @@ if (!orders) {
 
     let orderSummaryHTML = ''
 
-    
+    const today = dayjs()
+
+    const currentDate = dayjs(today).format('ddd D MMMM YYYY')
+    console.log(currentDate)
+    let deliveredTime;
 
  orders.forEach((order)=>{
 
@@ -42,8 +46,9 @@ if (!orders) {
         let item = getProduct(product.productId)
         let deliveryOption =getDeliveryOption(product.deliveryOptionId)
         totalCost =product.totalCost
-        orderDate = product.orderDate
+        orderDate = product.orderDate 
         orderId = product.orderId
+        deliveredTime = dayjs(product.deliveryDate).format('ddd, DD MMMM YYYY')
 
       
 
@@ -67,7 +72,7 @@ if (!orders) {
                                
                         </div>
                         <div class="arriving-date">
-                            Arriving on :  
+                            ${currentDate >= product.deliveryDate?'Delivered on':'Arriving on'}:  
                             ${product.deliveryDate}
     
                         </div>

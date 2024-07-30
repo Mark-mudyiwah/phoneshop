@@ -35,14 +35,15 @@ button{
      
     .product-image{
         
-       max-width: 130px;
+       max-width: 140px;
        margin-bottom: 8px;
+        
       
 }
 
 .product-container{
     display: flex;
-    align-items:center;
+    align-items:start;
     border-radius: 6px;
     flex-direction: column;
     
@@ -144,17 +145,25 @@ bottom: 0;
 }
 .product-container{
 display: flex;
-align-items:end;
+align-items:self-start;
+justify-content: end;
 border-radius: 6px;
  
 
 
 }
 
+
+.product-infomation{
+    margin-top: 15px;
+    font-size: small;
+}
+
 .product-image{
  display:flex;
  justify-content: center;
- width: 150px;
+ align-items: center;
+ width: 180px;
   margin-right: 12px;
 
 }
