@@ -87,15 +87,17 @@ color: rgb(73, 69, 69);
     display: flex;
     font-size: 10px;
     justify-content: center;
+    align-items: center;
      width: 20px;
     font-weight: bold;
-    color:rgb(24, 226, 24);
+    color:rgb(226, 81, 24);
   
     position:absolute;
     top: 2px;
    
     right: 2px;
 }
+
 .icon-container{
      width: 30px;
     height: 30px;

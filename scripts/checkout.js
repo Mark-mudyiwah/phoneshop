@@ -14,6 +14,13 @@ import { getProduct } from "../data/products.js"
   renderPaymentSummary()
   denyingCommas()
  updatingItemQuantity()
+
+ 
+
+ function adjustHeight(textarea) {
+    textarea.style.height = 'auto'; // Reset height to auto
+    textarea.style.height = textarea.scrollHeight + 'px'; // Set height to scrollHeight
+}
  
  export function updatingItemQuantity(){
    
@@ -143,8 +150,22 @@ window.location.href ='orders.html'
 
 })
 
+
 :''
 
 }
 
 placingOrder()
+
+function AddClientDetails(){
+    cart.length > 0 ?
+    document.querySelector('.js-next-button').addEventListener('click',()=>{
+      document.querySelector('.js-next-button').classList.add('hide')
+    document.querySelector('.js-client-details').classList.add('show')
+    document.querySelector('.place-order-div').classList.add('remove-flex')
+    
+
+    }):''
+}
+
+AddClientDetails()

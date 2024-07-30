@@ -17,6 +17,22 @@ body{
     color: white;
 
 }
+textarea{
+   width: 100%;
+   min-height: 100px;
+   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+   overflow: hidden; /* Hide the scrollbars */
+   resize: none; /* Disable manual resizing */
+   font-family: roboto;
+   border: 1px solid black;
+
+}
+
+textarea:focus{
+   outline: none;
+   border: 2px solid rgb(14, 33, 201);
+  
+}
 
 .header-container div a{
    text-decoration: none;
@@ -45,6 +61,7 @@ align-items: center;
 .icon-lock{
     height: 30px;
 }
+
 
 .products-summary-grid{
    
@@ -361,7 +378,7 @@ display: none;
 }
 .place-order-div{
 display: flex;
-justify-content: center;
+justify-content:center ;
 background-color: whitesmoke;
 padding: 8px 6px;
 
@@ -407,4 +424,57 @@ padding: 8px 6px;
    color: brown;
    transform: scale(1.2);
    transition: 1s ease;
+}
+
+
+.client-details{
+   display: none;
+   border: none;
+   width: 100%;
+   padding: 10px;
+}
+
+.client-details div{
+   margin-bottom: 10px;
+   font-weight: bold;
+   color: brown;
+}
+.client-details div div{
+margin-bottom: 2px;
+ 
+
+}
+
+.name-input,
+.number-input{
+   border: 1px solid black;
+   padding: 6px 6px;
+   border-radius: 2px;
+   width: 70%;
+}
+
+.name-input:focus,
+.number-input:focus{
+outline: none;
+   border: 1px solid blue;
+}
+
+.address-input{
+   height: 150px;
+   
+}
+
+.show{
+   display: initial;
+}
+
+.hide{
+display: none;
+}
+
+
+.remove-flex{
+   display: flex;
+   justify-content: start;
+   flex-direction: column;
 }

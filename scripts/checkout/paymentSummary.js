@@ -84,12 +84,43 @@ const paymentSummaryHTML=
          $ &#160 ${totalCost.toFixed(2)}
     </div>
 </div>
-
  </div>
+  <div class= "place-order-div js-next-button-div">
+          <button class="place-order-button js-next-button">
+       Next</button>
+       <div>
  <div class="place-order-div">
-    <button class="place-order-button js-place-order">
-    Place an Order</button>
+   
+<div class="client-details js-client-details">
+    <div class="client-name">
+      <div class="name"> Name:</div>
+       <input class="name-input" placeholder="Enter your name">
     </div>
+     <div class="client-number">
+    <div class="phone-number">
+        Phone Number:
+    </div>
+        <input type="number" class="number-input">
+    </div>
+
+    <div class="client-address">
+        <div class="address">
+             Shipping Address:
+        </div>
+            <textarea id="address" name="address" placeholder="Enter your address here..." oninput="adjustHeight(this)"></textarea>
+         
+    </div>
+      <div class="comments">
+        <div class="comment-text">Customer Comment:</div>
+        <textarea id="address" name="address" placeholder="Enter your comment here..." oninput="adjustHeight(this)"></textarea>
+      </div>
+     <div class= "place-order-div">
+          <button class="place-order-button js-place-order">
+       Place an Order</button>
+       <div>
+</div>
+
+
 `
 
 document.querySelector('.js-summary-side')
