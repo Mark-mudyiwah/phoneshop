@@ -1,13 +1,10 @@
 
 body{
     font-family: roboto;
+    color: white;
 
-    background-image:linear-gradient(45deg,rgba(255, 0, 0, 0.719),rgba(28, 218, 218, 0.966),rgb(29, 231, 11));
-   color:black;
-
-   animation: move-it 30s infinite alternate;
-   background-size: 400%;
- 
+    background-image:url('../../images/other images/background-03.jpg');
+ background-size:contain;
 }
 
 
@@ -18,6 +15,18 @@ p{
     margin-top: -4px;
     margin-bottom: 1px;
 }
+
+input[type="date"],
+input[type="text"],
+input[type="password"] ,
+select{
+    background: transparent;
+    border: 2px white solid;
+    padding: 10px 6px;
+    border-radius: 14px;
+    }  
+
+
 
 @keyframes move-it {
     0%{
@@ -102,9 +111,8 @@ span{
 }
 .main-container div div{
     margin: 4px 0px;
-    background: linear-gradient( rgb(31, 24, 1),rgb(86, 7, 231));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+     color: aqua;
+ 
     font-weight:900;
      
 }
@@ -130,6 +138,7 @@ input::placeholder{
 .date-of-birth,
 select{
     font-family: roboto;
+    color: rgb(228, 79, 34);
 }
 
 
@@ -140,13 +149,12 @@ select{
 }
 
 .save-info{
-    background:linear-gradient(rgb(35, 17, 192),rgb(207, 5, 56));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+color:aqua ;
+background-color: transparent;
   font-weight: bold;
   font-size: 14px;
   padding: 6px 10px;
-  border: 1px solid black;
+  border: 2px solid rgb(12, 71, 7);
   cursor: pointer;
   font-weight: 700;
   transition: 1s ease;
@@ -226,6 +234,7 @@ select{
  width: 18px;  
  height: 18px;
  cursor: pointer;
+ 
  
  
 }

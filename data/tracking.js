@@ -38,15 +38,16 @@ const today = now.format('D')
     const orderedTime = orderTime.format('D')
  
     const deliveryProgress = ((today-orderedTime)/(deliveryTime-orderedTime))*100 <= 0 ? 10 :((today-orderedTime)/(deliveryTime-orderedTime))*100
-    console.log(deliveryProgress)
+   
 
-
+    const isArriving = now.isBefore(time);
+     
 
 let productHtml =`
 
 
 <div class="delivery-date">
- ${today >= deliveryTime?'Delivered on:' : 'Arriving on:'} ${matchingItem.deliveryDate}
+ ${isArriving?'Arriving on:' : 'Delivered on:'} ${matchingItem.deliveryDate}
 </div>
 
 <div class="product-main">
@@ -83,7 +84,7 @@ Delivered
 </div>
 <div class="progress-container">
 <div class="progress-bar js-progress-bar"
-style ="width: ${deliveryProgress}%"
+style ="width:0%"
 >
 
 </div>
@@ -94,3 +95,15 @@ style ="width: ${deliveryProgress}%"
 `
  
 document.querySelector('.main').innerHTML = productHtml
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const progressBar = document.querySelector('.js-progress-bar');
+    progressBar.style.width =  `0%`;
+
+    // Use a timeout to ensure the bar starts from 0 before animating to the target width
+    setTimeout(() => {
+        progressBar.style.width = `${deliveryProgress}%`;
+    }, 100);
+});
+

@@ -12,17 +12,17 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 
     {
         id:'2',
-        deliveryDays:3,
+        deliveryDays:5,
         price:10,
-        method:' 3 day'
+        method:' 5 day'
     },
 
     {
 
         id:'3',
-        deliveryDays:1,
+        deliveryDays:3,
         price:  15,
-        method:' 24 hr'
+        method:' 3 day'
 
 
 

@@ -4,16 +4,6 @@ body{
     
 }
 
- 
-@keyframes  slideInLeft {
-    from{
-        transform: translateX(-20px);
-    }
-    to{
-        transform:translateX(0) ;
-    }
-}
- 
 
 .delivery-date{
     font-weight: 900;
@@ -58,6 +48,7 @@ body{
     border: 1px solid rgb(91, 92, 91);
     border-radius: 11px;
     padding: 0;
+    overflow: hidden;
 }
 
 .progress-bar{
@@ -67,9 +58,10 @@ body{
     border-radius: 9px;
     border: none;
     max-width: 100%;
-    animation: slideInLeft ;
+    animation: ease-in forwards;
     animation-duration: 3s;
-    animation-delay: 5ms;
+    transition: width 1s ease-out; 
+    width: 0;
     
 }
 

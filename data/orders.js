@@ -27,8 +27,7 @@ if (!orders) {
 
     const today = dayjs()
 
-    const currentDate = dayjs(today).format('ddd D MMMM YYYY')
-    console.log(currentDate)
+    const currentDate = dayjs(today)
     let deliveredTime;
 
  orders.forEach((order)=>{
@@ -49,7 +48,9 @@ if (!orders) {
         orderDate = product.orderDate 
         orderId = product.orderId
         deliveredTime = dayjs(product.deliveryDate).format('ddd, DD MMMM YYYY')
-
+        const isArriving = currentDate.isBefore(deliveredTime);
+    
+    
       
 
         productHTML +=` <div class="main-flex">
@@ -72,7 +73,7 @@ if (!orders) {
                                
                         </div>
                         <div class="arriving-date">
-                            ${currentDate >= product.deliveryDate?'Delivered on':'Arriving on'}:  
+                             ${isArriving ? 'Arriving on' : 'Delivered on'}: 
                             ${product.deliveryDate}
     
                         </div>

@@ -1,7 +1,5 @@
 import {  clientInfo, saveToStorage} from "./utils/client-info.js"
 
-  
-console.log(clientInfo)
  
 
  const saveInfoElement = document.querySelector('.js-save-button')
