@@ -187,10 +187,11 @@ function dropDownAnimation(){
      
       `
       dropDownMenu.innerHTML= `
-      <a href ="signIn.html"
-      <div class="Sign In">Sign In</div>
-      </a>
-      <div class="categories"> Categories</div>
+     
+     <div class="sign-in">  
+     <a href ="signIn.html">Sign In</a>
+     </div>
+      
      <div class="about-us">About Us </div>
      
   
@@ -221,47 +222,11 @@ function dropDownAnimation(){
     }
 
 
-      
-      const categoriesElement = document.querySelector('.categories')  
-        
-      categoriesElement.addEventListener('click',()=>{
-
-        document.querySelector('.about-us-drop-down')
-        .innerHTML=''
-        document.querySelector('.about-us-drop-down').classList.remove('about-us-drop-down-animate')
-        document.querySelector('.message-us-drop-down')
-        .innerHTML=''
-
-        const categoryDropDown =document.querySelector('.categories-drop-down')
-        if(categoryDropDown.innerText === ''){
-         categoryDropDown.classList.add('categories-drop-down-animate')
-          categoryDropDown.innerHTML=
-          `
-          <div class="laptops">Laptops</div>
-          <div class="mobiles"> Mobiles</div>
-          <div class="other">Other</div>
-          <div></div>
-          
-          `
-
-        }else{
-          categoryDropDown.classList.remove('categories-drop-down-animate')
-          categoryDropDown.innerHTML=''
-          return
-        }
-
-      
-        
-
-      })
 
       const  aboutUsElement = document.querySelector('.about-us')
 
       aboutUsElement.addEventListener('click',()=>{
-        document.querySelector('.categories-drop-down')
-        .innerHTML =''
-        document.querySelector('.categories-drop-down').classList.remove('categories-drop-down-animate')
-
+        
         document.querySelector('.message-us-drop-down').classList.remove('message-us-drop-down-animate')
 
         const aboutUsDropDown =document.querySelector('.about-us-drop-down')

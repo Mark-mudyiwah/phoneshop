@@ -265,9 +265,15 @@ margin-top: 15px;
    width: 120px;
    height: 35px;
    border: none;
-   background-color: rgb(7, 89, 211);
+   background-color:rgb(44, 5, 151);
    color: rgb(255, 255, 255);
    border-radius: 20px;
    font-size: 14px;
    cursor: pointer;
+   transition: ease 0.5s;
  }
+
+.add-to-cart-button:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}

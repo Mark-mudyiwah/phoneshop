@@ -62,7 +62,7 @@ const nameNoNumber = /^[a-zA-Z]+$/.test(firstName)
 
  const surNameLength =surName.length > 3
  const surNameNoNumber = /^[a-zA-Z]+$/.test(surName)
- const surNameIsCharacter = isNaN(parseInt(firstName, 10))
+ const surNameIsCharacter = isNaN(parseInt(surName, 10))
  //validating the surname not to include numbers
 
  const correctSurName =  surNameLength && nameIsCharacters && surNameNoNumber

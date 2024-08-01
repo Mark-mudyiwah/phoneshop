@@ -4,7 +4,7 @@
 
 .header{
     height: 60px;
-    background-color:darkblue;
+    background-color:black;
      color: white;
     display: flex;
     justify-content: space-between;
@@ -39,8 +39,10 @@
    
 }
 .header div a:hover{
-    color: rgb(193, 15, 199);
-    transition: 500ms ease-in-out  ;
+    color: rgb(187, 67, 19);
+    transition: 500ms ease-in-out;
+    transform: scale(1.1);
+   
 }
 
 .left-side{
@@ -120,28 +122,42 @@ color: rgb(73, 69, 69);
     height: max-content;
     position: fixed;
     left: 0;
+    text-decoration: none;
 }
 
-.drop-down-menu div {
+.drop-down-menu div,
+.drop-down-menu a{
    
     cursor: pointer;
     padding-top: 4px;
+    margin-bottom: 8px;
+    margin-top: 8px;
     padding-bottom: 4px;
-    width:  100px;
+    
+    width:  120px;
+    text-decoration: none;
+    color: black;
+    
 
+}
+
+.drop-down-menu a div{
+
+    width: 120px;
 }
 
 .drop-down-menu div a{
     text-decoration: none;
 }
-.drop-down-menu div:hover{
+.drop-down-menu div:hover,
+.drop-down-menu a:hover{
 background-color: rgb(3, 170, 192);
 text-decoration: underline;
  
 
 } 
 
-.categories-drop-down,
+ 
 .message-us-drop-down
 {
      
@@ -149,21 +165,22 @@ text-decoration: underline;
     background-color:aliceblue;
     color:black;
      
-    width: 90px;
     left: 80px;
     top:98px;
-
+    width: 130px;
     
 }
-.categories-drop-down div,
+.about-us-drop-down{
+    width: 150px;
+}
 .about-us-drop-down div,
 .message-us-drop-down div{
     padding-top: 4px;
     padding-bottom: 4px;
     cursor: pointer;
     
+    
 }
-.categories-drop-down div:hover,
 .about-us-drop-down div:hover,
 .message-us-drop-down div:hover{
     background-color: rgb(6, 143, 185);
