@@ -109,55 +109,106 @@ document.querySelector('.js-place-order').addEventListener('click',()=>{
     const customerAddressElement = document.querySelector('.js-customer-address')
     const customerCommentElement = document.querySelector('.js-customer-comment')
 
-    const customerName = (customerNameInputElement.value) 
-    const customerNumber = (customerNumberInputElement.value) 
+    const customerName = customerNameInputElement.value
+    const customerNumber =customerNumberInputElement.value.toString()
     const customerAddress = customerAddressElement.value
     const customerComment = customerCommentElement.value
 
-    let productsCost = 0
-    let shippingCost = 0
-    let orders =loadFromStorage()
-    const today = dayjs()
-    const orderDate = today.format('MMMM D')
+    const correctCustomerName = customerName.length > 3
+    const correctCustomerNumber = customerNumber.length >9 &&customerNumber.length <=10
+    const correctCustomerAddress = customerAddress.length > 10
+    const correctComment = customerComment.length >= 5
 
-const idNumber = Math.random() 
-const orderId = (idNumber*100000).toFixed(0).padEnd(5,'0')
+    console.log(
+        {'name':customerName,
+         'number':customerNumber,
+         'address':customerAddress,
+         'comment':customerComment
+        },
 
+        correctCustomerName,correctCustomerNumber,
+        correctCustomerAddress
 
+    )
 
-cart.forEach((cartItem)=>{
+     if(!correctCustomerName){
 
-  
-    const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId)
-    const deliveryDate = (today.add(`${deliveryOption.deliveryDays}`,'days')).format('ddd D MMMM YYYY')
+        document.querySelector('.js-name-caution').innerHTML=`
+        
+        Please provide your name  &#9888
+        `
+     }else{
+        document.querySelector('.js-name-caution').innerHTML=``
+       
+    }
 
-    const product = getProduct(cartItem.productId);
-    productsCost += product.price*cartItem.quantity;
-   shippingCost += deliveryOption.price
-    cartItem.deliveryDate = `${deliveryDate}`
-    cartItem.orderDate =`${orderDate}`
-    cartItem.orderId =`${orderId}`
-   
-})
+     if(!correctCustomerNumber){
+        document.querySelector('.js-number-caution').innerHTML=`
+        
+        Please provide your number  &#9888
+        `
+     }else{
+         document.querySelector('.js-number-caution').innerHTML=``
+        
+     }
 
-const costBeforeTax =productsCost + shippingCost
-const tax =  costBeforeTax * 0.05
+     
+     if(!correctCustomerAddress){
+        document.querySelector('.js-address-caution').innerHTML=`
+        
+        Please provide your address &#9888
+        `
+     }else{
+        document.querySelector('.js-address-caution').innerHTML=``
+       
+    }
+    if(correctCustomerName&&correctCustomerNumber&&correctCustomerAddress){
+      
 
-const totalCost =  costBeforeTax+tax
-
-console.log(cart)
-cart.forEach((cartItem)=>{
-   cartItem.totalCost = `${totalCost}`
-})
-
-orders.unshift(cart)
-
- localStorage.removeItem('cart')
- 
-localStorage.setItem('orders',JSON.stringify(orders))
-
-window.location.href ='orders.html'
-
+        let productsCost = 0
+        let shippingCost = 0
+        let orders =loadFromStorage()
+        const today = dayjs()
+        const orderDate = today.format('MMMM D')
+    
+    const idNumber = Math.random() 
+    const orderId = (idNumber*100000).toFixed(0).padEnd(5,'0')
+    
+    
+    
+    cart.forEach((cartItem)=>{
+    
+      
+        const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId)
+        const deliveryDate = (today.add(`${deliveryOption.deliveryDays}`,'days')).format('ddd D MMMM YYYY')
+    
+        const product = getProduct(cartItem.productId);
+        productsCost += product.price*cartItem.quantity;
+       shippingCost += deliveryOption.price
+        cartItem.deliveryDate = `${deliveryDate}`
+        cartItem.orderDate =`${orderDate}`
+        cartItem.orderId =`${orderId}`
+       
+    })
+    
+    const costBeforeTax =productsCost + shippingCost
+    const tax =  costBeforeTax * 0.05
+    
+    const totalCost =  costBeforeTax+tax
+    
+    console.log(cart)
+    cart.forEach((cartItem)=>{
+       cartItem.totalCost = `${totalCost}`
+    })
+    
+    orders.unshift(cart)
+    
+     localStorage.removeItem('cart')
+     
+    localStorage.setItem('orders',JSON.stringify(orders))
+    
+    window.location.href ='orders.html'
+     }
 })
 
 

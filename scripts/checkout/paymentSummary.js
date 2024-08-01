@@ -95,13 +95,15 @@ const paymentSummaryHTML=
     <div class="client-name">
       <div class="name"> Name:</div>
        <input class="name-input js-customer-name" placeholder="Enter your name">
-    </div>
+       </div>
+        <span class="js-name-caution"></span>
      <div class="client-number">
     <div class="phone-number">
         Phone Number:
     </div>
         <input type="number" class="number-input js-customer-number">
     </div>
+    <span class ="js-number-caution"></span>
 
     <div class="client-address ">
         <div class="address">
@@ -110,6 +112,7 @@ const paymentSummaryHTML=
             <textarea id="address" class="js-customer-address"  name="address" placeholder="Enter your address here..."></textarea>
          
     </div>
+    <span class = "js-address-caution"></span>
       <div class="comments">
         <div class="comment-text">Customer Comment:</div>
         <textarea id="address" class="js-customer-comment"  name="address" placeholder="Enter your comment here..."></textarea>
