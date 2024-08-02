@@ -188,6 +188,10 @@ document.querySelector('.js-place-order').addEventListener('click',()=>{
         cartItem.deliveryDate = `${deliveryDate}`
         cartItem.orderDate =`${orderDate}`
         cartItem.orderId =`${orderId}`
+        cartItem.clientAddress=`${customerAddress}`
+        cartItem.clientNumber=`${customerNumber}`
+        cartItem.clientName=`${customerName}`
+        cartItem.clientComment = `${customerComment}`
        
     })
     

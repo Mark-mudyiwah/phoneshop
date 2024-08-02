@@ -37,6 +37,10 @@ if (!orders) {
    let productHTML =``
    let orderDate;
    let orderId;
+   let clientName;
+   let clientAddress;
+   let clientNumber;
+   let clientComment;
  
 
 
@@ -47,6 +51,10 @@ if (!orders) {
         totalCost =product.totalCost
         orderDate = product.orderDate 
         orderId = product.orderId
+        clientName = product.clientName
+        clientAddress = product.clientAddress
+        clientNumber = product.clientNumber
+        clientComment = product.clientComment
         deliveredTime = dayjs(product.deliveryDate).format('ddd, DD MMMM YYYY')
         const isArriving = currentDate.isBefore(deliveredTime);
     
@@ -54,7 +62,7 @@ if (!orders) {
       
 
         productHTML +=` <div class="main-flex">
-                 
+    
                 <div class="product-container">
                     <div class="product-image">
                      <img class = "item-image" src ="${item.image}">
@@ -126,6 +134,26 @@ if (!orders) {
                               </div>
                 
                  </div>
+                 
+            </div>
+            <div class ="address-container">
+             <div class="customer-address">Shipping Address:
+             <div>${clientAddress}</div>
+              </div>
+            <div class = "customer-name">
+            <div class= "name-text">Name:</div>  
+            <div class="actual-name">${clientName}</div> 
+            </div>
+             <div class="customer-number">
+             <div class="number-text">Number:</div>
+             
+           <div class= "actual-number">${clientNumber}</div>
+             
+             </div>
+             
+               
+
+            
             </div>
                 ${productHTML}
             </div>

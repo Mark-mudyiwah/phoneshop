@@ -1,6 +1,6 @@
 
 body{
-    background: rgb(14, 12, 46);
+    background: white;
     font-family: roboto;;
     margin: auto;
     padding-top: 80px;
@@ -75,10 +75,68 @@ button{
 .main{
     margin-bottom: 40px;
     padding: 0;
-    background-color: rgb(247, 251, 255);
-   border: 1px solid rgb(230, 218, 218);
+    background-color: white;
    padding: 0 ;
+   margin: 0px 12px;
+   border:1px solid rgb(219, 210, 210)
 }
+
+
+.address-container{
+    margin-top: 12px;
+    background-color:white;
+    color: black;
+    padding-left: 12px ;
+    border:1px solid rgb(219, 210, 210);
+    border-top: none;
+}
+
+.address-container div{
+    margin-bottom: 4px;
+
+
+   
+}
+
+.customer-address{
+    color: brown;
+    font-weight: bold;
+    font-size: 14px;
+   
+}
+
+.customer-address div{
+    color: rgb(10, 49, 155);
+    font-weight: 500;
+    margin-top: 2px;
+    width: 130px;
+    padding-left: 10px;
+    font-size: small;
+    margin-bottom: 10px;
+  
+}
+
+.customer-name div,
+.customer-number div{
+    display: inline-block;
+
+}
+
+.name-text{
+    color: rgb(145, 11, 11);
+    font-weight:bold;
+    font-size: 14px;
+}
+.actual-name,
+.actual-number{
+    font-size: small;
+}
+.number-text{
+    color:rgb(12, 12, 109);
+    font-weight:bold;
+    font-size: 14px;
+}
+
 
 .order-container{
 color:white;
@@ -97,8 +155,10 @@ bottom: 0;
     display:flex;
      justify-content: space-between;
     align-items: center;
-    background-color:rgb(206, 152, 152);
+    background-color:white;
     padding: 8px 6px;
+    border:1px solid rgb(219, 210, 210)
+   
     
 }
 
@@ -138,7 +198,7 @@ bottom: 0;
 
     display: flex;
     align-items:end;
-     border-top:1px solid rgb(219, 210, 210);
+ 
     padding: 16px 5px;
     justify-content: space-between;
     margin-bottom: 10px;
