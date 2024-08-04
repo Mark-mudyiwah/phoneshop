@@ -119,48 +119,55 @@ document.querySelector('.js-place-order').addEventListener('click',()=>{
     const correctCustomerAddress = customerAddress.length > 10
     const correctComment = customerComment.length >= 5
 
-    console.log(
-        {'name':customerName,
-         'number':customerNumber,
-         'address':customerAddress,
-         'comment':customerComment
-        },
+    const shortCustomerNumber= customerNumber.length < 10&&customerNumber.length > 0
+    const emptyCustomerNumber=customerNumber.length <= 0
+    const emptyShippingAddress= customerAddress.length <= 0
+    const emptyCustomerName = customerName.length <= 0
 
-        correctCustomerName,correctCustomerNumber,
-        correctCustomerAddress
 
-    )
-
-     if(!correctCustomerName){
+     if(emptyCustomerName){
 
         document.querySelector('.js-name-caution').innerHTML=`
         
         Please provide your name  &#9888
         `
      }else{
-        document.querySelector('.js-name-caution').innerHTML=``
+        document.querySelector('.js-name-caution').innerHTML=`
+        `
        
     }
 
-     if(!correctCustomerNumber){
+    if(shortCustomerNumber){
+
+        document.querySelector('.js-number-caution').innerHTML=`
+        
+         Must be ten numbers  &#9888`
+    }else if(emptyCustomerNumber){
         document.querySelector('.js-number-caution').innerHTML=`
         
         Please provide your number  &#9888
         `
-     }else{
-         document.querySelector('.js-number-caution').innerHTML=``
+     }else if(correctCustomerNumber){
+        document.querySelector('.js-number-caution').innerHTML=`
         
+        `
      }
-
      
-     if(!correctCustomerAddress){
+     if(emptyShippingAddress){
         document.querySelector('.js-address-caution').innerHTML=`
         
         Please provide your address &#9888
         `
-     }else{
-        document.querySelector('.js-address-caution').innerHTML=``
+     }else if(!emptyShippingAddress &&!correctCustomerAddress){
+        document.querySelector('.js-address-caution').innerHTML=`
+        Enter a valid address  &#9888
+        `
        
+    }else{
+        document.querySelector('.js-address-caution').innerHTML=`
+        
+        `
+
     }
     if(correctCustomerName&&correctCustomerNumber&&correctCustomerAddress){
       
@@ -200,7 +207,7 @@ document.querySelector('.js-place-order').addEventListener('click',()=>{
     
     const totalCost =  costBeforeTax+tax
     
-    console.log(cart)
+  
     cart.forEach((cartItem)=>{
        cartItem.totalCost = `${totalCost}`
     })

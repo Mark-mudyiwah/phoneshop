@@ -15,6 +15,7 @@ body{
     top: 0;
     height: 50px;
     color: white;
+    z-index: 100;
 
 }
 textarea{
@@ -443,13 +444,23 @@ background-color: rgb(20, 111, 196);
 .client-details div{
    margin-bottom: 15px;
    font-weight: bold;
-   color: rgb(9, 109, 224);
+
 }
 .client-details div div{
 margin-bottom: 2px;
  
 
 }
+
+.name,
+.phone-number{
+   color: rgb(9, 51, 190);
+}
+
+.address{
+   color: brown;
+}
+
 
 .name-input,
 .number-input{

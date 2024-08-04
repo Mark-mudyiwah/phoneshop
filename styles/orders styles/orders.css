@@ -73,9 +73,9 @@ button{
 }
 
 .main{
-    margin-bottom: 40px;
+    margin-bottom: 2px;
     padding: 0;
-    background-color: white;
+    background-color:white;
    padding: 0 ;
    margin: 0px 12px;
    border:1px solid rgb(219, 210, 210)
@@ -99,7 +99,7 @@ button{
 }
 
 .customer-address{
-    color: brown;
+    color: rgb(48, 5, 5);
     font-weight: bold;
     font-size: 14px;
    
@@ -123,16 +123,17 @@ button{
 }
 
 .name-text{
-    color: rgb(145, 11, 11);
+    color: rgb(90, 14, 24);
     font-weight:bold;
     font-size: 14px;
 }
 .actual-name,
 .actual-number{
     font-size: small;
+    color:rgb(12, 12, 109);
 }
 .number-text{
-    color:rgb(12, 12, 109);
+    color: rgb(90, 14, 24);
     font-weight:bold;
     font-size: 14px;
 }
@@ -155,12 +156,15 @@ bottom: 0;
     display:flex;
      justify-content: space-between;
     align-items: center;
-    background-color:white;
+    background-color:rgb(20, 19, 19);
     padding: 8px 6px;
-    border:1px solid rgb(219, 210, 210)
+    border:1px solid rgb(219, 210, 210);
+     margin-top: 10px;
+    
+    }
    
     
-}
+
 
 
 .order-date,
@@ -192,7 +196,7 @@ bottom: 0;
     color: rgb(194, 23, 23);
 }
 .total-cost-number{
-    color: rgb(20, 20, 168);
+    color: rgb(20, 121, 168);
 }
 .main-flex{
 
@@ -287,4 +291,19 @@ margin-bottom: 4px;
     transition: 0.5s ease-in;
     transform: scale(1.1);
     box-shadow: 0px 0px 30px rgb(30, 224, 4);
+}
+
+.customer-comment{
+    color:brown;
+     
+    font-weight: 700;
+    margin-top: 20px;
+    
+}
+
+.actual-comment{
+    color: rgb(30, 62, 204);
+    font-size: small;
+    margin-top: 6px;
+    margin-bottom: 10px;
 }

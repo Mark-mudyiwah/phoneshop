@@ -97,7 +97,6 @@ if (!orders) {
                 
                 </div>
                 </div>
-    
                   `
     })
 
@@ -137,25 +136,29 @@ if (!orders) {
                  
             </div>
             <div class ="address-container">
+            <div style="
+            margin-left:-12px;font-weight:bold;color:brown;"><u> Customer Details</u></div>
              <div class="customer-address">Shipping Address:
              <div>${clientAddress}</div>
               </div>
             <div class = "customer-name">
-            <div class= "name-text">Name:</div>  
+            <div class= "name-text">Full Name:</div>  
             <div class="actual-name">${clientName}</div> 
             </div>
              <div class="customer-number">
-             <div class="number-text">Number:</div>
+             <div class="number-text">Contact:</div>
              
            <div class= "actual-number">${clientNumber}</div>
              
              </div>
-             
                
 
             
             </div>
                 ${productHTML}
+                 <div class="customer-comment"><u> Customer Comment:</u>
+                 <div class="actual-comment"> ${clientComment}</div>
+                 </div>
             </div>
 
     

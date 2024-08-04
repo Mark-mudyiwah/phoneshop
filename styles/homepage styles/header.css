@@ -30,6 +30,7 @@
     align-items: center;
     text-decoration: none;
     color: white;
+    transition: 500ms ease-in-out;
   
 }
 
@@ -41,7 +42,7 @@
 .header div a:hover{
     color: rgb(187, 67, 19);
     transition: 500ms ease-in-out;
-    transform: scale(1.1);
+  
    
 }
 

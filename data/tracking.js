@@ -4,7 +4,7 @@ import { orders } from './orders.js'
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 
  const url= new URL(window.location.href)
- console.log(url)
+ 
 
  const productId = url.searchParams.get('productId')
 

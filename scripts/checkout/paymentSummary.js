@@ -93,7 +93,7 @@ const paymentSummaryHTML=
    
 <div class="client-details js-client-details">
     <div class="client-name">
-      <div class="name"> Name:</div>
+      <div class="name"> Full Name:</div>
        <input class="name-input js-customer-name" placeholder="Enter your name">
        </div>
         <span class="js-name-caution"></span>

@@ -2,9 +2,9 @@
 body{
     font-family: roboto;
     color: white;
-
-    background-image:url('../../images/other images/background-03.jpg');
- background-size:contain;
+  display:flex;
+  justify-content: center;
+    background-color:black;
 }
 
 
