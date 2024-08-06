@@ -4,7 +4,7 @@ body{
     color: white;
   display:flex;
   justify-content: center;
-    background-color:black;
+    background-color:rgb(1, 14, 31)
 }
 
 
@@ -54,7 +54,7 @@ span{
      font-family: roboto;
      flex-direction: column;
      padding: 30px 2px;
-    border: 2px solid  rgb(45, 17, 173) ;
+     border: 1px solid gray;
     border-radius: 10px;
     background-color:transparent;
     padding: 50px 20px;

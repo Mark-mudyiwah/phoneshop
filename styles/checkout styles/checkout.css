@@ -80,7 +80,9 @@ align-items: center;
    border: 1px solid gray;
    background-color: white;
    max-width: 700px;
-   margin-bottom: 8px;
+   margin-bottom: 15px;
+   padding-bottom: 14px;
+
 }
 .product-container{
 
@@ -345,6 +347,7 @@ font-weight: 500;
 font-size:12px;
 margin: 2px 2px;
 display: none;
+
 }
 
  
