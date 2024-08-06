@@ -4,6 +4,9 @@ body{
     font-family: roboto;;
     margin: auto;
     padding-top: 80px;
+    margin-left:12px;
+    margin-right:12px;
+
     
     
 }
@@ -44,7 +47,6 @@ button{
 .product-container{
     display: flex;
     align-items:start;
-    border-radius: 6px;
     flex-direction: column;
     
     
@@ -78,17 +80,19 @@ button{
     background-color:white;
    padding: 0 ;
    margin: 0px 12px;
-   border:1px solid rgb(219, 210, 210)
+   border-bottom:1px solid  black ;
+ margin-top: 12px;
+ padding-bottom: 15px;
 }
 
+ 
 
 .address-container{
     margin-top: 12px;
-    background-color:white;
+    background-color :aliceblue;
     color: black;
     padding-left: 12px ;
-    border:1px solid rgb(219, 210, 210);
-    border-top: none;
+    border:1px solid rgb(7, 6, 6);
 }
 
 .address-container div{
@@ -141,6 +145,9 @@ button{
 
 .order-container{
 color:white;
+border:1px solid black;
+margin-bottom:20px;
+
 }
 .order-container span{
 display: flex;
@@ -295,9 +302,10 @@ margin-bottom: 4px;
 
 .customer-comment{
     color:brown;
-     
+     background-color: rgb(238, 236, 236);
     font-weight: 700;
     margin-top: 20px;
+    padding: 4px 10px;
     
 }
 
@@ -306,4 +314,5 @@ margin-bottom: 4px;
     font-size: small;
     margin-top: 6px;
     margin-bottom: 10px;
+    padding: 0 10px;
 }
