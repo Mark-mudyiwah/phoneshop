@@ -92,7 +92,7 @@ if (!orders) {
                         Buy Again
                     </button>
                     <button  class="track-package">
-                      <a href = "tracking.html?productId=${item.Id}&orderId=${orderId} ">Track Package</a>
+                      <a href = "tracking.html?productId=${item.Id}&orderId=${orderId} ">Track Order</a>
                     </button>
                 
                 </div>
@@ -166,7 +166,7 @@ if (!orders) {
     `
  })
   orders.length < 1?
-   document.querySelector('.js-order-container').innerHTML =  `<span><span>Sorry, you don't have any orders yet</span></span>`
+   document.querySelector('.js-order-container').innerHTML =  `<span><span>Sorry, you  haven't placed any Orders yet &#128560</span></span>`
 :
 document.querySelector('.js-order-container').innerHTML = orderSummaryHTML
 
